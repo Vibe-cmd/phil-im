@@ -13,6 +13,7 @@ interface AlbumGridProps {
   searchQuery: string;
   showCreateModal: boolean;
   onCloseCreateModal: () => void;
+  onOpenCreateModal: () => void;
 }
 
 export const AlbumGrid = ({
@@ -22,7 +23,8 @@ export const AlbumGrid = ({
   onDeleteAlbum,
   searchQuery,
   showCreateModal,
-  onCloseCreateModal
+  onCloseCreateModal,
+  onOpenCreateModal
 }: AlbumGridProps) => {
   const filteredAlbums = albums.filter(album =>
     album.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -32,7 +34,7 @@ export const AlbumGrid = ({
   if (albums.length === 0) {
     return (
       <>
-        <EmptyState onCreateAlbum={onCreateAlbum} />
+        <EmptyState onCreateAlbum={onOpenCreateModal} />
         {showCreateModal && (
           <CreateAlbumModal
             onCreateAlbum={onCreateAlbum}

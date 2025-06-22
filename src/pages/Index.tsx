@@ -65,11 +65,15 @@ const Index = () => {
     setSearchQuery(query);
   };
 
+  const handleOpenCreateModal = () => {
+    setShowCreateModal(true);
+  };
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
         <Header
-          onCreateAlbum={() => setShowCreateModal(true)}
+          onCreateAlbum={handleOpenCreateModal}
           onSearch={handleSearch}
           albumCount={albums.length}
         />
@@ -83,6 +87,7 @@ const Index = () => {
             searchQuery={searchQuery}
             showCreateModal={showCreateModal}
             onCloseCreateModal={() => setShowCreateModal(false)}
+            onOpenCreateModal={handleOpenCreateModal}
           />
         </main>
       </div>
