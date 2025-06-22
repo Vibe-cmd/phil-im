@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Album } from '@/types';
 import { Header } from '@/components/Header';
 import { AlbumGrid } from '@/components/AlbumGrid';
+import { AlbumDetail } from '@/components/AlbumDetail';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { storage } from '@/lib/storage';
 import { useToast } from '@/hooks/use-toast';
@@ -11,6 +12,7 @@ const Index = () => {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const { toast } = useToast();
 
   // Load albums from storage on component mount
@@ -42,12 +44,13 @@ const Index = () => {
   };
 
   const handleSelectAlbum = (album: Album) => {
-    console.log('Opening album:', album.name);
-    // TODO: Navigate to album detail view
-    toast({
-      title: "Album Selected",
-      description: `Opening "${album.name}" - This feature is coming soon!`,
-    });
+    setSelectedAlbum(album);
+  };
+
+  const handleUpdateAlbum = (updatedAlbum: Album) => {
+    setAlbums(prev => prev.map(album => 
+      album.id === updatedAlbum.id ? updatedAlbum : album
+    ));
   };
 
   const handleDeleteAlbum = (albumId: string) => {
@@ -68,6 +71,21 @@ const Index = () => {
   const handleOpenCreateModal = () => {
     setShowCreateModal(true);
   };
+
+  // If an album is selected, show the detail view
+  if (selectedAlbum) {
+    return (
+      <ThemeProvider>
+        <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
+          <AlbumDetail
+            album={selectedAlbum}
+            onBack={() => setSelectedAlbum(null)}
+            onUpdateAlbum={handleUpdateAlbum}
+          />
+        </div>
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider>
