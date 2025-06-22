@@ -21,6 +21,23 @@ export const tmdbApi = {
     }
   },
 
+  searchMovies: async (query: string): Promise<any> => {
+    try {
+      const response = await fetch(
+        `${TMDB_BASE_URL}/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}&page=1`
+      );
+      
+      if (!response.ok) {
+        throw new Error('Failed to search movies');
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('TMDB search error:', error);
+      throw error;
+    }
+  },
+
   getMovieDetails: async (id: number, mediaType: 'movie' | 'tv'): Promise<any> => {
     try {
       const response = await fetch(
