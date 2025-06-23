@@ -656,6 +656,8 @@ interface ThemeContextType {
   changeTheme: (themeId: string) => void;
   isSecondaryMode: boolean;
   toggleColorMode: () => void;
+  customFont: string;
+  setGoogleFont: (fontName: string) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -717,14 +719,17 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       root.classList.add(...theme.className.split(' '));
     }
 
-    // Apply color mode
+    // Apply dynamic CSS variables for theme colors
     if (useSecondary) {
-      root.style.setProperty('--primary', theme.colors.secondary);
-      root.style.setProperty('--secondary', theme.colors.primary);
+      root.style.setProperty('--theme-primary', theme.colors.secondary);
+      root.style.setProperty('--theme-secondary', theme.colors.primary);
     } else {
-      root.style.setProperty('--primary', theme.colors.primary);
-      root.style.setProperty('--secondary', theme.colors.secondary);
+      root.style.setProperty('--theme-primary', theme.colors.primary);
+      root.style.setProperty('--theme-secondary', theme.colors.secondary);
     }
+    
+    root.style.setProperty('--theme-accent', theme.colors.accent);
+    root.style.setProperty('--theme-background', theme.colors.background);
 
     // Apply custom font if provided
     if (font && font.trim()) {
@@ -733,6 +738,9 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     } else {
       root.style.removeProperty('--font-family');
     }
+
+    // Add theme-specific animations and effects
+    root.setAttribute('data-theme', theme.id);
   };
 
   const changeTheme = (themeId: string) => {
