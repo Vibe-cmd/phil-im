@@ -60,3 +60,12 @@ export interface TMDBSearchResponse {
   total_pages: number;
   total_results: number;
 }
+
+export type LayoutType = 'grid' | 'carousel' | 'staggered' | 'instagram' | 'polaroid';
+
+export interface LayoutConfig {
+  type: LayoutType;
+  name: string;
+  description: string;
+  className: string;
+}
