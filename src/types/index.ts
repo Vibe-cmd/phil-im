@@ -1,4 +1,3 @@
-
 export interface Movie {
   id: number;
   title: string;
@@ -52,6 +51,7 @@ export interface Theme {
   };
   font: string;
   preview: string;
+  emojis?: string[];
 }
 
 export interface TMDBSearchResponse {
