@@ -1,7 +1,9 @@
 
 import { AlbumItem } from '@/types';
 import { EnhancedMovieCard } from '@/components/EnhancedMovieCard';
+import { RecommendationCard } from '@/components/RecommendationCard';
 import { useState } from 'react';
+import { Share } from 'lucide-react';
 
 interface StaggeredLayoutProps {
   items: AlbumItem[];
@@ -10,6 +12,7 @@ interface StaggeredLayoutProps {
 
 export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) => {
   const [selectedItem, setSelectedItem] = useState<AlbumItem | null>(null);
+  const [recommendationItem, setRecommendationItem] = useState<AlbumItem | null>(null);
 
   const columnCount = 4;
   const columns: AlbumItem[][] = Array.from({ length: columnCount }, () => []);
@@ -18,14 +21,19 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
     columns[index % columnCount].push(item);
   });
 
+  const handleRecommendation = (movieId: string, comment: string, rating: number) => {
+    console.log('Recommendation submitted:', { movieId, comment, rating });
+    // Handle recommendation logic here
+  };
+
   return (
     <>
-      <div className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="container mx-auto p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="space-y-6">
+            <div key={columnIndex} className="space-y-4">
               {column.map((item, itemIndex) => {
-                const heights = ['h-80', 'h-96', 'h-72', 'h-88', 'h-64', 'h-[400px]'];
+                const heights = ['h-64', 'h-80', 'h-72', 'h-96', 'h-60', 'h-88'];
                 const randomHeight = heights[(columnIndex + itemIndex) % heights.length];
                 
                 return (
@@ -33,22 +41,22 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
                     key={item.id}
                     className={`relative group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:z-20 animate-fade-in ${randomHeight}`}
                     style={{ 
-                      animationDelay: `${(columnIndex * 100) + (itemIndex * 150)}ms`,
-                      filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))'
+                      animationDelay: `${(columnIndex * 100) + (itemIndex * 150)}ms`
                     }}
-                    onClick={() => setSelectedItem(item)}
                   >
                     <div 
-                      className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 border border-[var(--theme-primary)]/20"
+                      className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 border-2 border-transparent group-hover:border-[var(--theme-primary)]"
                       style={{ 
-                        background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.15), rgba(var(--theme-accent-rgb), 0.1), transparent)`
+                        background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.1), rgba(var(--theme-accent-rgb), 0.05))`
                       }}
+                      onClick={() => setSelectedItem(item)}
                     >
                       <img
-                        src={item.posterPath ? `https://image.tmdb.org/t/p/w500${item.posterPath}` : '/placeholder.svg'}
+                        src={item.posterPath ? `https://image.tmdb.org/t/p/w400${item.posterPath}` : '/placeholder.svg'}
                         alt={item.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
+                      
                       <div 
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                         style={{ 
@@ -61,16 +69,29 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
                           {item.title}
                         </h3>
                         <p className="text-sm opacity-80 mb-2">{new Date(item.releaseDate).getFullYear()}</p>
-                        <p className="text-xs opacity-70 line-clamp-3">{item.overview}</p>
+                        <p className="text-xs opacity-70 line-clamp-3 mb-3">{item.overview}</p>
                         
-                        <div className="mt-3 flex items-center gap-2">
-                          <div 
-                            className="w-3 h-3 rounded-full animate-pulse"
-                            style={{ 
-                              backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)'
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div 
+                              className="w-3 h-3 rounded-full animate-pulse"
+                              style={{ 
+                                backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)'
+                              }}
+                            />
+                            <span className="text-xs">{item.isWatched ? 'Watched' : 'To Watch'}</span>
+                          </div>
+                          
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setRecommendationItem(item);
                             }}
-                          />
-                          <span className="text-xs">{item.isWatched ? 'Watched' : 'To Watch'}</span>
+                            className="p-2 rounded-full transition-all duration-200 hover:scale-125"
+                            style={{ backgroundColor: 'var(--theme-primary)' }}
+                          >
+                            <Share className="w-4 h-4 text-white" />
+                          </button>
                         </div>
                       </div>
                       
@@ -89,6 +110,7 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
         </div>
       </div>
 
+      {/* Enhanced Movie Card Modal */}
       {selectedItem && (
         <EnhancedMovieCard
           isOpen={!!selectedItem}
@@ -119,6 +141,16 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
             };
             onUpdateItem(updatedItem);
           }}
+        />
+      )}
+
+      {/* Recommendation Card Modal */}
+      {recommendationItem && (
+        <RecommendationCard
+          movie={recommendationItem}
+          isOpen={!!recommendationItem}
+          onClose={() => setRecommendationItem(null)}
+          onSubmitRecommendation={handleRecommendation}
         />
       )}
     </>

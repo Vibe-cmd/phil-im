@@ -1,8 +1,9 @@
 
 import { AlbumItem } from '@/types';
 import { EnhancedMovieCard } from '@/components/EnhancedMovieCard';
+import { RecommendationCard } from '@/components/RecommendationCard';
 import { useState, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Share } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface CarouselLayoutProps {
@@ -12,6 +13,7 @@ interface CarouselLayoutProps {
 
 export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => {
   const [selectedItem, setSelectedItem] = useState<AlbumItem | null>(null);
+  const [recommendationItem, setRecommendationItem] = useState<AlbumItem | null>(null);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -29,6 +31,10 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
         setFocusedIndex(focusedIndex + 1);
       }
     }
+  };
+
+  const handleRecommendation = (movieId: string, comment: string, rating: number) => {
+    console.log('Recommendation submitted:', { movieId, comment, rating });
   };
 
   return (
@@ -52,13 +58,12 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
             {items.map((item, index) => (
               <div
                 key={item.id}
-                className={`flex-shrink-0 cursor-pointer transform transition-all duration-700 ${
+                className={`flex-shrink-0 group cursor-pointer transform transition-all duration-700 ${
                   index === focusedIndex 
                     ? 'scale-125 z-20 animate-glow' 
                     : 'scale-100 hover:scale-110'
                 }`}
                 style={{ width: '280px' }}
-                onClick={() => setSelectedItem(item)}
                 onMouseEnter={() => setFocusedIndex(index)}
               >
                 <div 
@@ -67,6 +72,7 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
                     borderColor: index === focusedIndex ? 'var(--theme-primary)' : 'transparent',
                     background: `linear-gradient(135deg, var(--theme-primary)20, var(--theme-accent)20)`
                   }}
+                  onClick={() => setSelectedItem(item)}
                 >
                   <img
                     src={item.posterPath ? `https://image.tmdb.org/t/p/w500${item.posterPath}` : '/placeholder.svg'}
@@ -82,19 +88,33 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
                       {item.title}
                     </h3>
                     <p className="text-sm opacity-80 mb-2">{new Date(item.releaseDate).getFullYear()}</p>
-                    <div className="flex items-center gap-2">
-                      <div className="flex gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <div
-                            key={i}
-                            className={`w-2 h-2 rounded-full transition-colors duration-300`}
-                            style={{ 
-                              backgroundColor: i < Math.round(item.rating / 2) ? 'var(--theme-accent)' : '#6b7280'
-                            }}
-                          />
-                        ))}
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="flex gap-1">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <div
+                              key={i}
+                              className={`w-2 h-2 rounded-full transition-colors duration-300`}
+                              style={{ 
+                                backgroundColor: i < Math.round(item.rating / 2) ? 'var(--theme-accent)' : '#6b7280'
+                              }}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-xs">{item.rating.toFixed(1)}</span>
                       </div>
-                      <span className="text-xs">{item.rating.toFixed(1)}</span>
+                      
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setRecommendationItem(item);
+                        }}
+                        className="p-2 rounded-full transition-all duration-200 hover:scale-125"
+                        style={{ backgroundColor: 'var(--theme-primary)' }}
+                      >
+                        <Share className="w-4 h-4 text-white" />
+                      </button>
                     </div>
                   </div>
                   
@@ -120,6 +140,7 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
         </div>
       </div>
 
+      {/* Enhanced Movie Card Modal */}
       {selectedItem && (
         <EnhancedMovieCard
           isOpen={!!selectedItem}
@@ -150,6 +171,16 @@ export const CarouselLayout = ({ items, onUpdateItem }: CarouselLayoutProps) => 
             };
             onUpdateItem(updatedItem);
           }}
+        />
+      )}
+
+      {/* Recommendation Card Modal */}
+      {recommendationItem && (
+        <RecommendationCard
+          movie={recommendationItem}
+          isOpen={!!recommendationItem}
+          onClose={() => setRecommendationItem(null)}
+          onSubmitRecommendation={handleRecommendation}
         />
       )}
     </>
