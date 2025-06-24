@@ -143,7 +143,7 @@ export const PolaroidLayout = ({ items, onUpdateItem }: PolaroidLayoutProps) => 
           movieData={{
             title: selectedItem.title,
             overview: selectedItem.overview,
-            posterPath: selectedItem.posterPath ? `https://image.tmdb.org/t/p/w500${selectedItem.posterPath}` : '/placeholder.svg',
+            poster: selectedItem.posterPath ? `https://image.tmdb.org/t/p/w500${selectedItem.posterPath}` : '/placeholder.svg',
             backdrop: selectedItem.posterPath ? `https://image.tmdb.org/t/p/original${selectedItem.posterPath}` : '/placeholder.svg',
             releaseYear: new Date(selectedItem.releaseDate).getFullYear().toString(),
             tmdbRating: selectedItem.rating,
