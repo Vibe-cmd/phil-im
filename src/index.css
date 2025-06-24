@@ -32,7 +32,6 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     
-    /* Enhanced theme-aware variables */
     --theme-primary: #ec4899;
     --theme-secondary: #64748b;
     --theme-accent: #f472b6;
@@ -76,41 +75,47 @@
   * {
     @apply border-border;
   }
+  
+  html {
+    background-color: var(--theme-background) !important;
+    min-height: 100vh;
+  }
+  
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-family, 'Inter', sans-serif) !important;
     background: linear-gradient(135deg, var(--theme-background), rgba(var(--theme-secondary-rgb), 0.1)) !important;
+    background-color: var(--theme-background) !important;
     min-height: 100vh;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  
+  #root {
+    background: transparent !important;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
   }
 }
 
-/* Theme-specific styling */
-[data-theme] {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Enhanced float animation for emojis */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(7deg);
+  }
 }
 
-[data-theme="spider-verse"] body {
-  background: linear-gradient(135deg, #1a1a2e, rgba(255, 30, 86, 0.1), rgba(0, 183, 235, 0.1)) !important;
-}
-
-[data-theme="batman-dark"] body {
-  background: linear-gradient(135deg, #000000, rgba(47, 79, 79, 0.2), rgba(255, 202, 40, 0.1)) !important;
-}
-
-[data-theme="wakanda-vibranium"] body {
-  background: linear-gradient(135deg, #2C1A3D, rgba(107, 63, 160, 0.2), rgba(255, 215, 0, 0.1)) !important;
-}
-
-[data-theme="matrix-code"] body {
-  background: linear-gradient(135deg, #000000, rgba(0, 255, 0, 0.1), rgba(76, 175, 80, 0.05)) !important;
-}
-
-[data-theme="barbie-pink"] body {
-  background: linear-gradient(135deg, #fdf2f8, rgba(236, 72, 153, 0.1), rgba(244, 114, 182, 0.1)) !important;
-}
-
-/* Enhanced animations with theme integration */
+/* ... keep existing code (all other animations and utilities) the same ... */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -130,18 +135,6 @@
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-  66% {
-    transform: translateY(5px) rotate(-3deg);
   }
 }
 
@@ -229,7 +222,6 @@
   animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
-/* Theme-aware utilities */
 .bg-theme-primary {
   background-color: var(--theme-primary) !important;
 }
@@ -258,7 +250,6 @@
   border-color: var(--theme-accent) !important;
 }
 
-/* Enhanced scrollbar styling */
 .scrollbar-theme::-webkit-scrollbar {
   width: 8px;
 }
@@ -277,7 +268,6 @@
   background: var(--theme-accent);
 }
 
-/* Enhanced glass morphism effects */
 .glass-strong {
   background: rgba(var(--theme-primary-rgb), 0.1) !important;
   backdrop-filter: blur(30px) saturate(200%);
@@ -287,7 +277,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Interactive hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

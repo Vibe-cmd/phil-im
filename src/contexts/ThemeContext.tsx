@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 import { Theme } from '@/types';
 import { storage } from '@/lib/storage';
 
-// Complete theme collection with all mentioned themes
+// Complete theme collection with ALL themes from knowledge base
 const themes: Theme[] = [
   {
     id: 'default',
@@ -178,7 +178,7 @@ const themes: Theme[] = [
       primary: '#E91E63',
       secondary: '#0288D1',
       accent: '#4CAF50',
-      background: '#FFD700'
+      background: '#1C2526'
     },
     font: 'Roboto Condensed',
     preview: 'bg-gradient-to-br from-pink-600 via-blue-600 to-green-500',
@@ -208,7 +208,7 @@ const themes: Theme[] = [
       primary: '#00A3AD',
       secondary: '#A3D39C',
       accent: '#4CAF50',
-      background: '#2A623D'
+      background: '#1B263B'
     },
     font: 'Papyrus',
     preview: 'bg-gradient-to-br from-cyan-600 via-green-500 to-teal-800',
@@ -238,7 +238,7 @@ const themes: Theme[] = [
       primary: '#A68A64',
       secondary: '#FFD700',
       accent: '#4A3728',
-      background: '#2A623D'
+      background: '#4A3728'
     },
     font: 'Cinzel',
     preview: 'bg-gradient-to-br from-amber-600 via-yellow-500 to-green-800',
@@ -283,7 +283,7 @@ const themes: Theme[] = [
       primary: '#2A623D',
       secondary: '#8B6F47',
       accent: '#D9A86C',
-      background: '#FFD700'
+      background: '#1A472A'
     },
     font: 'Jungle Fever',
     preview: 'bg-gradient-to-br from-green-700 via-amber-600 to-yellow-500',
@@ -298,11 +298,192 @@ const themes: Theme[] = [
       primary: '#A3BFFA',
       secondary: '#FFD700',
       accent: '#D9C2A6',
-      background: '#4A3728'
+      background: '#1B263B'
     },
     font: 'Great Vibes',
     preview: 'bg-gradient-to-br from-blue-400 via-yellow-500 to-amber-600',
     emojis: ['🚢', '💎', '🌊', '❤️', '🎻']
+  },
+  // Adding all the missing themes from knowledge base
+  {
+    id: 'creed-conquest',
+    name: "Creed's Conquest",
+    description: 'Your legacy is more than a name.',
+    className: 'theme-creed',
+    colors: {
+      primary: '#D81F26',
+      secondary: '#FFD700',
+      accent: '#4A4A4A',
+      background: '#1C2526'
+    },
+    font: 'Bebas Neue',
+    preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-gray-600',
+    emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇']
+  },
+  {
+    id: 'narcotic-narcos',
+    name: 'Narcotic Narcos',
+    description: 'Plata o plomo.',
+    className: 'theme-narcos',
+    colors: {
+      primary: '#FFD700',
+      secondary: '#8B6F47',
+      accent: '#4A3728',
+      background: '#3C2F2F'
+    },
+    font: 'Oswald',
+    preview: 'bg-gradient-to-br from-yellow-600 via-amber-700 to-brown-800',
+    emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️']
+  },
+  {
+    id: 'jester-joker',
+    name: "Jester's Joker",
+    description: 'Why so serious?',
+    className: 'theme-joker',
+    colors: {
+      primary: '#4CAF50',
+      secondary: '#D81F26',
+      accent: '#FFD700',
+      background: '#1C2526'
+    },
+    font: 'Creepster',
+    preview: 'bg-gradient-to-br from-green-500 via-red-600 to-yellow-500',
+    emojis: ['🃏', '😂', '🎭', '🩸', '🌃']
+  },
+  {
+    id: 'twisted-tenet',
+    name: 'Twisted Tenet',
+    description: "Don't try to understand it, feel it.",
+    className: 'theme-tenet',
+    colors: {
+      primary: '#A3BFFA',
+      secondary: '#D81F26',
+      accent: '#FFD700',
+      background: '#1B263B'
+    },
+    font: 'Futura',
+    preview: 'bg-gradient-to-br from-blue-400 via-red-600 to-yellow-500',
+    emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌']
+  },
+  {
+    id: 'wistful-wandavision',
+    name: 'Wistful WandaVision',
+    description: 'What is grief, if not love persevering?',
+    className: 'theme-wandavision',
+    colors: {
+      primary: '#D81F26',
+      secondary: '#A3BFFA',
+      accent: '#FFD700',
+      background: '#1C2526'
+    },
+    font: 'American Typewriter',
+    preview: 'bg-gradient-to-br from-red-600 via-blue-400 to-yellow-500',
+    emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌']
+  },
+  {
+    id: 'rebel-robot',
+    name: 'Rebel Robot',
+    description: 'Hello, friend.',
+    className: 'theme-robot',
+    colors: {
+      primary: '#00FF00',
+      secondary: '#FF1E56',
+      accent: '#4CAF50',
+      background: '#0F3D3E'
+    },
+    font: 'VT323',
+    preview: 'bg-gradient-to-br from-green-500 via-red-500 to-green-600',
+    emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐']
+  },
+  {
+    id: 'mischievous-minions',
+    name: 'Mischievous Minions',
+    description: 'Bananaaaa!',
+    className: 'theme-minions',
+    colors: {
+      primary: '#F4A261',
+      secondary: '#00B7EB',
+      accent: '#FFD700',
+      background: '#1C2526'
+    },
+    font: 'Comic Sans MS',
+    preview: 'bg-gradient-to-br from-orange-400 via-blue-500 to-yellow-400',
+    emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉']
+  },
+  {
+    id: 'arcane-aura',
+    name: "Arcane's Aura",
+    description: 'Every legend has a beginning.',
+    className: 'theme-arcane',
+    colors: {
+      primary: '#2A9D8F',
+      secondary: '#E9C46A',
+      accent: '#F4A261',
+      background: '#1B263B'
+    },
+    font: 'Anime Ace',
+    preview: 'bg-gradient-to-br from-teal-600 via-yellow-500 to-orange-400',
+    emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️']
+  },
+  {
+    id: 'rambunctious-rick',
+    name: 'Rambunctious Rick',
+    description: 'Wubba lubba dub dub!',
+    className: 'theme-rick',
+    colors: {
+      primary: '#00B7EB',
+      secondary: '#F4A261',
+      accent: '#4CAF50',
+      background: '#1C2526'
+    },
+    font: 'Get Schwifty',
+    preview: 'bg-gradient-to-br from-blue-500 via-orange-400 to-green-500',
+    emojis: ['🚀', '🧪', '👽', '🌀', '🌌']
+  },
+  {
+    id: 'sacred-syndicate',
+    name: 'Sacred Syndicate',
+    description: 'Jo bhi main bolta hoon, vahi sahi hai.',
+    className: 'theme-syndicate',
+    colors: {
+      primary: '#D81F26',
+      secondary: '#FFD700',
+      accent: '#8B6F47',
+      background: '#2A3728'
+    },
+    font: 'Noto Serif Devanagari',
+    preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-amber-700',
+    emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸']
+  },
+  {
+    id: 'bountiful-bollywood',
+    name: 'Bountiful Bollywood',
+    description: 'Pyaar dosti hai.',
+    className: 'theme-bollywood',
+    colors: {
+      primary: '#FFD700',
+      secondary: '#D81F26',
+      accent: '#00B7EB',
+      background: '#1C2526'
+    },
+    font: 'Noto Serif Devanagari',
+    preview: 'bg-gradient-to-br from-yellow-500 via-red-600 to-blue-500',
+    emojis: ['💃', '🕺', '🎬', '🎶', '🌹']
+  },
+  {
+    id: 'dharma-delight',
+    name: "Dharma's Delight",
+    description: 'Kuch kuch hota hai.',
+    className: 'theme-dharma',
+    colors: {
+      primary: '#E91E63',
+      secondary: '#FFD700',
+      accent: '#00B7EB',
+      background: '#1C2526'
+    },
+    font: 'Noto Serif Devanagari',
+    preview: 'bg-gradient-to-br from-pink-600 via-yellow-500 to-blue-500',
+    emojis: ['💕', '🎬', '💃', '🕺', '🌟']
   }
 ];
 
@@ -347,11 +528,9 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const formattedFontName = fontName.replace(/\s+/g, '+');
     const linkId = `google-font-${formattedFontName}`;
     
-    // Remove existing custom font link
     const existingLinks = document.querySelectorAll('[id^="google-font-"]');
     existingLinks.forEach(link => link.remove());
     
-    // Add new font link
     const link = document.createElement('link');
     link.id = linkId;
     link.rel = 'stylesheet';
@@ -365,28 +544,36 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   };
 
   const createEmojiBackground = (emojis: string[]) => {
-    // Create subtle emoji background pattern
-    const emojiElements = emojis.map((emoji, index) => {
+    const emojiElements = [];
+    
+    // Create more emojis for better visibility
+    for (let i = 0; i < 25; i++) {
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
       const x = Math.random() * 100;
       const y = Math.random() * 100;
       const rotation = Math.random() * 360;
-      const size = 20 + Math.random() * 10;
-      const opacity = 0.03 + Math.random() * 0.02;
+      const size = 24 + Math.random() * 16; // Bigger size
+      const opacity = 0.08 + Math.random() * 0.07; // More visible
+      const animationDuration = 20 + Math.random() * 15;
+      const animationDelay = Math.random() * 10;
       
-      return `<div style="
-        position: absolute;
-        top: ${y}%;
-        left: ${x}%;
-        font-size: ${size}px;
-        opacity: ${opacity};
-        transform: rotate(${rotation}deg);
-        pointer-events: none;
-        animation: float ${15 + Math.random() * 10}s ease-in-out infinite;
-        animation-delay: ${index * 2}s;
-      ">${emoji}</div>`;
-    }).join('');
+      emojiElements.push(`
+        <div style="
+          position: absolute;
+          top: ${y}%;
+          left: ${x}%;
+          font-size: ${size}px;
+          opacity: ${opacity};
+          transform: rotate(${rotation}deg);
+          pointer-events: none;
+          animation: float ${animationDuration}s ease-in-out infinite;
+          animation-delay: ${animationDelay}s;
+          z-index: 1;
+        ">${emoji}</div>
+      `);
+    }
     
-    return emojiElements;
+    return emojiElements.join('');
   };
 
   const applyTheme = (theme: Theme, useSecondary: boolean = false, font?: string) => {
@@ -407,7 +594,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       body.classList.add(...theme.className.split(' '));
     }
 
-    // Apply comprehensive CSS variables
+    // Apply CSS variables
     const primaryColor = useSecondary ? theme.colors.secondary : theme.colors.primary;
     const secondaryColor = useSecondary ? theme.colors.primary : theme.colors.secondary;
     
@@ -416,7 +603,6 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     root.style.setProperty('--theme-accent', theme.colors.accent);
     root.style.setProperty('--theme-background', theme.colors.background);
     
-    // RGB values for better alpha support
     root.style.setProperty('--theme-primary-rgb', hexToRgb(primaryColor));
     root.style.setProperty('--theme-secondary-rgb', hexToRgb(secondaryColor));
     root.style.setProperty('--theme-accent-rgb', hexToRgb(theme.colors.accent));
@@ -439,7 +625,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       existingEmojiContainer.remove();
     }
 
-    // Create and apply theme-specific background with emojis
+    // Create emoji background
     const emojiContainer = document.createElement('div');
     emojiContainer.id = 'theme-emoji-background';
     emojiContainer.style.cssText = `
@@ -449,26 +635,22 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       width: 100vw;
       height: 100vh;
       pointer-events: none;
-      z-index: -1;
+      z-index: 0;
       overflow: hidden;
     `;
     
-    // Generate multiple sets of emojis for better coverage
-    let emojiHTML = '';
-    for (let set = 0; set < 3; set++) {
-      emojiHTML += createEmojiBackground(theme.emojis || []);
-    }
-    emojiContainer.innerHTML = emojiHTML;
+    emojiContainer.innerHTML = createEmojiBackground(theme.emojis || []);
     
-    // Apply theme background
-    body.style.background = `linear-gradient(135deg, ${theme.colors.background}, rgba(${hexToRgb(primaryColor)}, 0.1), rgba(${hexToRgb(theme.colors.accent)}, 0.05))`;
+    // Apply the theme background to the body - THIS IS THE KEY FIX
+    body.style.background = `linear-gradient(135deg, ${theme.colors.background}, rgba(${hexToRgb(primaryColor)}, 0.15), rgba(${hexToRgb(theme.colors.accent)}, 0.08)) !important`;
+    body.style.backgroundColor = theme.colors.background;
     body.style.minHeight = '100vh';
     body.style.fontFamily = `"${fontToUse}", sans-serif`;
     
-    // Insert emoji background
-    document.body.appendChild(emojiContainer);
+    // Also apply to html element for full coverage
+    root.style.backgroundColor = theme.colors.background;
     
-    // Add theme data attribute for CSS targeting
+    document.body.appendChild(emojiContainer);
     root.setAttribute('data-theme', theme.id);
     
     console.log(`Theme applied: ${theme.name}`, {
@@ -482,12 +664,11 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   };
 
   const applyThemeEffects = () => {
-    // Force re-render of theme-dependent elements
     const themeElements = document.querySelectorAll('[style*="var(--theme"]');
     themeElements.forEach(el => {
       const element = el as HTMLElement;
       element.style.display = 'none';
-      element.offsetHeight; // Force reflow
+      element.offsetHeight;
       element.style.display = '';
     });
   };
