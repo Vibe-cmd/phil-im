@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,6 +40,8 @@
     --theme-primary-rgb: 236, 72, 153;
     --theme-secondary-rgb: 100, 116, 139;
     --theme-accent-rgb: 244, 114, 182;
+    --theme-background-rgb: 15, 23, 42;
+    --font-family: 'Inter', sans-serif;
   }
 
   .dark {
@@ -77,11 +78,36 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-family, 'Inter', sans-serif);
-    background: linear-gradient(135deg, var(--theme-background), rgba(var(--theme-secondary-rgb), 0.1));
+    font-family: var(--font-family, 'Inter', sans-serif) !important;
+    background: linear-gradient(135deg, var(--theme-background), rgba(var(--theme-secondary-rgb), 0.1)) !important;
     min-height: 100vh;
     transition: all 0.3s ease;
   }
+}
+
+/* Theme-specific styling */
+[data-theme] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="spider-verse"] body {
+  background: linear-gradient(135deg, #1a1a2e, rgba(255, 30, 86, 0.1), rgba(0, 183, 235, 0.1)) !important;
+}
+
+[data-theme="batman-dark"] body {
+  background: linear-gradient(135deg, #000000, rgba(47, 79, 79, 0.2), rgba(255, 202, 40, 0.1)) !important;
+}
+
+[data-theme="wakanda-vibranium"] body {
+  background: linear-gradient(135deg, #2C1A3D, rgba(107, 63, 160, 0.2), rgba(255, 215, 0, 0.1)) !important;
+}
+
+[data-theme="matrix-code"] body {
+  background: linear-gradient(135deg, #000000, rgba(0, 255, 0, 0.1), rgba(76, 175, 80, 0.05)) !important;
+}
+
+[data-theme="barbie-pink"] body {
+  background: linear-gradient(135deg, #fdf2f8, rgba(236, 72, 153, 0.1), rgba(244, 114, 182, 0.1)) !important;
 }
 
 /* Enhanced animations with theme integration */
@@ -122,15 +148,6 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(var(--rotation, 0deg));
-  }
-  50% {
-    transform: translateY(-15px) rotate(var(--rotation, 0deg));
-  }
-}
-
 @keyframes pulse-theme {
   0%, 100% {
     background-color: rgba(var(--theme-primary-rgb), 0.1);
@@ -153,18 +170,18 @@
 
 @keyframes bounce-in {
   0% {
-    transform: scale(0.3) rotate(var(--rotation, 0deg));
+    transform: scale(0.3);
     opacity: 0;
   }
   50% {
-    transform: scale(1.05) rotate(var(--rotation, 0deg));
+    transform: scale(1.05);
   }
   70% {
-    transform: scale(0.9) rotate(var(--rotation, 0deg));
+    transform: scale(0.9);
     opacity: 1;
   }
   100% {
-    transform: scale(1) rotate(var(--rotation, 0deg));
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -179,10 +196,6 @@
 
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
 }
 
 .animate-pulse-theme {
@@ -204,53 +217,36 @@
   animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
-/* Theme-aware utilities with better integration */
+/* Theme-aware utilities */
 .bg-theme-primary {
-  background-color: var(--theme-primary);
+  background-color: var(--theme-primary) !important;
 }
 
 .bg-theme-secondary {
-  background-color: var(--theme-secondary);
+  background-color: var(--theme-secondary) !important;
 }
 
 .bg-theme-accent {
-  background-color: var(--theme-accent);
-}
-
-.bg-theme-primary-soft {
-  background-color: rgba(var(--theme-primary-rgb), 0.1);
-}
-
-.bg-theme-gradient {
-  background: linear-gradient(135deg, var(--theme-primary), var(--theme-accent));
+  background-color: var(--theme-accent) !important;
 }
 
 .text-theme-primary {
-  color: var(--theme-primary);
+  color: var(--theme-primary) !important;
 }
 
 .text-theme-accent {
-  color: var(--theme-accent);
+  color: var(--theme-accent) !important;
 }
 
 .border-theme-primary {
-  border-color: var(--theme-primary);
+  border-color: var(--theme-primary) !important;
 }
 
 .border-theme-accent {
-  border-color: var(--theme-accent);
+  border-color: var(--theme-accent) !important;
 }
 
 /* Enhanced scrollbar styling */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
 .scrollbar-theme::-webkit-scrollbar {
   width: 8px;
 }
@@ -270,47 +266,13 @@
 }
 
 /* Enhanced glass morphism effects */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
 .glass-strong {
-  background: rgba(var(--theme-primary-rgb), 0.1);
+  background: rgba(var(--theme-primary-rgb), 0.1) !important;
   backdrop-filter: blur(30px) saturate(200%);
   border: 1px solid rgba(var(--theme-primary-rgb), 0.2);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.glass-card {
-  background: rgba(var(--theme-background), 0.7);
-  backdrop-filter: blur(15px) saturate(150%);
-  border: 1px solid rgba(var(--theme-accent-rgb), 0.2);
-}
-
-/* Theme-specific enhancements */
-[data-theme] {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="matrix"] {
-  --glow-color: #22c55e;
-}
-
-[data-theme="cyberpunk"] {
-  --glow-color: #06b6d4;
-}
-
-[data-theme="neon"] {
-  --glow-color: #a855f7;
-}
-
-[data-theme="barbie"] {
-  --glow-color: #ec4899;
 }
 
 /* Interactive hover effects */
@@ -329,50 +291,4 @@
   box-shadow: 
     0 0 20px rgba(var(--theme-accent-rgb), 0.4),
     0 0 40px rgba(var(--theme-primary-rgb), 0.2);
-}
-
-/* Enhanced particle effects container */
-.theme-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.1;
-}
-
-/* Improved layout-specific styles */
-.masonry-item {
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
-}
-
-.carousel-item {
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-}
-
-.instagram-story {
-  background: linear-gradient(45deg, var(--theme-primary), var(--theme-accent));
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-.polaroid-shadow {
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))
-          drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-}
-
-/* Typography enhancements */
-.text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.text-glow {
-  text-shadow: 
-    0 0 10px rgba(var(--theme-accent-rgb), 0.8),
-    0 0 20px rgba(var(--theme-accent-rgb), 0.4),
-    0 0 30px rgba(var(--theme-accent-rgb), 0.2);
 }

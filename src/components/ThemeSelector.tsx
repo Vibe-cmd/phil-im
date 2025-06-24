@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Check, Palette, Type, Sparkles, Wand2, Stars } from 'lucide-react';
+import { Check, Palette, Type, Sparkles, Wand2 } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useState } from 'react';
 
@@ -22,39 +22,12 @@ export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
     }
   };
 
-  // Group themes by category
-  const groupedThemes = themes.reduce((groups, theme) => {
-    let category = 'Other';
-    
-    if (['spider-verse', 'batman-dark', 'wakanda-vibranium', 'loki-mischief', 'mcu-mighty', 'deadpool-chaos'].includes(theme.id)) {
-      category = 'Superhero';
-    } else if (['dune-desert', 'interstellar-space', 'matrix-code', 'tenet-inversion', 'cyberpunk-neon'].includes(theme.id)) {
-      category = 'Sci-Fi';
-    } else if (['hogwarts-magic', 'witcher-silver', 'thrones-winter', 'avatar-pandora', 'ghibli-nature'].includes(theme.id)) {
-      category = 'Fantasy';
-    } else if (['peaky-blinders', 'money-heist', 'narcos-cartel', 'sacred-games', 'joker-chaos'].includes(theme.id)) {
-      category = 'Crime Drama';
-    } else if (['minions-banana', 'arcane-steampunk', 'rick-morty'].includes(theme.id)) {
-      category = 'Animated';
-    } else if (['bollywood-classic', 'dharma-romance'].includes(theme.id)) {
-      category = 'Bollywood';
-    } else if (['squid-game', 'wandavision-retro'].includes(theme.id)) {
-      category = 'Thriller';
-    } else if (['barbie-pink', 'breaking-bad', 'oppenheimer-atomic', 'stranger-things'].includes(theme.id)) {
-      category = 'Classic';
-    }
-    
-    if (!groups[category]) groups[category] = [];
-    groups[category].push(theme);
-    return groups;
-  }, {} as Record<string, typeof themes>);
-
   const filteredThemes = searchTerm 
     ? themes.filter(theme => 
         theme.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         theme.description.toLowerCase().includes(searchTerm.toLowerCase())
       )
-    : null;
+    : themes;
 
   return (
     <Card className="p-6 glass-strong border-primary/20 animate-slide-up max-h-[90vh] overflow-y-auto scrollbar-theme">
@@ -126,35 +99,14 @@ export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
       </div>
       
       {/* Theme Grid */}
-      {filteredThemes ? (
-        <div className="space-y-6">
-          <h4 className="text-lg font-semibold">Search Results ({filteredThemes.length})</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredThemes.map((theme) => (
-              <ThemeCard key={theme.id} theme={theme} currentTheme={currentTheme} onSelect={changeTheme} isSecondaryMode={isSecondaryMode} />
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="space-y-8">
-          {Object.entries(groupedThemes).map(([category, categoryThemes]) => (
-            <div key={category} className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Stars className="w-5 h-5" style={{ color: 'var(--theme-accent)' }} />
-                <h4 className="text-lg font-semibold">{category}</h4>
-                <Badge variant="outline" className="text-xs">
-                  {categoryThemes.length} themes
-                </Badge>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {categoryThemes.map((theme) => (
-                  <ThemeCard key={theme.id} theme={theme} currentTheme={currentTheme} onSelect={changeTheme} isSecondaryMode={isSecondaryMode} />
-                ))}
-              </div>
-            </div>
+      <div className="space-y-6">
+        <h4 className="text-lg font-semibold">Available Themes ({filteredThemes.length})</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredThemes.map((theme) => (
+            <ThemeCard key={theme.id} theme={theme} currentTheme={currentTheme} onSelect={changeTheme} isSecondaryMode={isSecondaryMode} />
           ))}
         </div>
-      )}
+      </div>
     </Card>
   );
 };
@@ -220,9 +172,6 @@ const ThemeCard = ({ theme, currentTheme, onSelect, isSecondaryMode }: any) => {
               </div>
             </div>
           )}
-          
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         
         {/* Theme Info */}

@@ -41,7 +41,7 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
                     <div 
                       className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 border border-[var(--theme-primary)]/20"
                       style={{ 
-                        background: `linear-gradient(135deg, var(--theme-primary)15, var(--theme-accent)10, transparent)`
+                        background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.15), rgba(var(--theme-accent-rgb), 0.1), transparent)`
                       }}
                     >
                       <img
@@ -52,7 +52,7 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
                       <div 
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                         style={{ 
-                          background: `linear-gradient(to top, rgba(0,0,0,0.9), var(--theme-primary)30, transparent)`
+                          background: `linear-gradient(to top, rgba(0,0,0,0.9), rgba(var(--theme-primary-rgb), 0.3), transparent)`
                         }}
                       />
                       
@@ -65,7 +65,7 @@ export const StaggeredLayout = ({ items, onUpdateItem }: StaggeredLayoutProps) =
                         
                         <div className="mt-3 flex items-center gap-2">
                           <div 
-                            className={`w-3 h-3 rounded-full animate-pulse`}
+                            className="w-3 h-3 rounded-full animate-pulse"
                             style={{ 
                               backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)'
                             }}

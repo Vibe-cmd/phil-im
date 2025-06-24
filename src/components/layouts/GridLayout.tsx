@@ -19,19 +19,28 @@ export const GridLayout = ({ items, onUpdateItem }: GridLayoutProps) => {
             key={item.id}
             className="group cursor-pointer transform transition-all duration-700 hover:scale-110 hover:z-20 animate-fade-in"
             style={{ 
-              animationDelay: `${index * 100}ms`,
-              background: `linear-gradient(135deg, var(--theme-primary)10, var(--theme-accent)10)`
+              animationDelay: `${index * 100}ms`
             }}
             onClick={() => setSelectedItem(item)}
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-700 bg-gradient-to-br from-[var(--theme-primary)]/10 to-[var(--theme-accent)]/10 border border-[var(--theme-primary)]/20">
+            <div 
+              className="relative overflow-hidden rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-700 border border-[var(--theme-primary)]/20"
+              style={{
+                background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.1), rgba(var(--theme-accent-rgb), 0.1))`
+              }}
+            >
               <img
                 src={item.posterPath ? `https://image.tmdb.org/t/p/w500${item.posterPath}` : '/placeholder.svg'}
                 alt={item.title}
                 className="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-125"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-[var(--theme-primary)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+              <div 
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700"
+                style={{
+                  background: `linear-gradient(to top, rgba(0,0,0,0.9), rgba(var(--theme-primary-rgb), 0.2), transparent)`
+                }}
+              />
               
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-700">
                 <h3 className="font-bold text-sm mb-1 line-clamp-2" style={{ color: 'var(--theme-accent)' }}>
@@ -41,7 +50,7 @@ export const GridLayout = ({ items, onUpdateItem }: GridLayoutProps) => {
                 
                 <div className="mt-2 flex items-center gap-2">
                   <div 
-                    className={`w-3 h-3 rounded-full border-2 animate-pulse`}
+                    className="w-3 h-3 rounded-full border-2 animate-pulse"
                     style={{ 
                       backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)',
                       borderColor: 'var(--theme-primary)'
