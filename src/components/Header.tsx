@@ -33,7 +33,7 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `watchvault-backup-${new Date().toISOString().split('T')[0]}.json`;
+      a.download = `फीLim-backup-${new Date().toISOString().split('T')[0]}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -83,20 +83,39 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <header 
+      className="sticky top-0 z-50 backdrop-blur-lg border-b"
+      style={{ 
+        backgroundColor: `rgba(var(--theme-background-rgb), 0.8)`,
+        borderColor: `rgba(var(--theme-primary-rgb), 0.2)`
+      }}
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col lg:flex-row lg:items-center gap-4">
           {/* Logo and Title */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20">
-              <Film className="w-5 h-5 text-primary" />
+            <div 
+              className="flex items-center justify-center w-12 h-12 rounded-xl border-2"
+              style={{
+                background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`,
+                borderColor: `rgba(var(--theme-primary-rgb), 0.3)`
+              }}
+            >
+              <Film className="w-6 h-6" style={{ color: 'var(--theme-primary)' }} />
             </div>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                WatchVault
+              <h1 
+                className="text-3xl font-bold tracking-wide"
+                style={{ 
+                  color: 'var(--theme-primary)',
+                  fontFamily: 'var(--font-family)',
+                  textShadow: `0 2px 8px rgba(var(--theme-primary-rgb), 0.3)`
+                }}
+              >
+                फीLim
               </h1>
-              <p className="text-sm text-muted-foreground">
-                {albumCount} {albumCount === 1 ? 'Album' : 'Albums'}
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                {albumCount} {albumCount === 1 ? 'CineLibrary' : 'CineLibraries'}
               </p>
             </div>
           </div>
@@ -104,19 +123,32 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="flex-1 max-w-md">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" style={{ color: 'rgba(255, 255, 255, 0.6)' }} />
               <Input
-                placeholder="Search your albums..."
+                placeholder="Search your CineLibraries..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 glass border-primary/20 focus:border-primary/40"
+                className="pl-10"
+                style={{
+                  background: `rgba(var(--theme-primary-rgb), 0.1)`,
+                  borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                  color: 'white'
+                }}
               />
             </div>
           </form>
 
           {/* Action Buttons */}
           <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="hidden sm:flex">
+            <Badge 
+              variant="secondary" 
+              className="hidden sm:flex"
+              style={{
+                backgroundColor: `rgba(var(--theme-accent-rgb), 0.2)`,
+                color: 'var(--theme-accent)',
+                border: `1px solid rgba(var(--theme-accent-rgb), 0.3)`
+              }}
+            >
               {currentTheme.name}
             </Badge>
             
@@ -124,7 +156,12 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
               variant="outline"
               size="sm"
               onClick={() => setShowThemeSelector(!showThemeSelector)}
-              className="relative glass border-primary/20 hover:border-primary/40"
+              className="relative"
+              style={{
+                backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`,
+                borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                color: 'var(--theme-primary)'
+              }}
             >
               <Palette className="w-4 h-4" />
             </Button>
@@ -133,7 +170,11 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
               variant="outline"
               size="sm"
               onClick={handleBackup}
-              className="glass border-primary/20 hover:border-primary/40"
+              style={{
+                backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`,
+                borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                color: 'var(--theme-primary)'
+              }}
             >
               <Download className="w-4 h-4" />
             </Button>
@@ -148,7 +189,11 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
               <Button
                 variant="outline"
                 size="sm"
-                className="glass border-primary/20 hover:border-primary/40"
+                style={{
+                  backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`,
+                  borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                  color: 'var(--theme-primary)'
+                }}
               >
                 <Upload className="w-4 h-4" />
               </Button>
@@ -156,10 +201,14 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
 
             <Button
               onClick={onCreateAlbum}
-              className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg"
+              className="shadow-lg"
+              style={{
+                backgroundColor: 'var(--theme-primary)',
+                color: 'white'
+              }}
             >
               <Plus className="w-4 h-4 mr-2" />
-              New Album
+              New CineLibrary
             </Button>
           </div>
         </div>

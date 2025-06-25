@@ -22,10 +22,12 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
 
   return (
     <Card
-      className="group cursor-pointer overflow-hidden animate-fade-in transition-all duration-300 hover:scale-105"
+      className="group cursor-pointer overflow-hidden animate-fade-in transition-all duration-300 hover:scale-105 relative"
       style={{ 
         animationDelay: `${index * 100}ms`,
-        background: `rgba(var(--theme-primary-rgb), 0.1)`,
+        background: album.useAsBackground && album.coverImage 
+          ? 'transparent'
+          : `rgba(var(--theme-primary-rgb), 0.1)`,
         backdropFilter: 'blur(20px)',
         border: `1px solid rgba(var(--theme-primary-rgb), 0.2)`,
         boxShadow: `0 8px 32px rgba(0, 0, 0, 0.1)`,
@@ -34,11 +36,40 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => onSelect(album)}
     >
+      {/* Background Image (if enabled) */}
+      {album.useAsBackground && album.coverImage && (
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url(${album.coverImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(8px)',
+            transform: 'scale(1.1)'
+          }}
+        />
+      )}
+      
+      {/* Overlay for better readability when background is used */}
+      {album.useAsBackground && album.coverImage && (
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.4), rgba(var(--theme-background-rgb), 0.6))`
+          }}
+        />
+      )}
+
       {/* Cover Image */}
-      <div className="relative aspect-[4/3] overflow-hidden" style={{
-        background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`
-      }}>
-        {album.coverImage ? (
+      <div 
+        className="relative aspect-[4/3] overflow-hidden z-10"
+        style={{
+          background: album.useAsBackground && album.coverImage 
+            ? 'transparent'
+            : `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`
+        }}
+      >
+        {album.coverImage && !album.useAsBackground ? (
           <img
             src={album.coverImage}
             alt={album.name}
@@ -75,12 +106,15 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
       </div>
 
       {/* Content */}
-      <div className="p-4 space-y-3">
+      <div className="p-4 space-y-3 relative z-10">
         <div>
-          <h3 className="font-semibold text-lg truncate mb-1" style={{ 
-            color: 'var(--theme-primary)',
-            fontFamily: 'var(--font-family)'
-          }}>
+          <h3 
+            className="font-semibold text-lg truncate mb-1" 
+            style={{ 
+              color: 'var(--theme-primary)',
+              fontFamily: 'var(--font-family)'
+            }}
+          >
             {album.name}
           </h3>
           {album.description && (
