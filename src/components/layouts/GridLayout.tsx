@@ -22,52 +22,47 @@ export const GridLayout = ({ items, onUpdateItem }: GridLayoutProps) => {
   return (
     <>
       <div className="container mx-auto p-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-6">
           {items.map((item, index) => (
             <div
               key={item.id}
-              className="group relative cursor-pointer transform transition-all duration-500 hover:scale-105 hover:z-20 animate-fade-in"
+              className="group relative cursor-pointer transform transition-all duration-700 hover:scale-105 hover:z-20 animate-fade-in"
               style={{ 
-                animationDelay: `${index * 50}ms`
+                animationDelay: `${index * 75}ms`
               }}
             >
               {/* Movie Card */}
               <div 
-                className="relative overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500 border-2 border-transparent group-hover:border-[var(--theme-primary)]"
-                style={{
-                  background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.05), rgba(var(--theme-accent-rgb), 0.05))`
-                }}
+                className="relative overflow-hidden rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-700 border border-white/10 group-hover:border-[var(--theme-primary)] bg-gradient-to-br from-black/20 to-black/5 backdrop-blur-sm"
                 onClick={() => setSelectedItem(item)}
               >
                 <img
-                  src={item.posterPath ? `https://image.tmdb.org/t/p/w300${item.posterPath}` : '/placeholder.svg'}
+                  src={item.posterPath ? `https://image.tmdb.org/t/p/w400${item.posterPath}` : '/placeholder.svg'}
                   alt={item.title}
-                  className="w-full aspect-[2/3] object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                {/* Overlay on hover */}
+                {/* Gradient Overlay */}
                 <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-3"
-                  style={{
-                    background: `linear-gradient(to top, rgba(0,0,0,0.9), rgba(var(--theme-primary-rgb), 0.3), transparent)`
-                  }}
+                  className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4"
                 >
-                  <h3 className="font-bold text-sm mb-1 line-clamp-2 text-white">
+                  <h3 className="font-bold text-sm mb-1 line-clamp-2 text-white drop-shadow-lg">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-white/80 mb-2">
+                  <p className="text-xs text-white/90 mb-3 drop-shadow-md">
                     {new Date(item.releaseDate).getFullYear()}
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-2">
                       <div 
-                        className={`w-2 h-2 rounded-full animate-pulse`}
+                        className={`w-2 h-2 rounded-full animate-pulse shadow-lg`}
                         style={{ 
-                          backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)'
+                          backgroundColor: item.isWatched ? '#22c55e' : 'var(--theme-accent)',
+                          boxShadow: `0 0 8px ${item.isWatched ? '#22c55e' : 'var(--theme-accent)'}`
                         }}
                       />
-                      <span className="text-xs text-white/90">
+                      <span className="text-xs text-white/95 font-medium drop-shadow-md">
                         {item.isWatched ? 'Watched' : 'To Watch'}
                       </span>
                     </div>
@@ -77,8 +72,11 @@ export const GridLayout = ({ items, onUpdateItem }: GridLayoutProps) => {
                         e.stopPropagation();
                         setRecommendationItem(item);
                       }}
-                      className="p-1 rounded-full transition-all duration-200 hover:scale-125"
-                      style={{ backgroundColor: 'var(--theme-primary)' }}
+                      className="p-2 rounded-full transition-all duration-300 hover:scale-125 shadow-lg"
+                      style={{ 
+                        backgroundColor: 'var(--theme-primary)',
+                        boxShadow: `0 4px 15px rgba(var(--theme-primary-rgb), 0.4)`
+                      }}
                     >
                       <Share className="w-3 h-3 text-white" />
                     </button>
@@ -87,10 +85,13 @@ export const GridLayout = ({ items, onUpdateItem }: GridLayoutProps) => {
                 
                 {/* Rating badge */}
                 <div 
-                  className="absolute top-2 right-2 backdrop-blur-sm rounded-full px-2 py-1 transition-transform duration-300 group-hover:scale-110"
-                  style={{ backgroundColor: 'var(--theme-primary)' }}
+                  className="absolute top-3 right-3 backdrop-blur-md rounded-full px-3 py-1 transition-all duration-300 group-hover:scale-110 shadow-lg border border-white/20"
+                  style={{ 
+                    backgroundColor: 'rgba(var(--theme-primary-rgb), 0.9)',
+                    boxShadow: `0 4px 15px rgba(var(--theme-primary-rgb), 0.3)`
+                  }}
                 >
-                  <span className="text-white text-xs font-bold">
+                  <span className="text-white text-xs font-bold drop-shadow-md">
                     ★{item.rating.toFixed(1)}
                   </span>
                 </div>

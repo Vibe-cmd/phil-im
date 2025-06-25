@@ -11,18 +11,20 @@ export interface Movie {
   first_air_date?: string; // For TV shows
 }
 
-export interface Album {
+export interface CineLibrary {
   id: string;
   name: string;
   description?: string;
   coverImage?: string;
   emoji?: string;
   font: string;
-  layout: 'grid' | 'carousel' | 'staggered' | 'instagram' | 'polaroid';
   items: AlbumItem[];
   createdAt: Date;
   updatedAt: Date;
 }
+
+// Keep Album interface for backward compatibility
+export interface Album extends CineLibrary {}
 
 export interface AlbumItem {
   id: string;

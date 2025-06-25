@@ -2,28 +2,28 @@
 import { Album, Theme } from '@/types';
 
 const STORAGE_KEYS = {
-  ALBUMS: 'watchvault_albums',
-  CURRENT_THEME: 'watchvault_theme',
-  USER_PREFERENCES: 'watchvault_preferences'
+  CINE_LIBRARIES: 'feelim_cine_libraries',
+  CURRENT_THEME: 'feelim_theme',
+  USER_PREFERENCES: 'feelim_preferences'
 };
 
 export const storage = {
   // Albums
   getAlbums: (): Album[] => {
     try {
-      const albums = localStorage.getItem(STORAGE_KEYS.ALBUMS);
-      return albums ? JSON.parse(albums) : [];
+      const libraries = localStorage.getItem(STORAGE_KEYS.CINE_LIBRARIES);
+      return libraries ? JSON.parse(libraries) : [];
     } catch (error) {
-      console.error('Error loading albums:', error);
+      console.error('Error loading CineLibraries:', error);
       return [];
     }
   },
 
-  saveAlbums: (albums: Album[]): void => {
+  saveAlbums: (libraries: Album[]): void => {
     try {
-      localStorage.setItem(STORAGE_KEYS.ALBUMS, JSON.stringify(albums));
+      localStorage.setItem(STORAGE_KEYS.CINE_LIBRARIES, JSON.stringify(libraries));
     } catch (error) {
-      console.error('Error saving albums:', error);
+      console.error('Error saving CineLibraries:', error);
     }
   },
 
@@ -39,10 +39,11 @@ export const storage = {
   // Backup & Export
   exportData: (): string => {
     const data = {
-      albums: storage.getAlbums(),
+      cineLibraries: storage.getAlbums(),
       theme: storage.getCurrentTheme(),
       exportedAt: new Date().toISOString(),
-      version: '1.0.0'
+      version: '2.0.0',
+      appName: 'फीLim'
     };
     return JSON.stringify(data, null, 2);
   },
@@ -51,8 +52,8 @@ export const storage = {
     try {
       const data = JSON.parse(jsonString);
       
-      if (data.albums) {
-        storage.saveAlbums(data.albums);
+      if (data.cineLibraries || data.albums) {
+        storage.saveAlbums(data.cineLibraries || data.albums);
       }
       
       if (data.theme) {

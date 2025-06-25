@@ -9,57 +9,57 @@ import { storage } from '@/lib/storage';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
-  const [albums, setAlbums] = useState<Album[]>([]);
+  const [cineLibraries, setCineLibraries] = useState<Album[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [showCreateModal, setShowCreateModal] = useState(false);
-  const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
+  const [selectedLibrary, setSelectedLibrary] = useState<Album | null>(null);
   const { toast } = useToast();
 
-  // Load albums from storage on component mount
+  // Load libraries from storage on component mount
   useEffect(() => {
-    const savedAlbums = storage.getAlbums();
-    setAlbums(savedAlbums);
+    const saved = storage.getAlbums();
+    setCineLibraries(saved);
   }, []);
 
-  // Save albums to storage whenever albums change
+  // Save libraries to storage whenever they change
   useEffect(() => {
-    storage.saveAlbums(albums);
-  }, [albums]);
+    storage.saveAlbums(cineLibraries);
+  }, [cineLibraries]);
 
-  const handleCreateAlbum = (albumData: Omit<Album, 'id' | 'createdAt' | 'updatedAt'>) => {
-    const newAlbum: Album = {
-      ...albumData,
+  const handleCreateLibrary = (libraryData: Omit<Album, 'id' | 'createdAt' | 'updatedAt'>) => {
+    const newLibrary: Album = {
+      ...libraryData,
       id: crypto.randomUUID(),
       createdAt: new Date(),
       updatedAt: new Date()
     };
 
-    setAlbums(prev => [newAlbum, ...prev]);
+    setCineLibraries(prev => [newLibrary, ...prev]);
     setShowCreateModal(false);
     
     toast({
-      title: "Album Created",
-      description: `"${newAlbum.name}" has been added to your collection.`,
+      title: "CineLibrary Created",
+      description: `"${newLibrary.name}" has been added to your collection.`,
     });
   };
 
-  const handleSelectAlbum = (album: Album) => {
-    setSelectedAlbum(album);
+  const handleSelectLibrary = (library: Album) => {
+    setSelectedLibrary(library);
   };
 
-  const handleUpdateAlbum = (updatedAlbum: Album) => {
-    setAlbums(prev => prev.map(album => 
-      album.id === updatedAlbum.id ? updatedAlbum : album
+  const handleUpdateLibrary = (updatedLibrary: Album) => {
+    setCineLibraries(prev => prev.map(library => 
+      library.id === updatedLibrary.id ? updatedLibrary : library
     ));
   };
 
-  const handleDeleteAlbum = (albumId: string) => {
-    const album = albums.find(a => a.id === albumId);
-    setAlbums(prev => prev.filter(a => a.id !== albumId));
+  const handleDeleteLibrary = (libraryId: string) => {
+    const library = cineLibraries.find(l => l.id === libraryId);
+    setCineLibraries(prev => prev.filter(l => l.id !== libraryId));
     
     toast({
-      title: "Album Deleted",
-      description: `"${album?.name}" has been removed from your collection.`,
+      title: "CineLibrary Deleted",
+      description: `"${library?.name}" has been removed from your collection.`,
       variant: "destructive",
     });
   };
@@ -72,15 +72,15 @@ const Index = () => {
     setShowCreateModal(true);
   };
 
-  // If an album is selected, show the detail view
-  if (selectedAlbum) {
+  // If a library is selected, show the detail view
+  if (selectedLibrary) {
     return (
       <ThemeProvider>
         <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
           <AlbumDetail
-            album={selectedAlbum}
-            onBack={() => setSelectedAlbum(null)}
-            onUpdateAlbum={handleUpdateAlbum}
+            album={selectedLibrary}
+            onBack={() => setSelectedLibrary(null)}
+            onUpdateAlbum={handleUpdateLibrary}
           />
         </div>
       </ThemeProvider>
@@ -93,15 +93,15 @@ const Index = () => {
         <Header
           onCreateAlbum={handleOpenCreateModal}
           onSearch={handleSearch}
-          albumCount={albums.length}
+          albumCount={cineLibraries.length}
         />
         
         <main>
           <AlbumGrid
-            albums={albums}
-            onCreateAlbum={handleCreateAlbum}
-            onSelectAlbum={handleSelectAlbum}
-            onDeleteAlbum={handleDeleteAlbum}
+            albums={cineLibraries}
+            onCreateAlbum={handleCreateLibrary}
+            onSelectAlbum={handleSelectLibrary}
+            onDeleteAlbum={handleDeleteLibrary}
             searchQuery={searchQuery}
             showCreateModal={showCreateModal}
             onCloseCreateModal={() => setShowCreateModal(false)}
