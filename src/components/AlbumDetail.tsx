@@ -49,7 +49,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
     
     toast({
       title: "Item Removed",
-      description: `"${item?.title}" has been removed from the album.`,
+      description: `"${item?.title}" has been removed from the CineLibrary.`,
       variant: "destructive",
     });
   };
@@ -74,11 +74,11 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
       <div className="flex items-center gap-4 mb-8">
         <Button onClick={onBack} variant="outline" size="sm">
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Albums
+          Back to CineLibraries
         </Button>
       </div>
 
-      {/* Album Info */}
+      {/* CineLibrary Info */}
       <div className="mb-8">
         <div className="flex items-center gap-6">
           {/* Cover */}
@@ -119,9 +119,6 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                   {watchedCount} watched
                 </Badge>
               )}
-              <Badge variant="outline" className="capitalize">
-                {album.layout} layout
-              </Badge>
             </div>
           </div>
 
@@ -137,7 +134,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
       {album.items.length === 0 ? (
         <div className="text-center py-12">
           <h3 className="text-lg font-medium text-muted-foreground mb-2">
-            No items in this album yet
+            No items in this CineLibrary yet
           </h3>
           <p className="text-sm text-muted-foreground mb-4">
             Start building your collection by adding movies and TV shows
@@ -148,11 +145,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
           </Button>
         </div>
       ) : (
-        <div className={`grid gap-6 ${
-          album.layout === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' :
-          album.layout === 'instagram' ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' :
-          'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-        }`}>
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {album.items.map((item, index) => (
             <Card
               key={item.id}

@@ -89,9 +89,6 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
               </Badge>
             )}
           </div>
-          <Badge variant="outline" className="text-xs capitalize">
-            {album.layout}
-          </Badge>
         </div>
 
         {/* Created Date */}
