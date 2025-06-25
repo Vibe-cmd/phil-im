@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 interface RecommendationCardProps {
   movie: AlbumItem;
@@ -22,13 +23,77 @@ export const RecommendationCard = ({
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = () => {
-    if (onSubmitRecommendation && comment.trim() && rating > 0) {
-      onSubmitRecommendation(movie.id, comment, rating);
+  const handleSubmit = async () => {
+    if (!comment.trim() || rating === 0) {
+      toast({
+        title: "Missing Information",
+        description: "Please provide both a comment and rating.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        await navigator.share({
+          title: `Movie Recommendation: ${movie.title}`,
+          text: `I recommend "${movie.title}" (${rating}/10)!\n\n${comment}\n\nShared via फ़ीLim`,
+          url: window.location.href
+        });
+        
+        toast({
+          title: "Recommendation Shared!",
+          description: "Your movie recommendation has been shared successfully.",
+        });
+      } else {
+        // Fallback: Copy to clipboard
+        const shareText = `🎬 Movie Recommendation: ${movie.title}\n\n⭐ Rating: ${rating}/10\n\n💬 "${comment}"\n\nShared via फ़ीLim`;
+        
+        await navigator.clipboard.writeText(shareText);
+        
+        toast({
+          title: "Copied to Clipboard!",
+          description: "Your recommendation has been copied. You can now paste it anywhere to share.",
+        });
+      }
+      
+      // Call the callback if provided
+      if (onSubmitRecommendation) {
+        onSubmitRecommendation(movie.id, comment, rating);
+      }
+      
+      // Reset form and close
       setComment('');
       setRating(0);
       onClose();
+      
+    } catch (error) {
+      console.error('Share failed:', error);
+      
+      // Fallback: Copy to clipboard
+      try {
+        const shareText = `🎬 Movie Recommendation: ${movie.title}\n\n⭐ Rating: ${rating}/10\n\n💬 "${comment}"\n\nShared via फ़ीLim`;
+        await navigator.clipboard.writeText(shareText);
+        
+        toast({
+          title: "Copied to Clipboard!",
+          description: "Sharing was not available, but your recommendation has been copied to clipboard.",
+        });
+      } catch (clipboardError) {
+        toast({
+          title: "Share Failed",
+          description: "Unable to share or copy the recommendation. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -109,19 +174,20 @@ export const RecommendationCard = ({
               variant="outline"
               onClick={onClose}
               className="flex-1"
+              disabled={isSubmitting}
             >
               Cancel
             </Button>
             <Button
               onClick={handleSubmit}
-              disabled={!comment.trim() || rating === 0}
+              disabled={!comment.trim() || rating === 0 || isSubmitting}
               className="flex-1"
               style={{ 
                 backgroundColor: 'var(--theme-primary)',
                 color: 'white'
               }}
             >
-              Share Recommendation
+              {isSubmitting ? 'Sharing...' : 'Share Recommendation'}
             </Button>
           </div>
         </CardContent>

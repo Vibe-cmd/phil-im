@@ -17,7 +17,29 @@ const themes: Theme[] = [
     },
     font: 'Inter',
     preview: 'bg-gradient-to-br from-slate-900 via-slate-800 to-pink-900',
-    emojis: ['💫', '🌟', '✨', '🎨', '🌙']
+    emojis: ['💫', '🌟', '✨', '🎨', '🌙'],
+    category: 'Modern',
+    tagline: 'Clean and elegant',
+    modes: {
+      light: {
+        colors: ['#ec4899', '#64748b', '#f472b6', '#ffffff', '#0f172a'],
+        font: { name: 'Inter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💫', '🌟', '✨', '🎨', '🌙'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#ec4899', '#64748b', '#f472b6', '#0f172a', '#1e293b'],
+        font: { name: 'Inter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💫', '🌟', '✨', '🎨', '🌙'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#ec4899', '#000000', '#ffffff', '#f472b6', '#64748b'],
+        font: { name: 'Inter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💫', '🌟', '✨', '🎨', '🌙'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'spider-verse',
@@ -32,7 +54,29 @@ const themes: Theme[] = [
     },
     font: 'Anime Ace',
     preview: 'bg-gradient-to-br from-red-600 via-blue-500 to-yellow-400',
-    emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆']
+    emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
+    category: 'Superhero',
+    tagline: 'With great power comes great responsibility.',
+    modes: {
+      light: {
+        colors: ['#FF1E56', '#00B7EB', '#FFFFFF', '#F5E050', '#FF6F61'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#0288D1', '#1C2526', '#E0C120', '#E64A45'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
+      },
+      highContrast: {
+        colors: ['#FF1E56', '#000000', '#FFFFFF', '#FFFF00', '#FF6F61'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
+      }
+    }
   },
   {
     id: 'dune-desert',
@@ -47,7 +91,29 @@ const themes: Theme[] = [
     },
     font: 'Cinzel',
     preview: 'bg-gradient-to-br from-amber-600 via-orange-800 to-yellow-200',
-    emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌']
+    emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
+    category: 'Fantasy',
+    tagline: 'The spice must flow.',
+    modes: {
+      light: {
+        colors: ['#D9A86C', '#8B5523', '#F4E4BC', '#FFFFFF', '#3C2F2F'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D9A86C', '#8B5523', '#F4E4BC', '#0f172a', '#3C2F2F'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D9A86C', '#000000', '#FFFFFF', '#F4E4BC', '#8B5523'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'interstellar-space',
@@ -62,7 +128,29 @@ const themes: Theme[] = [
     },
     font: 'Orbitron',
     preview: 'bg-gradient-to-br from-blue-600 via-indigo-800 to-orange-400',
-    emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀']
+    emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
+    category: 'Science Fiction',
+    tagline: 'We must reach for the stars.',
+    modes: {
+      light: {
+        colors: ['#A3BFFA', '#3A5F7D', '#F4A261', '#FFFFFF', '#0B1C2E'],
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A3BFFA', '#3A5F7D', '#F4A261', '#0f172a', '#0B1C2E'],
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A3BFFA', '#000000', '#FFFFFF', '#F4A261', '#3A5F7D'],
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'matrix-code',
@@ -77,7 +165,29 @@ const themes: Theme[] = [
     },
     font: 'VT323',
     preview: 'bg-gradient-to-br from-green-500 via-teal-800 to-black',
-    emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐']
+    emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
+    category: 'Science Fiction',
+    tagline: 'There is no spoon.',
+    modes: {
+      light: {
+        colors: ['#4CAF50', '#00FF00', '#2E7D32', '#FFFFFF', '#0F3D3E'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#4CAF50', '#00FF00', '#2E7D32', '#0f172a', '#0F3D3E'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#4CAF50', '#000000', '#FFFFFF', '#00FF00', '#2E7D32'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'hogwarts-magic',
@@ -92,7 +202,29 @@ const themes: Theme[] = [
     },
     font: 'Luminary',
     preview: 'bg-gradient-to-br from-amber-600 via-yellow-500 to-green-700',
-    emojis: ['🪄', '⚡', '🦁', '🏰', '📖']
+    emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
+    category: 'Fantasy',
+    tagline: 'It does not do to dwell on dreams and forget to live.',
+    modes: {
+      light: {
+        colors: ['#A68A64', '#FFD700', '#2A623D', '#FFFFFF', '#4A3728'],
+        font: { name: 'Luminary', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A68A64', '#FFD700', '#2A623D', '#0f172a', '#4A3728'],
+        font: { name: 'Luminary', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A68A64', '#000000', '#FFFFFF', '#FFD700', '#2A623D'],
+        font: { name: 'Luminary', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'batman-dark',
@@ -107,7 +239,29 @@ const themes: Theme[] = [
     },
     font: 'Gotham',
     preview: 'bg-gradient-to-br from-gray-800 via-black to-yellow-600',
-    emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓']
+    emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
+    category: 'Superhero',
+    tagline: 'I am vengeance, I am the night, I am Batman!',
+    modes: {
+      light: {
+        colors: ['#B0BEC5', '#4A4A4A', '#FFCA28', '#FFFFFF', '#1C2526'],
+        font: { name: 'Gotham', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#B0BEC5', '#4A4A4A', '#FFCA28', '#0f172a', '#1C2526'],
+        font: { name: 'Gotham', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#B0BEC5', '#000000', '#FFFFFF', '#FFCA28', '#4A4A4A'],
+        font: { name: 'Gotham', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'wakanda-vibranium',
@@ -122,7 +276,29 @@ const themes: Theme[] = [
     },
     font: 'Futura',
     preview: 'bg-gradient-to-br from-purple-600 via-yellow-600 to-gold',
-    emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️']
+    emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
+    category: 'Fantasy',
+    tagline: 'Wakanda forever!',
+    modes: {
+      light: {
+        colors: ['#D4A017', '#6B3FA0', '#FFD700', '#FFFFFF', '#2C1A3D'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D4A017', '#6B3FA0', '#FFD700', '#0f172a', '#2C1A3D'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D4A017', '#000000', '#FFFFFF', '#FFD700', '#6B3FA0'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'loki-mischief',
@@ -137,7 +313,29 @@ const themes: Theme[] = [
     },
     font: 'Papyrus',
     preview: 'bg-gradient-to-br from-teal-600 via-yellow-500 to-orange-400',
-    emojis: ['🗡️', '🕰️', '👑', '🐍', '🪄']
+    emojis: ['🗡️', '🕰️', '👑', '🐍', '🪄'],
+    category: 'Fantasy',
+    tagline: 'I am burdened with glorious purpose.',
+    modes: {
+      light: {
+        colors: ['#2A9D8F', '#E9C46A', '#F4A261', '#FFFFFF', '#264653'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🕰️', '👑', '🐍', '🪄'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#2A9D8F', '#E9C46A', '#F4A261', '#0f172a', '#264653'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🕰️', '👑', '🐍', '🪄'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#2A9D8F', '#000000', '#FFFFFF', '#F4A261', '#E9C46A'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🕰️', '👑', '🐍', '🪄'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'peaky-blinders',
@@ -152,7 +350,29 @@ const themes: Theme[] = [
     },
     font: 'Bebas Neue',
     preview: 'bg-gradient-to-br from-amber-700 via-brown-600 to-gray-800',
-    emojis: ['🧢', '🚬', '🔫', '🥃', '🕴️']
+    emojis: ['🧢', '🚬', '🔫', '🥃', '🕴️'],
+    category: 'Crime',
+    tagline: 'By order of the Peaky Blinders.',
+    modes: {
+      light: {
+        colors: ['#D9C2A6', '#8B6F47', '#4A3728', '#FFFFFF', '#3C2F2F'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🧢', '🚬', '🔫', '🥃', '🕴️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D9C2A6', '#8B6F47', '#4A3728', '#0f172a', '#3C2F2F'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🧢', '🚬', '🔫', '🥃', '🕴️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D9C2A6', '#000000', '#FFFFFF', '#8B6F47', '#4A3728'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🧢', '🚬', '🔫', '🥃', '🕴️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'mcu-avengers',
@@ -167,7 +387,29 @@ const themes: Theme[] = [
     },
     font: 'Avenir',
     preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-blue-500',
-    emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌']
+    emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
+    category: 'Superhero',
+    tagline: 'Avengers, assemble!',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#FFD700', '#00B7EB', '#FFFFFF', '#1C2526'],
+        font: { name: 'Avenir', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#FFD700', '#00B7EB', '#0f172a', '#1C2526'],
+        font: { name: 'Avenir', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#00B7EB', '#FFD700'],
+        font: { name: 'Avenir', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'squid-game',
@@ -182,7 +424,29 @@ const themes: Theme[] = [
     },
     font: 'Roboto Condensed',
     preview: 'bg-gradient-to-br from-pink-600 via-blue-600 to-green-500',
-    emojis: ['🎮', '🟥', '🟢', '🔺', '⬛']
+    emojis: ['🎮', '🟥', '🟢', '🔺', '⬛'],
+    category: 'Science Fiction',
+    tagline: 'Ready, set, play.',
+    modes: {
+      light: {
+        colors: ['#E91E63', '#0288D1', '#4CAF50', '#FFFFFF', '#1C2526'],
+        font: { name: 'Roboto Condensed', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎮', '🟥', '🟢', '🔺', '⬛'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#E91E63', '#0288D1', '#4CAF50', '#0f172a', '#1C2526'],
+        font: { name: 'Roboto Condensed', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎮', '🟥', '🟢', '🔺', '⬛'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#E91E63', '#000000', '#FFFFFF', '#4CAF50', '#0288D1'],
+        font: { name: 'Roboto Condensed', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎮', '🟥', '🟢', '🔺', '⬛'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'game-of-thrones',
@@ -197,7 +461,29 @@ const themes: Theme[] = [
     },
     font: 'Trajan Pro',
     preview: 'bg-gradient-to-br from-yellow-600 via-amber-700 to-gray-800',
-    emojis: ['👑', '🐉', '⚔️', '🛡️', '❄️']
+    emojis: ['👑', '🐉', '⚔️', '🛡️', '❄️'],
+    category: 'Fantasy',
+    tagline: 'Winter is coming.',
+    modes: {
+      light: {
+        colors: ['#FFD700', '#8B6F47', '#4A3728', '#FFFFFF', '#3C2F2F'],
+        font: { name: 'Trajan Pro', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['👑', '🐉', '⚔️', '🛡️', '❄️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#FFD700', '#8B6F47', '#4A3728', '#0f172a', '#3C2F2F'],
+        font: { name: 'Trajan Pro', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['👑', '🐉', '⚔️', '🛡️', '❄️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#FFD700', '#000000', '#FFFFFF', '#8B6F47', '#4A3728'],
+        font: { name: 'Trajan Pro', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['👑', '🐉', '⚔️', '🛡️', '❄️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'avatar-pandora',
@@ -212,7 +498,29 @@ const themes: Theme[] = [
     },
     font: 'Papyrus',
     preview: 'bg-gradient-to-br from-cyan-600 via-green-500 to-teal-800',
-    emojis: ['🌍', '🐉', '🌿', '🪶', '🦋']
+    emojis: ['🌍', '🐉', '🌿', '🪶', '🦋'],
+    category: 'Fantasy',
+    tagline: 'We are one with the forest.',
+    modes: {
+      light: {
+        colors: ['#00A3AD', '#A3D39C', '#4CAF50', '#FFFFFF', '#1B263B'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌍', '🐉', '🌿', '🪶', '🦋'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#00A3AD', '#A3D39C', '#4CAF50', '#0f172a', '#1B263B'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌍', '🐉', '🌿', '🪶', '🦋'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#00A3AD', '#000000', '#FFFFFF', '#A3D39C', '#00A3AD'],
+        font: { name: 'Papyrus', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌍', '🐉', '🌿', '🪶', '🦋'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'casa-de-papel',
@@ -227,7 +535,29 @@ const themes: Theme[] = [
     },
     font: 'Eurostile',
     preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-gray-500',
-    emojis: ['🎭', '💰', '🔫', '🕴️', '📜']
+    emojis: ['🎭', '💰', '🔫', '🕴️', '📜'],
+    category: 'Crime',
+    tagline: 'Bella Ciao!',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#FFD700', '#B0BEC5', '#FFFFFF', '#4A3728'],
+        font: { name: 'Eurostile', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎭', '💰', '🔫', '🕴️', '📜'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#FFD700', '#B0BEC5', '#0f172a', '#4A3728'],
+        font: { name: 'Eurostile', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎭', '💰', '🔫', '🕴️', '📜'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#FFD700', '#B0BEC5'],
+        font: { name: 'Eurostile', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎭', '💰', '🔫', '🕴️', '📜'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'witcher-geralt',
@@ -242,7 +572,29 @@ const themes: Theme[] = [
     },
     font: 'Cinzel',
     preview: 'bg-gradient-to-br from-amber-600 via-yellow-500 to-green-800',
-    emojis: ['⚔️', '🐺', '🪄', '👑', '🧙‍♂️']
+    emojis: ['⚔️', '🐺', '🪄', '👑', '🧙‍♂️'],
+    category: 'Fantasy',
+    tagline: 'Destiny is a beast.',
+    modes: {
+      light: {
+        colors: ['#A68A64', '#FFD700', '#4A3728', '#FFFFFF', '#4A3728'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚔️', '🐺', '🪄', '👑', '🧙‍♂️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A68A64', '#FFD700', '#4A3728', '#0f172a', '#4A3728'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚔️', '🐺', '🪄', '👑', '🧙‍♂️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A68A64', '#000000', '#FFFFFF', '#FFD700', '#4A3728'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚔️', '🐺', '🪄', '👑', '🧙‍♂️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'deadpool-chaos',
@@ -257,7 +609,29 @@ const themes: Theme[] = [
     },
     font: 'Impact',
     preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-gray-500',
-    emojis: ['🗡️', '🔫', '😂', '💥', '🌮']
+    emojis: ['🗡️', '🔫', '😂', '💥', '🌮'],
+    category: 'Superhero',
+    tagline: 'Maximum effort!',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#FFD700', '#B0BEC5', '#FFFFFF', '#4A4A4A'],
+        font: { name: 'Impact', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🔫', '😂', '💥', '🌮'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#FFD700', '#B0BEC5', '#0f172a', '#4A4A4A'],
+        font: { name: 'Impact', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🔫', '😂', '💥', '🌮'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#FFD700', '#B0BEC5'],
+        font: { name: 'Impact', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🗡️', '🔫', '😂', '💥', '🌮'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'studio-ghibli',
@@ -272,7 +646,29 @@ const themes: Theme[] = [
     },
     font: 'Anime Ace',
     preview: 'bg-gradient-to-br from-green-400 via-cyan-500 to-yellow-400',
-    emojis: ['🌸', '🐾', '🌿', '🪄', '🍃']
+    emojis: ['🌸', '🐾', '🌿', '🪄', '🍃'],
+    category: 'Fantasy',
+    tagline: 'The wind rises, we must try to live.',
+    modes: {
+      light: {
+        colors: ['#A3D39C', '#00A3AD', '#FFD700', '#FFFFFF', '#2A623D'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌸', '🐾', '🌿', '🪄', '🍃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A3D39C', '#00A3AD', '#FFD700', '#0f172a', '#2A623D'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌸', '🐾', '🌿', '🪄', '🍃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A3D39C', '#000000', '#FFFFFF', '#FFD700', '#00A3AD'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🌸', '🐾', '🌿', '🪄', '🍃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'jumanji-jungle',
@@ -287,7 +683,29 @@ const themes: Theme[] = [
     },
     font: 'Jungle Fever',
     preview: 'bg-gradient-to-br from-green-700 via-amber-600 to-yellow-500',
-    emojis: ['🎲', '🦒', '🌴', '🪐', '🗺️']
+    emojis: ['🎲', '🦒', '🌴', '🪐', '🗺️'],
+    category: 'Fantasy',
+    tagline: 'In the jungle, you must wait, until the dice read five or eight.',
+    modes: {
+      light: {
+        colors: ['#2A623D', '#8B6F47', '#D9A86C', '#FFFFFF', '#1A472A'],
+        font: { name: 'Jungle Fever', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎲', '🦒', '🌴', '🪐', '🗺️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#2A623D', '#8B6F47', '#D9A86C', '#0f172a', '#1A472A'],
+        font: { name: 'Jungle Fever', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎲', '🦒', '🌴', '🪐', '🗺️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#2A623D', '#000000', '#FFFFFF', '#D9A86C', '#8B6F47'],
+        font: { name: 'Jungle Fever', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🎲', '🦒', '🌴', '🪐', '🗺️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'titanic-romance',
@@ -302,7 +720,29 @@ const themes: Theme[] = [
     },
     font: 'Great Vibes',
     preview: 'bg-gradient-to-br from-blue-400 via-yellow-500 to-amber-600',
-    emojis: ['🚢', '💎', '🌊', '❤️', '🎻']
+    emojis: ['🚢', '💎', '🌊', '❤️', '🎻'],
+    category: 'Fantasy',
+    tagline: "I'm the king of the world!",
+    modes: {
+      light: {
+        colors: ['#A3BFFA', '#FFD700', '#D9C2A6', '#FFFFFF', '#1B263B'],
+        font: { name: 'Great Vibes', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚢', '💎', '🌊', '❤️', '🎻'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A3BFFA', '#FFD700', '#D9C2A6', '#0f172a', '#1B263B'],
+        font: { name: 'Great Vibes', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚢', '💎', '🌊', '❤️', '🎻'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A3BFFA', '#000000', '#FFFFFF', '#D9C2A6', '#FFD700'],
+        font: { name: 'Great Vibes', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚢', '💎', '🌊', '❤️', '🎻'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   // Adding all the missing themes from knowledge base
   {
@@ -318,7 +758,29 @@ const themes: Theme[] = [
     },
     font: 'Bebas Neue',
     preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-gray-600',
-    emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇']
+    emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇'],
+    category: 'Superhero',
+    tagline: 'Your legacy is more than a name.',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#FFD700', '#4A4A4A', '#FFFFFF', '#1C2526'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#FFD700', '#4A4A4A', '#0f172a', '#1C2526'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#FFD700', '#4A4A4A'],
+        font: { name: 'Bebas Neue', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🥊', '🏋️‍♂️', '🏟️', '💪', '🥇'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'narcotic-narcos',
@@ -333,7 +795,29 @@ const themes: Theme[] = [
     },
     font: 'Oswald',
     preview: 'bg-gradient-to-br from-yellow-600 via-amber-700 to-brown-800',
-    emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️']
+    emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️'],
+    category: 'Crime',
+    tagline: 'Plata o plomo.',
+    modes: {
+      light: {
+        colors: ['#FFD700', '#8B6F47', '#4A3728', '#FFFFFF', '#3C2F2F'],
+        font: { name: 'Oswald', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#FFD700', '#8B6F47', '#4A3728', '#0f172a', '#3C2F2F'],
+        font: { name: 'Oswald', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#FFD700', '#000000', '#FFFFFF', '#4A3728', '#8B6F47'],
+        font: { name: 'Oswald', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🔫', '💸', '🚬', '🕴️', '🛩️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'jester-joker',
@@ -348,7 +832,29 @@ const themes: Theme[] = [
     },
     font: 'Creepster',
     preview: 'bg-gradient-to-br from-green-500 via-red-600 to-yellow-500',
-    emojis: ['🃏', '😂', '🎭', '🩸', '🌃']
+    emojis: ['🃏', '😂', '🎭', '🩸', '🌃'],
+    category: 'Superhero',
+    tagline: 'Why so serious?',
+    modes: {
+      light: {
+        colors: ['#4CAF50', '#D81F26', '#FFD700', '#FFFFFF', '#1C2526'],
+        font: { name: 'Creepster', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🃏', '😂', '🎭', '🩸', '🌃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#4CAF50', '#D81F26', '#FFD700', '#0f172a', '#1C2526'],
+        font: { name: 'Creepster', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🃏', '😂', '🎭', '🩸', '🌃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#4CAF50', '#000000', '#FFFFFF', '#FFD700', '#D81F26'],
+        font: { name: 'Creepster', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🃏', '😂', '🎭', '🩸', '🌃'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'twisted-tenet',
@@ -363,7 +869,29 @@ const themes: Theme[] = [
     },
     font: 'Futura',
     preview: 'bg-gradient-to-br from-blue-400 via-red-600 to-yellow-500',
-    emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌']
+    emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌'],
+    category: 'Fantasy',
+    tagline: "Don't try to understand it, feel it.",
+    modes: {
+      light: {
+        colors: ['#A3BFFA', '#D81F26', '#FFD700', '#FFFFFF', '#1B263B'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#A3BFFA', '#D81F26', '#FFD700', '#0f172a', '#1B263B'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#A3BFFA', '#000000', '#FFFFFF', '#FFD700', '#D81F26'],
+        font: { name: 'Futura', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕰️', '🔄', '🛩️', '🕴️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'wistful-wandavision',
@@ -378,7 +906,29 @@ const themes: Theme[] = [
     },
     font: 'American Typewriter',
     preview: 'bg-gradient-to-br from-red-600 via-blue-400 to-yellow-500',
-    emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌']
+    emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌'],
+    category: 'Fantasy',
+    tagline: 'What is grief, if not love persevering?',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#A3BFFA', '#FFD700', '#FFFFFF', '#1C2526'],
+        font: { name: 'American Typewriter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#A3BFFA', '#FFD700', '#0f172a', '#1C2526'],
+        font: { name: 'American Typewriter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#A3BFFA', '#D81F26'],
+        font: { name: 'American Typewriter', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🪄', '📺', '❤️', '🧙‍♀️', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'rebel-robot',
@@ -393,7 +943,29 @@ const themes: Theme[] = [
     },
     font: 'VT323',
     preview: 'bg-gradient-to-br from-green-500 via-red-500 to-green-600',
-    emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐']
+    emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐'],
+    category: 'Science Fiction',
+    tagline: 'Hello, friend.',
+    modes: {
+      light: {
+        colors: ['#00FF00', '#FF1E56', '#4CAF50', '#FFFFFF', '#0F3D3E'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#00FF00', '#FF1E56', '#4CAF50', '#0f172a', '#0F3D3E'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#00FF00', '#000000', '#FFFFFF', '#FF1E56', '#4CAF50'],
+        font: { name: 'VT323', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💾', '🖥️', '🕶️', '🔒', '🌐'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'mischievous-minions',
@@ -408,7 +980,29 @@ const themes: Theme[] = [
     },
     font: 'Comic Sans MS',
     preview: 'bg-gradient-to-br from-orange-400 via-blue-500 to-yellow-400',
-    emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉']
+    emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉'],
+    category: 'Crime',
+    tagline: 'Bananaaaa!',
+    modes: {
+      light: {
+        colors: ['#F4A261', '#00B7EB', '#FFD700', '#FFFFFF', '#1C2526'],
+        font: { name: 'Comic Sans MS', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#F4A261', '#00B7EB', '#FFD700', '#0f172a', '#1C2526'],
+        font: { name: 'Comic Sans MS', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#F4A261', '#000000', '#FFFFFF', '#FFD700', '#00B7EB'],
+        font: { name: 'Comic Sans MS', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🍌', '😈', '👨‍🚀', '🦁', '🎉'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'arcane-aura',
@@ -423,7 +1017,29 @@ const themes: Theme[] = [
     },
     font: 'Anime Ace',
     preview: 'bg-gradient-to-br from-teal-600 via-yellow-500 to-orange-400',
-    emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️']
+    emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️'],
+    category: 'Fantasy',
+    tagline: 'Every legend has a beginning.',
+    modes: {
+      light: {
+        colors: ['#2A9D8F', '#E9C46A', '#F4A261', '#FFFFFF', '#1B263B'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#2A9D8F', '#E9C46A', '#F4A261', '#0f172a', '#1B263B'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#2A9D8F', '#000000', '#FFFFFF', '#F4A261', '#E9C46A'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['⚙️', '🪄', '💥', '🧙‍♀️', '🏙️'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'rambunctious-rick',
@@ -438,7 +1054,29 @@ const themes: Theme[] = [
     },
     font: 'Get Schwifty',
     preview: 'bg-gradient-to-br from-blue-500 via-orange-400 to-green-500',
-    emojis: ['🚀', '🧪', '👽', '🌀', '🌌']
+    emojis: ['🚀', '🧪', '👽', '🌀', '🌌'],
+    category: 'Superhero',
+    tagline: 'Wubba lubba dub dub!',
+    modes: {
+      light: {
+        colors: ['#00B7EB', '#F4A261', '#4CAF50', '#FFFFFF', '#1C2526'],
+        font: { name: 'Get Schwifty', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚀', '🧪', '👽', '🌀', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#00B7EB', '#F4A261', '#4CAF50', '#0f172a', '#1C2526'],
+        font: { name: 'Get Schwifty', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚀', '🧪', '👽', '🌀', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#00B7EB', '#000000', '#FFFFFF', '#F4A261', '#4CAF50'],
+        font: { name: 'Get Schwifty', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🚀', '🧪', '👽', '🌀', '🌌'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'sacred-syndicate',
@@ -453,7 +1091,29 @@ const themes: Theme[] = [
     },
     font: 'Noto Serif Devanagari',
     preview: 'bg-gradient-to-br from-red-600 via-yellow-500 to-amber-700',
-    emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸']
+    emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸'],
+    category: 'Crime',
+    tagline: 'Jo bhi main bolta hoon, vahi sahi hai.',
+    modes: {
+      light: {
+        colors: ['#D81F26', '#FFD700', '#8B6F47', '#FFFFFF', '#2A3728'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#D81F26', '#FFD700', '#8B6F47', '#0f172a', '#2A3728'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#D81F26', '#000000', '#FFFFFF', '#FFD700', '#8B6F47'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['🕴️', '🔫', '🛕', '🌃', '🩸'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'bountiful-bollywood',
@@ -468,7 +1128,29 @@ const themes: Theme[] = [
     },
     font: 'Noto Serif Devanagari',
     preview: 'bg-gradient-to-br from-yellow-500 via-red-600 to-blue-500',
-    emojis: ['💃', '🕺', '🎬', '🎶', '🌹']
+    emojis: ['💃', '🕺', '🎬', '🎶', '🌹'],
+    category: 'Fantasy',
+    tagline: 'Pyaar dosti hai.',
+    modes: {
+      light: {
+        colors: ['#FFD700', '#D81F26', '#00B7EB', '#FFFFFF', '#1C2526'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💃', '🕺', '🎬', '🎶', '🌹'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#FFD700', '#D81F26', '#00B7EB', '#0f172a', '#1C2526'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💃', '🕺', '🎬', '🎶', '🌹'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#FFD700', '#000000', '#FFFFFF', '#00B7EB', '#D81F26'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💃', '🕺', '🎬', '🎶', '🌹'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   },
   {
     id: 'dharma-delight',
@@ -483,7 +1165,29 @@ const themes: Theme[] = [
     },
     font: 'Noto Serif Devanagari',
     preview: 'bg-gradient-to-br from-pink-600 via-yellow-500 to-blue-500',
-    emojis: ['💕', '🎬', '💃', '🕺', '🌟']
+    emojis: ['💕', '🎬', '💃', '🕺', '🌟'],
+    category: 'Fantasy',
+    tagline: 'Kuch kuch hota hai.',
+    modes: {
+      light: {
+        colors: ['#E91E63', '#FFD700', '#00B7EB', '#FFFFFF', '#1C2526'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💕', '🎬', '💃', '🕺', '🌟'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      dark: {
+        colors: ['#E91E63', '#FFD700', '#00B7EB', '#0f172a', '#1C2526'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💕', '🎬', '💃', '🕺', '🌟'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      },
+      highContrast: {
+        colors: ['#E91E63', '#000000', '#FFFFFF', '#00B7EB', '#FFD700'],
+        font: { name: 'Noto Serif Devanagari', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
+        emojis: ['💕', '🎬', '💃', '🕺', '🌟'],
+        animations: { buttonHover: 'pulse', pageTransition: 'fade', loader: 'spin' }
+      }
+    }
   }
 ];
 
@@ -710,3 +1414,5 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     </ThemeContext.Provider>
   );
 };
+
+</edits_to_apply>
