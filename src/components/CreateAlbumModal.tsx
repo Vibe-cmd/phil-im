@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Album } from '@/types';
 import { Button } from '@/components/ui/button';
@@ -270,8 +271,8 @@ export const CreateAlbumModal = ({ isOpen, onClose, onCreate }: CreateAlbumModal
                           background: emoji === emojiOption 
                             ? `rgba(var(--theme-primary-rgb), 0.2)` 
                             : `rgba(var(--theme-primary-rgb), 0.05)`,
-                          ringColor: 'var(--theme-primary)'
-                        }}
+                          '--tw-ring-color': 'var(--theme-primary)'
+                        } as React.CSSProperties}
                       >
                         {emojiOption}
                       </button>

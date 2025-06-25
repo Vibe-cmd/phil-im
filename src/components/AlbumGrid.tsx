@@ -37,7 +37,8 @@ export const AlbumGrid = ({
         <EmptyState onCreateAlbum={onOpenCreateModal} />
         {showCreateModal && (
           <CreateAlbumModal
-            onCreateAlbum={onCreateAlbum}
+            isOpen={showCreateModal}
+            onCreate={onCreateAlbum}
             onClose={onCloseCreateModal}
           />
         )}
@@ -50,7 +51,7 @@ export const AlbumGrid = ({
       {filteredAlbums.length === 0 ? (
         <div className="text-center py-12">
           <h3 className="text-lg font-medium text-muted-foreground mb-2">
-            No albums found
+            No CineLibraries found
           </h3>
           <p className="text-sm text-muted-foreground">
             Try adjusting your search terms
@@ -72,7 +73,8 @@ export const AlbumGrid = ({
 
       {showCreateModal && (
         <CreateAlbumModal
-          onCreateAlbum={onCreateAlbum}
+          isOpen={showCreateModal}
+          onCreate={onCreateAlbum}
           onClose={onCloseCreateModal}
         />
       )}

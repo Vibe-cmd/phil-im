@@ -30,15 +30,30 @@ export type MediaType = 'movie' | 'tv';
 
 export interface Movie {
   id: number;
-  title: string;
+  title?: string;
+  name?: string;
   overview: string;
   poster_path?: string;
-  release_date: string;
+  release_date?: string;
+  first_air_date?: string;
+  vote_average: number;
   media_type?: MediaType;
 }
 
 export interface Theme {
+  id: string;
   name: string;
+  description: string;
+  className: string;
+  colors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+  };
+  font: string;
+  preview: string;
+  emojis: string[];
   category: string;
   tagline: string;
   modes: {
