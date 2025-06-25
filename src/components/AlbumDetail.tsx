@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Album, AlbumItem } from '@/types';
 import { Button } from '@/components/ui/button';
@@ -72,7 +71,16 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <Button onClick={onBack} variant="outline" size="sm">
+        <Button 
+          onClick={onBack} 
+          variant="outline" 
+          size="sm"
+          style={{
+            borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+            color: 'var(--theme-primary)',
+            backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`
+          }}
+        >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to CineLibraries
         </Button>
@@ -82,7 +90,12 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
       <div className="mb-8">
         <div className="flex items-center gap-6">
           {/* Cover */}
-          <div className="w-32 h-48 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden flex-shrink-0">
+          <div 
+            className="w-32 h-48 rounded-lg overflow-hidden flex-shrink-0"
+            style={{
+              background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`
+            }}
+          >
             {album.coverImage ? (
               <img
                 src={album.coverImage}
@@ -94,7 +107,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                 {album.emoji ? (
                   <span className="text-4xl">{album.emoji}</span>
                 ) : (
-                  <div className="text-muted-foreground">No Cover</div>
+                  <div style={{ color: 'rgba(255, 255, 255, 0.6)' }}>No Cover</div>
                 )}
               </div>
             )}
@@ -102,20 +115,39 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
 
           {/* Info */}
           <div className="flex-1">
-            <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: album.font }}>
+            <h1 
+              className="text-4xl font-bold mb-2" 
+              style={{ 
+                fontFamily: 'var(--font-family)',
+                color: 'var(--theme-primary)'
+              }}
+            >
               {album.name}
             </h1>
             {album.description && (
-              <p className="text-muted-foreground text-lg mb-4">
+              <p className="text-lg mb-4" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 {album.description}
               </p>
             )}
             <div className="flex items-center gap-4">
-              <Badge variant="secondary">
+              <Badge 
+                variant="secondary"
+                style={{
+                  backgroundColor: `rgba(var(--theme-accent-rgb), 0.2)`,
+                  color: 'var(--theme-accent)',
+                  border: `1px solid rgba(var(--theme-accent-rgb), 0.3)`
+                }}
+              >
                 {album.items.length} {album.items.length === 1 ? 'item' : 'items'}
               </Badge>
               {watchedCount > 0 && (
-                <Badge variant="outline">
+                <Badge 
+                  variant="outline"
+                  style={{
+                    borderColor: `rgba(var(--theme-primary-rgb), 0.4)`,
+                    color: 'var(--theme-primary)'
+                  }}
+                >
                   {watchedCount} watched
                 </Badge>
               )}
@@ -123,7 +155,15 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
           </div>
 
           {/* Add Button */}
-          <Button onClick={() => setShowSearchModal(true)} size="lg">
+          <Button 
+            onClick={() => setShowSearchModal(true)} 
+            size="lg"
+            style={{
+              backgroundColor: 'var(--theme-primary)',
+              color: 'white'
+            }}
+            className="hover:opacity-90"
+          >
             <Plus className="w-5 h-5 mr-2" />
             Add Item
           </Button>
@@ -133,13 +173,19 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
       {/* Items Grid */}
       {album.items.length === 0 ? (
         <div className="text-center py-12">
-          <h3 className="text-lg font-medium text-muted-foreground mb-2">
+          <h3 className="text-lg font-medium mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
             No items in this CineLibrary yet
           </h3>
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm mb-4" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
             Start building your collection by adding movies and TV shows
           </p>
-          <Button onClick={() => setShowSearchModal(true)}>
+          <Button 
+            onClick={() => setShowSearchModal(true)}
+            style={{
+              backgroundColor: 'var(--theme-primary)',
+              color: 'white'
+            }}
+          >
             <Plus className="w-4 h-4 mr-2" />
             Add Your First Item
           </Button>
@@ -149,12 +195,21 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
           {album.items.map((item, index) => (
             <Card
               key={item.id}
-              className="group cursor-pointer overflow-hidden hover:shadow-lg transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group cursor-pointer overflow-hidden transition-all duration-300 animate-fade-in hover:scale-105"
+              style={{ 
+                animationDelay: `${index * 100}ms`,
+                background: `rgba(var(--theme-primary-rgb), 0.1)`,
+                backdropFilter: 'blur(20px)',
+                border: `1px solid rgba(var(--theme-primary-rgb), 0.2)`,
+                boxShadow: `0 8px 32px rgba(0, 0, 0, 0.1)`,
+              }}
               onClick={() => setSelectedItem(item)}
             >
               {/* Poster */}
-              <div className="relative aspect-[2/3] overflow-hidden bg-muted">
+              <div 
+                className="relative aspect-[2/3] overflow-hidden"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+              >
                 {item.posterPath ? (
                   <img
                     src={`https://image.tmdb.org/t/p/w500${item.posterPath}`}
@@ -162,7 +217,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                  <div className="w-full h-full flex items-center justify-center" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
                     No Image
                   </div>
                 )}
@@ -185,12 +240,23 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                   
                   <div className="absolute bottom-2 left-2">
                     {item.isWatched ? (
-                      <Badge className="bg-green-500">
+                      <Badge 
+                        style={{
+                          backgroundColor: 'var(--theme-accent)',
+                          color: 'white'
+                        }}
+                      >
                         <Eye className="w-3 h-3 mr-1" />
                         Watched
                       </Badge>
                     ) : (
-                      <Badge variant="secondary">
+                      <Badge 
+                        variant="secondary"
+                        style={{
+                          backgroundColor: `rgba(var(--theme-secondary-rgb), 0.8)`,
+                          color: 'white'
+                        }}
+                      >
                         <EyeOff className="w-3 h-3 mr-1" />
                         To Watch
                       </Badge>
@@ -201,15 +267,24 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
 
               {/* Info */}
               <div className="p-4">
-                <h3 className="font-semibold truncate mb-1">{item.title}</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <h3 className="font-semibold truncate mb-1" style={{ color: 'var(--theme-primary)' }}>
+                  {item.title}
+                </h3>
+                <p className="text-sm line-clamp-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                   {item.overview}
                 </p>
                 <div className="flex items-center justify-between mt-2">
-                  <Badge variant="outline" className="text-xs">
+                  <Badge 
+                    variant="outline" 
+                    className="text-xs"
+                    style={{
+                      borderColor: `rgba(var(--theme-accent-rgb), 0.4)`,
+                      color: 'var(--theme-accent)'
+                    }}
+                  >
                     {item.mediaType}
                   </Badge>
-                  <span className="text-xs text-muted-foreground">
+                  <span className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
                     {new Date(item.releaseDate).getFullYear()}
                   </span>
                 </div>

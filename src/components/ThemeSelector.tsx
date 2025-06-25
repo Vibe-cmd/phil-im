@@ -14,20 +14,12 @@ interface ThemeSelectorProps {
 export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
   const { themes, currentTheme, changeTheme, isSecondaryMode, toggleColorMode, customFont, setGoogleFont } = useTheme();
   const [fontInput, setFontInput] = useState(customFont);
-  const [searchTerm, setSearchTerm] = useState('');
 
   const handleFontSubmit = () => {
     if (fontInput.trim()) {
       setGoogleFont(fontInput.trim());
     }
   };
-
-  const filteredThemes = searchTerm 
-    ? themes.filter(theme => 
-        theme.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        theme.description.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    : themes;
 
   return (
     <Card className="p-6 glass-strong border-primary/20 animate-slide-up max-h-[90vh] overflow-y-auto scrollbar-theme">
@@ -50,16 +42,6 @@ export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
         <Button variant="ghost" size="sm" onClick={onClose} className="hover:scale-110 transition-transform">
           ✕
         </Button>
-      </div>
-
-      {/* Search Bar */}
-      <div className="mb-6">
-        <Input
-          placeholder="Search themes by name or franchise..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="bg-background/50 border-[var(--theme-primary)]/30 focus:border-[var(--theme-accent)]"
-        />
       </div>
 
       {/* Custom Google Font Section */}
@@ -100,9 +82,9 @@ export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
       
       {/* Theme Grid */}
       <div className="space-y-6">
-        <h4 className="text-lg font-semibold">Available Themes ({filteredThemes.length})</h4>
+        <h4 className="text-lg font-semibold">Available Themes ({themes.length})</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredThemes.map((theme) => (
+          {themes.map((theme) => (
             <ThemeCard key={theme.id} theme={theme} currentTheme={currentTheme} onSelect={changeTheme} isSecondaryMode={isSecondaryMode} />
           ))}
         </div>
@@ -146,20 +128,14 @@ const ThemeCard = ({ theme, currentTheme, onSelect, isSecondaryMode }: any) => {
             />
           </div>
           
-          {/* Floating font sample */}
+          {/* Floating theme name */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
             <div className="text-center transform group-hover:scale-110 transition-transform duration-300">
               <span 
-                className="text-white text-2xl font-bold px-4 py-2 rounded-lg bg-black/60 block mb-2 animate-shimmer"
+                className="text-white text-2xl font-bold px-4 py-2 rounded-lg bg-black/60 block animate-shimmer"
                 style={{ fontFamily: theme.font }}
               >
                 {theme.name.split(' ')[0]}
-              </span>
-              <span 
-                className="text-white text-sm px-3 py-1 rounded bg-black/40"
-                style={{ fontFamily: theme.font }}
-              >
-                {theme.font}
               </span>
             </div>
           </div>
@@ -186,14 +162,6 @@ const ThemeCard = ({ theme, currentTheme, onSelect, isSecondaryMode }: any) => {
           </div>
           
           <div className="flex items-center justify-between">
-            <Badge 
-              variant="outline" 
-              className="text-xs border-[var(--theme-accent)]/30 hover:border-[var(--theme-accent)] transition-colors"
-              style={{ fontFamily: theme.font }}
-            >
-              {theme.font}
-            </Badge>
-            
             {/* Enhanced color indicators */}
             <div className="flex gap-1.5">
               <div 

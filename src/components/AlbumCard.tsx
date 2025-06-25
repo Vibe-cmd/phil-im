@@ -22,14 +22,22 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
 
   return (
     <Card
-      className="group cursor-pointer overflow-hidden glass border-primary/20 hover:border-primary/40 transition-all duration-300 animate-fade-in"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className="group cursor-pointer overflow-hidden animate-fade-in transition-all duration-300 hover:scale-105"
+      style={{ 
+        animationDelay: `${index * 100}ms`,
+        background: `rgba(var(--theme-primary-rgb), 0.1)`,
+        backdropFilter: 'blur(20px)',
+        border: `1px solid rgba(var(--theme-primary-rgb), 0.2)`,
+        boxShadow: `0 8px 32px rgba(0, 0, 0, 0.1)`,
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => onSelect(album)}
     >
       {/* Cover Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
+      <div className="relative aspect-[4/3] overflow-hidden" style={{
+        background: `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`
+      }}>
         {album.coverImage ? (
           <img
             src={album.coverImage}
@@ -37,11 +45,11 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
+          <div className="w-full h-full flex items-center justify-center">
             {album.emoji ? (
               <span className="text-6xl">{album.emoji}</span>
             ) : (
-              <Film className="w-12 h-12 text-primary/60" />
+              <Film className="w-12 h-12" style={{ color: 'var(--theme-primary)' }} />
             )}
           </div>
         )}
@@ -69,9 +77,14 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
       {/* Content */}
       <div className="p-4 space-y-3">
         <div>
-          <h3 className="font-semibold text-lg truncate mb-1">{album.name}</h3>
+          <h3 className="font-semibold text-lg truncate mb-1" style={{ 
+            color: 'var(--theme-primary)',
+            fontFamily: 'var(--font-family)'
+          }}>
+            {album.name}
+          </h3>
           {album.description && (
-            <p className="text-sm text-muted-foreground line-clamp-2">
+            <p className="text-sm line-clamp-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               {album.description}
             </p>
           )}
@@ -80,11 +93,26 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
         {/* Stats */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="text-xs">
+            <Badge 
+              variant="secondary" 
+              className="text-xs"
+              style={{
+                backgroundColor: `rgba(var(--theme-accent-rgb), 0.2)`,
+                color: 'var(--theme-accent)',
+                border: `1px solid rgba(var(--theme-accent-rgb), 0.3)`
+              }}
+            >
               {itemCount} {itemCount === 1 ? 'item' : 'items'}
             </Badge>
             {watchedCount > 0 && (
-              <Badge variant="outline" className="text-xs">
+              <Badge 
+                variant="outline" 
+                className="text-xs"
+                style={{
+                  borderColor: `rgba(var(--theme-primary-rgb), 0.4)`,
+                  color: 'var(--theme-primary)'
+                }}
+              >
                 {watchedCount} watched
               </Badge>
             )}
@@ -92,7 +120,7 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
         </div>
 
         {/* Created Date */}
-        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+        <div className="flex items-center gap-1 text-xs" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
           <Calendar className="w-3 h-3" />
           {format(new Date(album.createdAt), 'MMM d, yyyy')}
         </div>

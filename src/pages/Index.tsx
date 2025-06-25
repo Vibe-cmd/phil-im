@@ -76,7 +76,10 @@ const Index = () => {
   if (selectedLibrary) {
     return (
       <ThemeProvider>
-        <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
+        <div className="min-h-screen" style={{ 
+          background: `linear-gradient(135deg, var(--theme-background), rgba(var(--theme-secondary-rgb), 0.1))`,
+          backgroundColor: 'var(--theme-background)'
+        }}>
           <AlbumDetail
             album={selectedLibrary}
             onBack={() => setSelectedLibrary(null)}
@@ -89,7 +92,10 @@ const Index = () => {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
+      <div className="min-h-screen" style={{ 
+        background: `linear-gradient(135deg, var(--theme-background), rgba(var(--theme-secondary-rgb), 0.1))`,
+        backgroundColor: 'var(--theme-background)'
+      }}>
         <Header
           onCreateAlbum={handleOpenCreateModal}
           onSearch={handleSearch}
