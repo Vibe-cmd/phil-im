@@ -1,194 +1,196 @@
 
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Check, Palette, Type, Sparkles, Wand2 } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
 import { useState } from 'react';
+import { useTheme } from '@/contexts/ThemeContext';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Badge } from '@/components/ui/badge';
+import { Palette, Search, Sparkles } from 'lucide-react';
+import { EnhancedThemePreview } from './EnhancedThemePreview';
 
-interface ThemeSelectorProps {
-  onClose: () => void;
-}
-
-export const ThemeSelector = ({ onClose }: ThemeSelectorProps) => {
-  const { themes, currentTheme, changeTheme, isSecondaryMode, toggleColorMode, customFont, setGoogleFont } = useTheme();
+export const ThemeSelector = () => {
+  const { currentTheme, changeTheme, isSecondaryMode, toggleColorMode, customFont, setGoogleFont, themes } = useTheme();
+  const [searchQuery, setSearchQuery] = useState('');
   const [fontInput, setFontInput] = useState(customFont);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleFontSubmit = () => {
-    if (fontInput.trim()) {
-      setGoogleFont(fontInput.trim());
-    }
+  const filteredThemes = themes.filter(theme =>
+    theme.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    theme.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    theme.tagline.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const categories = [...new Set(themes.map(theme => theme.category))];
+
+  const handleFontChange = () => {
+    setGoogleFont(fontInput);
   };
 
   return (
-    <Card className="p-6 glass-strong border-primary/20 animate-slide-up max-h-[90vh] overflow-y-auto scrollbar-theme">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5" style={{ color: 'var(--theme-primary)' }} />
-            <h3 className="text-xl font-bold">Theme Universe</h3>
-          </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleColorMode}
-            className="flex items-center gap-2 hover-glow"
-          >
-            <Palette className="w-4 h-4" />
-            {isSecondaryMode ? 'Secondary Colors' : 'Primary Colors'}
-          </Button>
-        </div>
-        <Button variant="ghost" size="sm" onClick={onClose} className="hover:scale-110 transition-transform">
-          ✕
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger asChild>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="gap-2"
+          style={{
+            borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+            color: 'var(--theme-primary)',
+            backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`
+          }}
+        >
+          <Palette className="w-4 h-4" />
+          Themes
         </Button>
-      </div>
-
-      {/* Custom Google Font Section */}
-      <div className="mb-8 p-6 rounded-2xl border-2 border-dashed border-[var(--theme-accent)]/30 bg-gradient-to-r from-[var(--theme-primary)]/5 to-[var(--theme-accent)]/5">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 rounded-lg bg-[var(--theme-primary)]/20">
-            <Type className="w-5 h-5" style={{ color: 'var(--theme-primary)' }} />
-          </div>
-          <div>
-            <h4 className="font-semibold">Custom Google Font</h4>
-            <p className="text-sm text-muted-foreground">Enter any Google Font name for ultimate customization</p>
-          </div>
-        </div>
-        <div className="flex gap-3">
-          <Input
-            placeholder="e.g., 'Poppins', 'Roboto Mono', 'Dancing Script'"
-            value={fontInput}
-            onChange={(e) => setFontInput(e.target.value)}
-            className="flex-1 bg-background/70"
-          />
-          <Button 
-            onClick={handleFontSubmit} 
-            size="sm"
-            className="bg-[var(--theme-primary)] hover:bg-[var(--theme-accent)] transition-all duration-300 hover:scale-105"
-          >
-            <Wand2 className="w-4 h-4 mr-2" />
-            Apply
-          </Button>
-        </div>
-        {customFont && (
-          <div className="mt-3 p-3 bg-[var(--theme-accent)]/10 rounded-lg">
-            <p className="text-sm">
-              Current custom font: <span className="font-semibold" style={{ fontFamily: customFont }}>{customFont}</span>
-            </p>
-          </div>
-        )}
-      </div>
+      </DialogTrigger>
       
-      {/* Theme Grid */}
-      <div className="space-y-6">
-        <h4 className="text-lg font-semibold">Available Themes ({themes.length})</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {themes.map((theme) => (
-            <ThemeCard key={theme.id} theme={theme} currentTheme={currentTheme} onSelect={changeTheme} isSecondaryMode={isSecondaryMode} />
-          ))}
-        </div>
-      </div>
-    </Card>
-  );
-};
-
-// Enhanced Theme Card Component
-const ThemeCard = ({ theme, currentTheme, onSelect, isSecondaryMode }: any) => {
-  const isSelected = currentTheme.id === theme.id;
-  
-  return (
-    <div
-      className="relative cursor-pointer group animate-fade-in hover-lift"
-      onClick={() => onSelect(theme.id)}
-    >
-      <Card className={`p-4 border-2 transition-all duration-500 transform ${
-        isSelected 
-          ? 'border-[var(--theme-primary)] bg-[var(--theme-primary)]/10 shadow-2xl scale-105 animate-glow' 
-          : 'border-border hover:border-[var(--theme-primary)]/50 hover:shadow-xl hover:scale-102'
-      }`}>
-        {/* Enhanced Theme Preview */}
-        <div className={`w-full h-40 rounded-xl mb-4 ${theme.preview} relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}>
-          {/* Animated color swatches */}
-          <div className="absolute inset-0 flex">
-            <div 
-              className="flex-1 transition-all duration-700" 
+      <DialogContent 
+        className="max-w-7xl max-h-[90vh] overflow-y-auto p-0"
+        style={{
+          background: `linear-gradient(135deg, rgba(var(--theme-background-rgb), 0.95), rgba(var(--theme-primary-rgb), 0.05))`,
+          backdropFilter: 'blur(20px)',
+          border: `1px solid rgba(var(--theme-primary-rgb), 0.2)`,
+          boxShadow: `0 20px 60px rgba(0, 0, 0, 0.3)`,
+        }}
+      >
+        <div className="p-8">
+          <DialogHeader className="mb-8">
+            <DialogTitle 
+              className="text-3xl font-bold text-center flex items-center justify-center gap-3"
               style={{ 
-                backgroundColor: isSecondaryMode ? theme.colors.secondary : theme.colors.primary,
-                animation: isSelected ? 'pulse-theme 2s ease-in-out infinite' : 'none'
+                color: 'var(--theme-primary)',
+                fontFamily: 'var(--font-family)'
               }}
-            />
-            <div 
-              className="flex-1" 
-              style={{ backgroundColor: isSecondaryMode ? theme.colors.primary : theme.colors.secondary }}
-            />
-            <div 
-              className="flex-1" 
-              style={{ backgroundColor: theme.colors.accent }}
-            />
-          </div>
-          
-          {/* Floating theme name */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-            <div className="text-center transform group-hover:scale-110 transition-transform duration-300">
-              <span 
-                className="text-white text-2xl font-bold px-4 py-2 rounded-lg bg-black/60 block animate-shimmer"
-                style={{ fontFamily: theme.font }}
-              >
-                {theme.name.split(' ')[0]}
-              </span>
+            >
+              <Sparkles className="w-8 h-8" />
+              Choose Your CineLibrary Theme
+            </DialogTitle>
+          </DialogHeader>
+
+          {/* Controls */}
+          <div className="space-y-6 mb-8">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-3 w-4 h-4" style={{ color: 'var(--theme-primary)' }} />
+              <Input
+                placeholder="Search themes by name, category, or style..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 text-lg p-4"
+                style={{
+                  background: `rgba(var(--theme-primary-rgb), 0.1)`,
+                  borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                  color: 'white'
+                }}
+              />
             </div>
-          </div>
-          
-          {/* Selection indicator */}
-          {isSelected && (
-            <div className="absolute top-3 right-3 animate-bounce-in">
-              <div className="bg-[var(--theme-primary)] rounded-full p-2 shadow-lg">
-                <Check className="w-4 h-4 text-white" />
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              <Badge 
+                variant={searchQuery === '' ? 'default' : 'outline'}
+                className="cursor-pointer px-4 py-2"
+                onClick={() => setSearchQuery('')}
+                style={{
+                  backgroundColor: searchQuery === '' ? 'var(--theme-primary)' : 'transparent',
+                  borderColor: 'var(--theme-primary)',
+                  color: searchQuery === '' ? 'white' : 'var(--theme-primary)'
+                }}
+              >
+                All Themes ({themes.length})
+              </Badge>
+              {categories.map((category) => {
+                const isActive = searchQuery === category;
+                const count = themes.filter(t => t.category === category).length;
+                return (
+                  <Badge
+                    key={category}
+                    variant={isActive ? 'default' : 'outline'}
+                    className="cursor-pointer px-4 py-2"
+                    onClick={() => setSearchQuery(isActive ? '' : category)}
+                    style={{
+                      backgroundColor: isActive ? 'var(--theme-primary)' : 'transparent',
+                      borderColor: 'var(--theme-primary)',
+                      color: isActive ? 'white' : 'var(--theme-primary)'
+                    }}
+                  >
+                    {category} ({count})
+                  </Badge>
+                );
+              })}
+            </div>
+
+            {/* Theme Options */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg" style={{
+              background: `rgba(var(--theme-primary-rgb), 0.05)`,
+              border: `1px solid rgba(var(--theme-primary-rgb), 0.2)`
+            }}>
+              <div className="flex items-center justify-between">
+                <Label htmlFor="color-mode" style={{ color: 'var(--theme-primary)' }}>
+                  Secondary Color Mode
+                </Label>
+                <Switch
+                  id="color-mode"
+                  checked={isSecondaryMode}
+                  onCheckedChange={toggleColorMode}
+                />
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <Label htmlFor="custom-font" style={{ color: 'var(--theme-primary)' }}>
+                  Custom Font:
+                </Label>
+                <Input
+                  id="custom-font"
+                  placeholder="Enter Google Font name"
+                  value={fontInput}
+                  onChange={(e) => setFontInput(e.target.value)}
+                  onBlur={handleFontChange}
+                  className="flex-1"
+                  style={{
+                    background: `rgba(var(--theme-primary-rgb), 0.1)`,
+                    borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
+                    color: 'white'
+                  }}
+                />
               </div>
             </div>
-          )}
-        </div>
-        
-        {/* Theme Info */}
-        <div className="space-y-3">
-          <div>
-            <h4 className="font-bold text-sm truncate group-hover:text-[var(--theme-primary)] transition-colors" style={{ fontFamily: theme.font }}>
-              {theme.name}
-            </h4>
-            <p className="text-xs text-muted-foreground line-clamp-2 mt-1 leading-relaxed">
-              {theme.description}
-            </p>
           </div>
-          
-          <div className="flex items-center justify-between">
-            {/* Enhanced color indicators */}
-            <div className="flex gap-1.5">
-              <div 
-                className="w-4 h-4 rounded-full border-2 border-white/40 shadow-lg transform hover:scale-125 transition-transform duration-200"
-                style={{ backgroundColor: theme.colors.primary }}
-                title="Primary Color"
+
+          {/* Themes Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredThemes.map((theme) => (
+              <EnhancedThemePreview
+                key={theme.id}
+                theme={theme}
+                isSelected={currentTheme.id === theme.id}
+                onSelect={changeTheme}
               />
-              <div 
-                className="w-4 h-4 rounded-full border-2 border-white/40 shadow-lg transform hover:scale-125 transition-transform duration-200"
-                style={{ backgroundColor: theme.colors.secondary }}
-                title="Secondary Color"
-              />
-              <div 
-                className="w-4 h-4 rounded-full border-2 border-white/40 shadow-lg transform hover:scale-125 transition-transform duration-200"
-                style={{ backgroundColor: theme.colors.accent }}
-                title="Accent Color"
-              />
+            ))}
+          </div>
+
+          {filteredThemes.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-lg" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                No themes found matching "{searchQuery}"
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => setSearchQuery('')}
+                className="mt-4"
+                style={{
+                  borderColor: 'var(--theme-primary)',
+                  color: 'var(--theme-primary)'
+                }}
+              >
+                Clear Search
+              </Button>
             </div>
-          </div>
-          
-          {isSelected && (
-            <Badge className="w-full justify-center text-xs bg-[var(--theme-primary)] hover:bg-[var(--theme-accent)] transition-colors">
-              ✨ Currently Active
-            </Badge>
           )}
         </div>
-      </Card>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 };

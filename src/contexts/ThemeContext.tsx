@@ -25,7 +25,7 @@ const themes: Theme[] = [
       primary: '#FF1E56',
       secondary: '#00B7EB',
       accent: '#F5E050',
-      background: '#FFFFFF'
+      background: '#1C2526'
     },
     font: 'Anime Ace',
     preview: '🕷️',
@@ -34,58 +34,22 @@ const themes: Theme[] = [
     tagline: 'With great power comes great responsibility.',
     modes: {
       light: {
-        colors: ['#FF1E56', '#00B7EB', '#FFFFFF', '#F5E050', '#FF6F61'],
-        font: {
-          name: 'Anime Ace',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#FF1E56', '#00B7EB', '#1C2526', '#F5E050', '#FF6F61'],
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
-        animations: {
-          buttonHover: 'webSwing',
-          pageTransition: 'comicPop',
-          loader: 'spiderSpin'
-        }
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
       },
       dark: {
         colors: ['#D81F26', '#0288D1', '#1C2526', '#E0C120', '#E64A45'],
-        font: {
-          name: 'Anime Ace',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
-        animations: {
-          buttonHover: 'webSwing',
-          pageTransition: 'comicPop',
-          loader: 'spiderSpin'
-        }
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
       },
       highContrast: {
         colors: ['#FF1E56', '#000000', '#FFFFFF', '#FFFF00', '#FF6F61'],
-        font: {
-          name: 'Anime Ace',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Anime Ace', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🕷️', '🕸️', '🎨', '🦸‍♂️', '🌆'],
-        animations: {
-          buttonHover: 'webSwing',
-          pageTransition: 'comicPop',
-          loader: 'spiderSpin'
-        }
+        animations: { buttonHover: 'webSwing', pageTransition: 'comicPop', loader: 'spiderSpin' }
       }
     }
   },
@@ -98,7 +62,7 @@ const themes: Theme[] = [
       primary: '#D9A86C',
       secondary: '#8B5523',
       accent: '#A67B5B',
-      background: '#F4E4BC'
+      background: '#3C2F2F'
     },
     font: 'Cinzel',
     preview: '🏜️',
@@ -107,58 +71,22 @@ const themes: Theme[] = [
     tagline: 'The spice must flow.',
     modes: {
       light: {
-        colors: ['#D9A86C', '#8B5523', '#F4E4BC', '#FFFFFF', '#A67B5B'],
-        font: {
-          name: 'Cinzel',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#D9A86C', '#8B5523', '#3C2F2F', '#FFFFFF', '#A67B5B'],
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
-        animations: {
-          buttonHover: 'sandSwirl',
-          pageTransition: 'desertFade',
-          loader: 'spiceGlow'
-        }
+        animations: { buttonHover: 'sandSwirl', pageTransition: 'desertFade', loader: 'spiceGlow' }
       },
       dark: {
         colors: ['#A67B5B', '#5A3A1A', '#3C2F2F', '#1C2526', '#8B5523'],
-        font: {
-          name: 'Cinzel',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
-        animations: {
-          buttonHover: 'sandSwirl',
-          pageTransition: 'desertFade',
-          loader: 'spiceGlow'
-        }
+        animations: { buttonHover: 'sandSwirl', pageTransition: 'desertFade', loader: 'spiceGlow' }
       },
       highContrast: {
         colors: ['#D9A86C', '#000000', '#FFFFFF', '#8B5523', '#A67B5B'],
-        font: {
-          name: 'Cinzel',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Cinzel', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🏜️', '🪐', '🛸', '⚔️', '🌌'],
-        animations: {
-          buttonHover: 'sandSwirl',
-          pageTransition: 'desertFade',
-          loader: 'spiceGlow'
-        }
+        animations: { buttonHover: 'sandSwirl', pageTransition: 'desertFade', loader: 'spiceGlow' }
       }
     }
   },
@@ -171,7 +99,7 @@ const themes: Theme[] = [
       primary: '#A3BFFA',
       secondary: '#3A5F7D',
       accent: '#F4A261',
-      background: '#FFFFFF'
+      background: '#0B1C2E'
     },
     font: 'Orbitron',
     preview: '🌌',
@@ -180,58 +108,22 @@ const themes: Theme[] = [
     tagline: 'We must reach for the stars.',
     modes: {
       light: {
-        colors: ['#A3BFFA', '#3A5F7D', '#F4A261', '#FFFFFF', '#D9D9D9'],
-        font: {
-          name: 'Orbitron',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#A3BFFA', '#3A5F7D', '#0B1C2E', '#FFFFFF', '#D9D9D9'],
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
-        animations: {
-          buttonHover: 'starPulse',
-          pageTransition: 'wormholeZoom',
-          loader: 'orbitSpin'
-        }
+        animations: { buttonHover: 'starPulse', pageTransition: 'wormholeZoom', loader: 'orbitSpin' }
       },
       dark: {
         colors: ['#0B1C2E', '#2A4059', '#D98A40', '#1C2526', '#4A4A4A'],
-        font: {
-          name: 'Orbitron',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
-        animations: {
-          buttonHover: 'starPulse',
-          pageTransition: 'wormholeZoom',
-          loader: 'orbitSpin'
-        }
+        animations: { buttonHover: 'starPulse', pageTransition: 'wormholeZoom', loader: 'orbitSpin' }
       },
       highContrast: {
         colors: ['#A3BFFA', '#000000', '#FFFFFF', '#F4A261', '#D9D9D9'],
-        font: {
-          name: 'Orbitron',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Orbitron', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🌌', '🕰️', '🚀', '🌍', '🌀'],
-        animations: {
-          buttonHover: 'starPulse',
-          pageTransition: 'wormholeZoom',
-          loader: 'orbitSpin'
-        }
+        animations: { buttonHover: 'starPulse', pageTransition: 'wormholeZoom', loader: 'orbitSpin' }
       }
     }
   },
@@ -244,7 +136,7 @@ const themes: Theme[] = [
       primary: '#4CAF50',
       secondary: '#00FF00',
       accent: '#2E7D32',
-      background: '#FFFFFF'
+      background: '#0F3D3E'
     },
     font: 'VT323',
     preview: '💾',
@@ -253,58 +145,22 @@ const themes: Theme[] = [
     tagline: 'There is no spoon.',
     modes: {
       light: {
-        colors: ['#4CAF50', '#00FF00', '#FFFFFF', '#2E7D32', '#D9D9D9'],
-        font: {
-          name: 'VT323',
-          weight: ['regular'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#4CAF50', '#00FF00', '#0F3D3E', '#2E7D32', '#D9D9D9'],
+        font: { name: 'VT323', weight: ['regular'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
-        animations: {
-          buttonHover: 'glitch',
-          pageTransition: 'digitalRain',
-          loader: 'codeScroll'
-        }
+        animations: { buttonHover: 'glitch', pageTransition: 'digitalRain', loader: 'codeScroll' }
       },
       dark: {
         colors: ['#0F3D3E', '#00CC00', '#1A1A1A', '#1B5E20', '#263238'],
-        font: {
-          name: 'VT323',
-          weight: ['regular'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'VT323', weight: ['regular'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
-        animations: {
-          buttonHover: 'glitch',
-          pageTransition: 'digitalRain',
-          loader: 'codeScroll'
-        }
+        animations: { buttonHover: 'glitch', pageTransition: 'digitalRain', loader: 'codeScroll' }
       },
       highContrast: {
         colors: ['#00FF00', '#000000', '#FFFFFF', '#4CAF50', '#2E7D32'],
-        font: {
-          name: 'VT323',
-          weight: ['regular'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'VT323', weight: ['regular'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['💾', '🖥️', '🕶️', '🔢', '🌐'],
-        animations: {
-          buttonHover: 'glitch',
-          pageTransition: 'digitalRain',
-          loader: 'codeScroll'
-        }
+        animations: { buttonHover: 'glitch', pageTransition: 'digitalRain', loader: 'codeScroll' }
       }
     }
   },
@@ -317,7 +173,7 @@ const themes: Theme[] = [
       primary: '#A68A64',
       secondary: '#FFD700',
       accent: '#2A623D',
-      background: '#FFFFFF'
+      background: '#1A472A'
     },
     font: 'Luminary, serif',
     preview: '🪄',
@@ -326,58 +182,22 @@ const themes: Theme[] = [
     tagline: 'It does not do to dwell on dreams and forget to live.',
     modes: {
       light: {
-        colors: ['#A68A64', '#FFD700', '#FFFFFF', '#2A623D', '#740001'],
-        font: {
-          name: 'Luminary, serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#A68A64', '#FFD700', '#1A472A', '#2A623D', '#740001'],
+        font: { name: 'Luminary, serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
-        animations: {
-          buttonHover: 'sparkle',
-          pageTransition: 'wandWave',
-          loader: 'owlFlight'
-        }
+        animations: { buttonHover: 'sparkle', pageTransition: 'wandWave', loader: 'owlFlight' }
       },
       dark: {
         colors: ['#4A3728', '#D4A017', '#1A472A', '#1C2526', '#5C0000'],
-        font: {
-          name: 'Luminary, serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Luminary, serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
-        animations: {
-          buttonHover: 'sparkle',
-          pageTransition: 'wandWave',
-          loader: 'owlFlight'
-        }
+        animations: { buttonHover: 'sparkle', pageTransition: 'wandWave', loader: 'owlFlight' }
       },
       highContrast: {
         colors: ['#FFD700', '#000000', '#FFFFFF', '#2A623D', '#740001'],
-        font: {
-          name: 'Luminary, serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Luminary, serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🪄', '⚡', '🦁', '🏰', '📖'],
-        animations: {
-          buttonHover: 'sparkle',
-          pageTransition: 'wandWave',
-          loader: 'owlFlight'
-        }
+        animations: { buttonHover: 'sparkle', pageTransition: 'wandWave', loader: 'owlFlight' }
       }
     }
   },
@@ -390,7 +210,7 @@ const themes: Theme[] = [
       primary: '#B0BEC5',
       secondary: '#4A4A4A',
       accent: '#FFCA28',
-      background: '#FFFFFF'
+      background: '#1C2526'
     },
     font: 'Gotham, sans-serif',
     preview: '🦇',
@@ -399,58 +219,22 @@ const themes: Theme[] = [
     tagline: 'I am vengeance, I am the night, I am Batman!',
     modes: {
       light: {
-        colors: ['#B0BEC5', '#4A4A4A', '#FFFFFF', '#FFCA28', '#2F4F4F'],
-        font: {
-          name: 'Gotham, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#B0BEC5', '#4A4A4A', '#1C2526', '#FFCA28', '#2F4F4F'],
+        font: { name: 'Gotham, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
-        animations: {
-          buttonHover: 'shadowPulse',
-          pageTransition: 'nightFade',
-          loader: 'batSignal'
-        }
+        animations: { buttonHover: 'shadowPulse', pageTransition: 'nightFade', loader: 'batSignal' }
       },
       dark: {
         colors: ['#1C2526', '#2F4F4F', '#263238', '#E0A800', '#4A4A4A'],
-        font: {
-          name: 'Gotham, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Gotham, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
-        animations: {
-          buttonHover: 'shadowPulse',
-          pageTransition: 'nightFade',
-          loader: 'batSignal'
-        }
+        animations: { buttonHover: 'shadowPulse', pageTransition: 'nightFade', loader: 'batSignal' }
       },
       highContrast: {
         colors: ['#FFCA28', '#000000', '#FFFFFF', '#4A4A4A', '#2F4F4F'],
-        font: {
-          name: 'Gotham, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Gotham, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦇', '🌃', '🕵️‍♂️', '🃏', '🚓'],
-        animations: {
-          buttonHover: 'shadowPulse',
-          pageTransition: 'nightFade',
-          loader: 'batSignal'
-        }
+        animations: { buttonHover: 'shadowPulse', pageTransition: 'nightFade', loader: 'batSignal' }
       }
     }
   },
@@ -463,7 +247,7 @@ const themes: Theme[] = [
       primary: '#D4A017',
       secondary: '#6B3FA0',
       accent: '#FFD700',
-      background: '#FFFFFF'
+      background: '#2C1A3D'
     },
     font: 'Futura, sans-serif',
     preview: '🐆',
@@ -472,58 +256,22 @@ const themes: Theme[] = [
     tagline: 'Wakanda forever!',
     modes: {
       light: {
-        colors: ['#D4A017', '#6B3FA0', '#FFFFFF', '#FFD700', '#2C1A3D'],
-        font: {
-          name: 'Futura, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#D4A017', '#6B3FA0', '#2C1A3D', '#FFD700', '#2C1A3D'],
+        font: { name: 'Futura, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
-        animations: {
-          buttonHover: 'vibraniumGlow',
-          pageTransition: 'tribalFade',
-          loader: 'pantherProwl'
-        }
+        animations: { buttonHover: 'vibraniumGlow', pageTransition: 'tribalFade', loader: 'pantherProwl' }
       },
       dark: {
         colors: ['#2C1A3D', '#4B2A70', '#1C2526', '#D4A017', '#B38C00'],
-        font: {
-          name: 'Futura, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Futura, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
-        animations: {
-          buttonHover: 'vibraniumGlow',
-          pageTransition: 'tribalFade',
-          loader: 'pantherProwl'
-        }
+        animations: { buttonHover: 'vibraniumGlow', pageTransition: 'tribalFade', loader: 'pantherProwl' }
       },
       highContrast: {
         colors: ['#FFD700', '#000000', '#FFFFFF', '#6B3FA0', '#2C1A3D'],
-        font: {
-          name: 'Futura, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Futura, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🐆', '👑', '🌍', '🛡️', '⚔️'],
-        animations: {
-          buttonHover: 'vibraniumGlow',
-          pageTransition: 'tribalFade',
-          loader: 'pantherProwl'
-        }
+        animations: { buttonHover: 'vibraniumGlow', pageTransition: 'tribalFade', loader: 'pantherProwl' }
       }
     }
   },
@@ -536,7 +284,7 @@ const themes: Theme[] = [
       primary: '#D81F26',
       secondary: '#FFD700',
       accent: '#00B7EB',
-      background: '#FFFFFF'
+      background: '#1C2526'
     },
     font: 'Avenir, sans-serif',
     preview: '🦸‍♂️',
@@ -545,58 +293,22 @@ const themes: Theme[] = [
     tagline: 'Avengers, assemble!',
     modes: {
       light: {
-        colors: ['#D81F26', '#FFD700', '#FFFFFF', '#00B7EB', '#4CAF50'],
-        font: {
-          name: 'Avenir, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        colors: ['#D81F26', '#FFD700', '#1C2526', '#00B7EB', '#4CAF50'],
+        font: { name: 'Avenir, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
-        animations: {
-          buttonHover: 'heroPulse',
-          pageTransition: 'infinityWarp',
-          loader: 'arcReactor'
-        }
+        animations: { buttonHover: 'heroPulse', pageTransition: 'infinityWarp', loader: 'arcReactor' }
       },
       dark: {
         colors: ['#A1041B', '#D4A017', '#1C2526', '#0288D1', '#2A5F31'],
-        font: {
-          name: 'Avenir, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Avenir, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
-        animations: {
-          buttonHover: 'heroPulse',
-          pageTransition: 'infinityWarp',
-          loader: 'arcReactor'
-        }
+        animations: { buttonHover: 'heroPulse', pageTransition: 'infinityWarp', loader: 'arcReactor' }
       },
       highContrast: {
         colors: ['#D81F26', '#000000', '#FFFFFF', '#FFD700', '#4CAF50'],
-        font: {
-          name: 'Avenir, sans-serif',
-          weight: ['regular', 'bold'],
-          size: {
-            small: '14px',
-            medium: '16px',
-            large: '18px'
-          }
-        },
+        font: { name: 'Avenir, sans-serif', weight: ['regular', 'bold'], size: { small: '14px', medium: '16px', large: '18px' } },
         emojis: ['🦸‍♂️', '🛡️', '⚡', '🔨', '🌌'],
-        animations: {
-          buttonHover: 'heroPulse',
-          pageTransition: 'infinityWarp',
-          loader: 'arcReactor'
-        }
+        animations: { buttonHover: 'heroPulse', pageTransition: 'infinityWarp', loader: 'arcReactor' }
       }
     }
   }
@@ -630,9 +342,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const applyTheme = (theme: Theme) => {
     const root = document.documentElement;
-    const mode = theme.modes.light; // Default to light mode
+    const mode = theme.modes.light;
     
-    // Use custom font if available, otherwise use theme font
     const fontToUse = customFont || mode.font.name;
     
     root.style.setProperty('--theme-primary', isSecondaryMode ? theme.colors.secondary : theme.colors.primary);
@@ -641,7 +352,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     root.style.setProperty('--theme-accent', theme.colors.accent);
     root.style.setProperty('--font-family', fontToUse);
     
-    // Set RGB values for transparency usage
     const hexToRgb = (hex: string) => {
       const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       return result ? {
@@ -653,6 +363,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     
     const primaryColor = isSecondaryMode ? theme.colors.secondary : theme.colors.primary;
     const secondaryColor = isSecondaryMode ? theme.colors.primary : theme.colors.secondary;
+    const backgroundRgb = hexToRgb(theme.colors.background);
+    const accentRgb = hexToRgb(theme.colors.accent);
     
     const primaryRgb = hexToRgb(primaryColor);
     const secondaryRgb = hexToRgb(secondaryColor);
@@ -662,6 +374,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
     if (secondaryRgb) {
       root.style.setProperty('--theme-secondary-rgb', `${secondaryRgb.r}, ${secondaryRgb.g}, ${secondaryRgb.b}`);
+    }
+    if (backgroundRgb) {
+      root.style.setProperty('--theme-background-rgb', `${backgroundRgb.r}, ${backgroundRgb.g}, ${backgroundRgb.b}`);
+    }
+    if (accentRgb) {
+      root.style.setProperty('--theme-accent-rgb', `${accentRgb.r}, ${accentRgb.g}, ${accentRgb.b}`);
     }
   };
 
@@ -689,7 +407,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setCustomFont(font);
     localStorage.setItem('feelim_custom_font', font);
     
-    // Add Google Font link to head if it doesn't exist
     const existingLink = document.querySelector(`link[href*="${encodeURIComponent(font)}"]`);
     if (!existingLink && font) {
       const link = document.createElement('link');

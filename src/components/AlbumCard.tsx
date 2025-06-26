@@ -69,7 +69,8 @@ export const AlbumCard = ({ album, onSelect, onDelete, index }: AlbumCardProps) 
             : `linear-gradient(135deg, rgba(var(--theme-primary-rgb), 0.2), rgba(var(--theme-accent-rgb), 0.1))`
         }}
       >
-        {album.coverImage && !album.useAsBackground ? (
+        {/* Show either cover image OR emoji, not both */}
+        {album.coverImage ? (
           <img
             src={album.coverImage}
             alt={album.name}
