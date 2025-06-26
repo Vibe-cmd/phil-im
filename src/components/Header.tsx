@@ -152,19 +152,7 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
               {currentTheme.name}
             </Badge>
             
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setShowThemeSelector(!showThemeSelector)}
-              className="relative"
-              style={{
-                backgroundColor: `rgba(var(--theme-primary-rgb), 0.1)`,
-                borderColor: `rgba(var(--theme-primary-rgb), 0.3)`,
-                color: 'var(--theme-primary)'
-              }}
-            >
-              <Palette className="w-4 h-4" />
-            </Button>
+            <ThemeSelector />
 
             <Button
               variant="outline"
@@ -212,13 +200,6 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
             </Button>
           </div>
         </div>
-
-        {/* Theme Selector */}
-        {showThemeSelector && (
-          <div className="mt-4">
-            <ThemeSelector />
-          </div>
-        )}
       </div>
     </header>
   );

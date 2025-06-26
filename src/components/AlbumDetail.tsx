@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { Album, AlbumItem } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -17,7 +18,13 @@ interface AlbumDetailProps {
 export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) => {
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState<AlbumItem | null>(null);
+  const [currentAlbum, setCurrentAlbum] = useState<Album>(album);
   const { toast } = useToast();
+
+  // Update local state when album prop changes
+  useEffect(() => {
+    setCurrentAlbum(album);
+  }, [album]);
 
   const handleAddItem = (itemData: Omit<AlbumItem, 'id' | 'addedAt'>) => {
     const newItem: AlbumItem = {
@@ -27,23 +34,25 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
     };
 
     const updatedAlbum = {
-      ...album,
-      items: [...album.items, newItem],
+      ...currentAlbum,
+      items: [...currentAlbum.items, newItem],
       updatedAt: new Date()
     };
 
+    setCurrentAlbum(updatedAlbum);
     onUpdateAlbum(updatedAlbum);
     setShowSearchModal(false);
   };
 
   const handleDeleteItem = (itemId: string) => {
-    const item = album.items.find(i => i.id === itemId);
+    const item = currentAlbum.items.find(i => i.id === itemId);
     const updatedAlbum = {
-      ...album,
-      items: album.items.filter(i => i.id !== itemId),
+      ...currentAlbum,
+      items: currentAlbum.items.filter(i => i.id !== itemId),
       updatedAt: new Date()
     };
 
+    setCurrentAlbum(updatedAlbum);
     onUpdateAlbum(updatedAlbum);
     
     toast({
@@ -55,19 +64,20 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
 
   const handleUpdateItem = (updatedItem: AlbumItem) => {
     const updatedAlbum = {
-      ...album,
-      items: album.items.map(item => 
+      ...currentAlbum,
+      items: currentAlbum.items.map(item => 
         item.id === updatedItem.id ? updatedItem : item
       ),
       updatedAt: new Date()
     };
 
+    setCurrentAlbum(updatedAlbum);
     onUpdateAlbum(updatedAlbum);
   };
 
-  const watchedCount = album.items.filter(item => item.isWatched).length;
+  const watchedCount = currentAlbum.items.filter(item => item.isWatched).length;
 
-  const containerStyle = album.useAsBackground && album.coverImage 
+  const containerStyle = currentAlbum.useAsBackground && currentAlbum.coverImage 
     ? {
         position: 'relative' as const,
         minHeight: '100vh',
@@ -82,12 +92,12 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
   return (
     <div style={containerStyle}>
       {/* Blurred background image */}
-      {album.useAsBackground && album.coverImage && (
+      {currentAlbum.useAsBackground && currentAlbum.coverImage && (
         <>
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `url(${album.coverImage})`,
+              backgroundImage: `url(${currentAlbum.coverImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundAttachment: 'fixed',
@@ -134,16 +144,16 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
               }}
             >
               {/* Show either cover image OR emoji, not both */}
-              {album.coverImage ? (
+              {currentAlbum.coverImage ? (
                 <img
-                  src={album.coverImage}
-                  alt={album.name}
+                  src={currentAlbum.coverImage}
+                  alt={currentAlbum.name}
                   className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
-                  {album.emoji ? (
-                    <span className="text-4xl">{album.emoji}</span>
+                  {currentAlbum.emoji ? (
+                    <span className="text-4xl">{currentAlbum.emoji}</span>
                   ) : (
                     <div style={{ color: 'rgba(255, 255, 255, 0.6)' }}>No Cover</div>
                   )}
@@ -160,11 +170,11 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                   color: 'var(--theme-primary)'
                 }}
               >
-                {album.name}
+                {currentAlbum.name}
               </h1>
-              {album.description && (
+              {currentAlbum.description && (
                 <p className="text-lg mb-4" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-                  {album.description}
+                  {currentAlbum.description}
                 </p>
               )}
               <div className="flex items-center gap-4">
@@ -176,7 +186,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
                     border: `1px solid rgba(var(--theme-accent-rgb), 0.3)`
                   }}
                 >
-                  {album.items.length} {album.items.length === 1 ? 'item' : 'items'}
+                  {currentAlbum.items.length} {currentAlbum.items.length === 1 ? 'item' : 'items'}
                 </Badge>
                 {watchedCount > 0 && (
                   <Badge 
@@ -209,7 +219,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
         </div>
 
         {/* Items Grid */}
-        {album.items.length === 0 ? (
+        {currentAlbum.items.length === 0 ? (
           <div className="text-center py-12">
             <h3 className="text-lg font-medium mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               No items in this CineLibrary yet
@@ -230,7 +240,7 @@ export const AlbumDetail = ({ album, onBack, onUpdateAlbum }: AlbumDetailProps) 
           </div>
         ) : (
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {album.items.map((item, index) => (
+            {currentAlbum.items.map((item, index) => (
               <Card
                 key={item.id}
                 className="group cursor-pointer overflow-hidden transition-all duration-300 animate-fade-in hover:scale-105"

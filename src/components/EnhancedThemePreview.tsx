@@ -11,10 +11,54 @@ interface EnhancedThemePreviewProps {
   onSelect: (themeId: string) => void;
 }
 
+// Theme-specific movie/show images
+const getThemeImages = (themeName: string) => {
+  const imageMap: Record<string, string[]> = {
+    'Spectacular Spider-Verse': [
+      'https://image.tmdb.org/t/p/w300/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg', // Spider-Verse
+      'https://image.tmdb.org/t/p/w300/rweIrveL43TaxUN0akQEaAXL6x0.jpg', // Spider-Man
+      'https://image.tmdb.org/t/p/w300/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg'  // Venom
+    ],
+    'Dazzling Dune': [
+      'https://image.tmdb.org/t/p/w300/d5NuKs27qEV2HQo6rEHhhOX5LHV.jpg', // Dune
+      'https://image.tmdb.org/t/p/w300/A3KKbWtOQRcgMY8uHUAJhE8bIxW.jpg', // Dune 2
+      'https://image.tmdb.org/t/p/w300/lbs73ZjeNOjKISRgsKNBvHI6RJr.jpg'  // Blade Runner 2049
+    ],
+    'Intriguing Interstellar': [
+      'https://image.tmdb.org/t/p/w300/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg', // Interstellar
+      'https://image.tmdb.org/t/p/w300/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg', // Martian
+      'https://image.tmdb.org/t/p/w300/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg'  // Gravity
+    ],
+    'Mystical Matrix': [
+      'https://image.tmdb.org/t/p/w300/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg', // Matrix
+      'https://image.tmdb.org/t/p/w300/8c4a8kE7PizaGQQnditMmI1xbRp.jpg', // Blade Runner
+      'https://image.tmdb.org/t/p/w300/w86Sg4lU2eUcMfqpRRU91rjrkjJ.jpg'  // Ghost in Shell
+    ],
+    'Hogwarts Harmony': [
+      'https://image.tmdb.org/t/p/w300/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg', // Harry Potter
+      'https://image.tmdb.org/t/p/w300/z7uo9zmQdQwU5ZJHFpv2Qo7HHVQ.jpg', // Fantastic Beasts
+      'https://image.tmdb.org/t/p/w300/vzmL6fP7aPKNKPRTFnZmiUfciyV.jpg'  // Lord of the Rings
+    ],
+    'Brooding Batman': [
+      'https://image.tmdb.org/t/p/w300/qAKvUu2FSaDUEv2LXlq6jtuZBxQ.jpg', // Dark Knight
+      'https://image.tmdb.org/t/p/w300/lzWHtbfRmf5S2GICv6Bqzwdqe7T.jpg', // Batman
+      'https://image.tmdb.org/t/p/w300/74xTEgt7R36Fpooo50r9T25onhq.jpg'  // Joker
+    ]
+  };
+  
+  return imageMap[themeName] || [
+    'https://image.tmdb.org/t/p/w300/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    'https://image.tmdb.org/t/p/w300/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg',
+    'https://image.tmdb.org/t/p/w300/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg'
+  ];
+};
+
 export const EnhancedThemePreview = ({ theme, isSelected, onSelect }: EnhancedThemePreviewProps) => {
   const handleSelect = () => {
     onSelect(theme.id);
   };
+
+  const themeImages = getThemeImages(theme.name);
 
   return (
     <Card
@@ -103,27 +147,28 @@ export const EnhancedThemePreview = ({ theme, isSelected, onSelect }: EnhancedTh
           ))}
         </div>
 
-        {/* Mock Content Preview */}
-        <div className="space-y-3 mb-4">
-          <div 
-            className="h-2 rounded-full"
-            style={{
-              background: `linear-gradient(90deg, ${theme.colors.primary}, ${theme.colors.accent})`,
-              opacity: 0.7
-            }}
-          />
-          <div className="grid grid-cols-3 gap-2">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="aspect-[3/4] rounded-md transform transition-transform hover:scale-105"
-                style={{
-                  background: `linear-gradient(135deg, ${theme.colors.primary}40, ${theme.colors.secondary}20)`,
-                  border: `1px solid ${theme.colors.primary}20`
+        {/* Theme-related Movie Images */}
+        <div className="grid grid-cols-3 gap-2 mb-4">
+          {themeImages.map((imageUrl, index) => (
+            <div
+              key={index}
+              className="aspect-[3/4] rounded-md overflow-hidden transform transition-transform hover:scale-105"
+              style={{
+                border: `1px solid ${theme.colors.primary}20`
+              }}
+            >
+              <img
+                src={imageUrl}
+                alt={`${theme.name} reference`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.parentElement!.style.background = `linear-gradient(135deg, ${theme.colors.primary}40, ${theme.colors.secondary}20)`;
                 }}
               />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Tagline */}
