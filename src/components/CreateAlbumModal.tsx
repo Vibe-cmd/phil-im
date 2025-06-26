@@ -9,7 +9,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Upload } from 'lucide-react';
-import { CheckedState } from '@radix-ui/react-checkbox';
 
 interface CreateAlbumModalProps {
   isOpen: boolean;
@@ -28,14 +27,14 @@ export const CreateAlbumModal = ({ isOpen, onClose, onCreate }: CreateAlbumModal
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name) {
+    if (!name.trim()) {
       alert('Please enter a name for your CineLibrary.');
       return;
     }
 
     const newLibraryData: Omit<Album, 'id' | 'createdAt' | 'updatedAt' | 'items'> = {
-      name,
-      description,
+      name: name.trim(),
+      description: description.trim(),
       emoji,
       font,
       coverImage: coverImage || undefined,
@@ -43,7 +42,6 @@ export const CreateAlbumModal = ({ isOpen, onClose, onCreate }: CreateAlbumModal
     };
 
     onCreate(newLibraryData);
-    onClose();
     resetForm();
   };
 
@@ -233,7 +231,7 @@ export const CreateAlbumModal = ({ isOpen, onClose, onCreate }: CreateAlbumModal
                         <Checkbox
                           id="use-as-background"
                           checked={useAsBackground}
-                          onCheckedChange={(checked: CheckedState) => setUseAsBackground(checked === true)}
+                          onCheckedChange={(checked) => setUseAsBackground(checked === true)}
                         />
                         <Label 
                           htmlFor="use-as-background" 
@@ -265,14 +263,14 @@ export const CreateAlbumModal = ({ isOpen, onClose, onCreate }: CreateAlbumModal
                         type="button"
                         onClick={() => setEmoji(emojiOption)}
                         className={`text-2xl p-3 rounded-lg transition-all hover:scale-110 ${
-                          emoji === emojiOption ? 'ring-2 ring-opacity-50' : ''
+                          emoji === emojiOption ? 'ring-2' : ''
                         }`}
                         style={{
                           background: emoji === emojiOption 
                             ? `rgba(var(--theme-primary-rgb), 0.2)` 
                             : `rgba(var(--theme-primary-rgb), 0.05)`,
-                          '--tw-ring-color': 'var(--theme-primary)'
-                        } as React.CSSProperties}
+                          borderColor: emoji === emojiOption ? 'var(--theme-primary)' : 'transparent'
+                        }}
                       >
                         {emojiOption}
                       </button>
@@ -351,27 +349,10 @@ const FONT_OPTIONS = [
   { label: 'Oswald', value: 'Oswald' },
   { label: 'Abril Fatface', value: 'Abril Fatface' },
   { label: 'Bangers', value: 'Bangers' },
-  { label: 'Comfortaa', value: 'Comfortaa' },
-  { label: 'Advent Pro', value: 'Advent Pro' },
-  { label: 'Libre Baskerville', value: 'Libre Baskerville' },
-  { label: 'Bebas Neue', value: 'Bebas Neue' },
-  { label: 'Archivo Black', value: 'Archivo Black' },
-  { label: 'Special Elite', value: 'Special Elite' },
-  { label: 'Major Mono Display', value: 'Major Mono Display' },
-  { label: 'Fira Code', value: 'Fira Code' },
-  { label: 'Baloo 2', value: 'Baloo 2' },
-  { label: 'Russo One', value: 'Russo One' },
-  { label: 'Rajdhani', value: 'Rajdhani' },
-  { label: 'Dancing Script', value: 'Dancing Script' },
-  { label: 'Tienne', value: 'Tienne' },
-  { label: 'IM Fell English SC', value: 'IM Fell English SC' },
-  { label: 'Courier Prime', value: 'Courier Prime' },
-  { label: 'UnifrakturCook', value: 'UnifrakturCook' },
-  { label: 'Fredoka One', value: 'Fredoka One' },
-    { label: 'Pirata One', value: 'Pirata One' },
+  { label: 'Comfortaa', value: 'Comfortaa' }
 ];
 
 const EMOJI_OPTIONS = [
   '🎬', '🍿', '🎞️', '🎥', '📽️', '📺', '📼', '📀', '💽', '💾', '🕹️', '🎮', '👾', '🤖', '👽', '👻',
-  '🤡', '😈', '👹', '👺', '😻', '😽', '😼', '🙀', '😿', '😹', '😾', '😿', 'Surprised'
+  '🤡', '😈', '👹', '👺', '😻', '😽', '😼', '🙀', '😿', '😹', '😾', '🎪', '🎭', '🎨'
 ];

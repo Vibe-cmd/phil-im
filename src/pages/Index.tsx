@@ -23,13 +23,16 @@ const Index = () => {
 
   // Save libraries to storage whenever they change
   useEffect(() => {
-    storage.saveAlbums(cineLibraries);
+    if (cineLibraries.length > 0) {
+      storage.saveAlbums(cineLibraries);
+    }
   }, [cineLibraries]);
 
-  const handleCreateLibrary = (libraryData: Omit<Album, 'id' | 'createdAt' | 'updatedAt'>) => {
+  const handleCreateLibrary = (libraryData: Omit<Album, 'id' | 'createdAt' | 'updatedAt' | 'items'>) => {
     const newLibrary: Album = {
       ...libraryData,
       id: crypto.randomUUID(),
+      items: [],
       createdAt: new Date(),
       updatedAt: new Date()
     };

@@ -7,7 +7,7 @@ import { EmptyState } from './EmptyState';
 
 interface AlbumGridProps {
   albums: Album[];
-  onCreateAlbum: (album: Omit<Album, 'id' | 'createdAt' | 'updatedAt'>) => void;
+  onCreateAlbum: (album: Omit<Album, 'id' | 'createdAt' | 'updatedAt' | 'items'>) => void;
   onSelectAlbum: (album: Album) => void;
   onDeleteAlbum: (albumId: string) => void;
   searchQuery: string;
