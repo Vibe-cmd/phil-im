@@ -216,7 +216,7 @@ export const Header = ({ onCreateAlbum, onSearch, albumCount }: HeaderProps) => 
         {/* Theme Selector */}
         {showThemeSelector && (
           <div className="mt-4">
-            <ThemeSelector onClose={() => setShowThemeSelector(false)} />
+            <ThemeSelector />
           </div>
         )}
       </div>

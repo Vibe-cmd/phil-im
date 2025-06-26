@@ -26,7 +26,6 @@ export const EnhancedThemePreview = ({ theme, isSelected, onSelect }: EnhancedTh
       style={{
         background: `linear-gradient(135deg, ${theme.colors.background}, ${theme.colors.primary}20)`,
         border: `2px solid ${isSelected ? theme.colors.primary : 'transparent'}`,
-        ringColor: theme.colors.primary,
       }}
       onClick={handleSelect}
     >
