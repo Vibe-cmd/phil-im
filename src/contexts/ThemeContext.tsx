@@ -5,7 +5,12 @@ import { Theme } from '@/types';
 interface ThemeContextType {
   currentTheme: Theme;
   setTheme: (theme: Theme) => void;
+  changeTheme: (themeId: string) => void;
   themes: Theme[];
+  isSecondaryMode: boolean;
+  toggleColorMode: () => void;
+  customFont: string;
+  setGoogleFont: (font: string) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -234,30 +239,42 @@ const themes: Theme[] = [
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState<Theme>(themes[0]);
+  const [isSecondaryMode, setIsSecondaryMode] = useState(false);
+  const [customFont, setCustomFont] = useState('');
 
   useEffect(() => {
     const savedThemeId = localStorage.getItem('feelim_theme');
+    const savedFont = localStorage.getItem('feelim_custom_font');
+    const savedColorMode = localStorage.getItem('feelim_color_mode');
+    
     if (savedThemeId) {
       const savedTheme = themes.find(theme => theme.id === savedThemeId);
       if (savedTheme) {
         setCurrentTheme(savedTheme);
       }
     }
+    
+    if (savedFont) {
+      setCustomFont(savedFont);
+    }
+    
+    if (savedColorMode === 'secondary') {
+      setIsSecondaryMode(true);
+    }
   }, []);
 
-  const setTheme = (theme: Theme) => {
-    setCurrentTheme(theme);
-    localStorage.setItem('feelim_theme', theme.id);
-    
-    // Apply theme CSS variables
+  const applyTheme = (theme: Theme) => {
     const root = document.documentElement;
-    const mode = currentTheme.modes.light; // Default to light mode
+    const mode = theme.modes.light; // Default to light mode
     
-    root.style.setProperty('--theme-primary', mode.colors[0]);
-    root.style.setProperty('--theme-secondary', mode.colors[1]);
-    root.style.setProperty('--theme-background', mode.colors[2]);
-    root.style.setProperty('--theme-accent', mode.colors[3]);
-    root.style.setProperty('--font-family', mode.font.name);
+    // Use custom font if available, otherwise use theme font
+    const fontToUse = customFont || mode.font.name;
+    
+    root.style.setProperty('--theme-primary', isSecondaryMode ? theme.colors.secondary : theme.colors.primary);
+    root.style.setProperty('--theme-secondary', isSecondaryMode ? theme.colors.primary : theme.colors.secondary);
+    root.style.setProperty('--theme-background', theme.colors.background);
+    root.style.setProperty('--theme-accent', theme.colors.accent);
+    root.style.setProperty('--font-family', fontToUse);
     
     // Set RGB values for transparency usage
     const hexToRgb = (hex: string) => {
@@ -269,8 +286,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       } : null;
     };
     
-    const primaryRgb = hexToRgb(mode.colors[0]);
-    const secondaryRgb = hexToRgb(mode.colors[1]);
+    const primaryColor = isSecondaryMode ? theme.colors.secondary : theme.colors.primary;
+    const secondaryColor = isSecondaryMode ? theme.colors.primary : theme.colors.secondary;
+    
+    const primaryRgb = hexToRgb(primaryColor);
+    const secondaryRgb = hexToRgb(secondaryColor);
     
     if (primaryRgb) {
       root.style.setProperty('--theme-primary-rgb', `${primaryRgb.r}, ${primaryRgb.g}, ${primaryRgb.b}`);
@@ -280,12 +300,57 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
+  const setTheme = (theme: Theme) => {
+    setCurrentTheme(theme);
+    localStorage.setItem('feelim_theme', theme.id);
+    applyTheme(theme);
+  };
+
+  const changeTheme = (themeId: string) => {
+    const theme = themes.find(t => t.id === themeId);
+    if (theme) {
+      setTheme(theme);
+    }
+  };
+
+  const toggleColorMode = () => {
+    const newMode = !isSecondaryMode;
+    setIsSecondaryMode(newMode);
+    localStorage.setItem('feelim_color_mode', newMode ? 'secondary' : 'primary');
+    applyTheme(currentTheme);
+  };
+
+  const setGoogleFont = (font: string) => {
+    setCustomFont(font);
+    localStorage.setItem('feelim_custom_font', font);
+    
+    // Add Google Font link to head if it doesn't exist
+    const existingLink = document.querySelector(`link[href*="${encodeURIComponent(font)}"]`);
+    if (!existingLink && font) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(font)}:wght@400;700&display=swap`;
+      document.head.appendChild(link);
+    }
+    
+    applyTheme(currentTheme);
+  };
+
   useEffect(() => {
-    setTheme(currentTheme);
-  }, [currentTheme]);
+    applyTheme(currentTheme);
+  }, [currentTheme, isSecondaryMode, customFont]);
 
   return (
-    <ThemeContext.Provider value={{ currentTheme, setTheme, themes }}>
+    <ThemeContext.Provider value={{
+      currentTheme,
+      setTheme,
+      changeTheme,
+      themes,
+      isSecondaryMode,
+      toggleColorMode,
+      customFont,
+      setGoogleFont
+    }}>
       {children}
     </ThemeContext.Provider>
   );
