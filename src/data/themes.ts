@@ -1,4 +1,3 @@
-
 import { Theme } from '@/types';
 
 export const themes: Theme[] = [
@@ -316,5 +315,320 @@ export const themes: Theme[] = [
     },
     designStyle: 'Noir comic style, sharp shadows, bat-icon cutouts',
     textColor: '#F5C518'
+  },
+  {
+    id: 'harry-potter',
+    name: 'Hogwarts Harmony',
+    description: 'Wizard parchment textures with vintage gold accents',
+    className: 'theme-harry-potter',
+    colors: {
+      primary: '#D3A625',
+      secondary: '#740001',
+      accent: '#1A472A',
+      background: '#0E1A40'
+    },
+    font: 'Cinzel',
+    preview: '🏰 Magical World',
+    emojis: ['🏰', '⚡', '🦉', '🪄'],
+    category: 'Fantasy',
+    tagline: 'The boy who lived... to watch great films',
+    modes: {
+      light: {
+        colors: ['#D3A625', '#740001', '#1A472A', '#F5F0E8'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🏰', '⚡', '🦉'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(1deg)',
+          pageTransition: 'magical-shimmer',
+          loader: 'spell-cast'
+        }
+      },
+      dark: {
+        colors: ['#D3A625', '#740001', '#1A472A', '#0A0D1A'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🏰', '⚡', '🪄'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(-1deg)',
+          pageTransition: 'magical-shimmer',
+          loader: 'spell-cast'
+        }
+      },
+      highContrast: {
+        colors: ['#FFD700', '#FFFFFF', '#228B22', '#000080'],
+        font: {
+          name: 'Cinzel',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🏰', '⚡'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Wizard parchment textures, vintage gold accents',
+    textColor: '#F5F0E8'
+  },
+  {
+    id: 'black-panther',
+    name: 'Vibrant Vibranium',
+    description: 'Vibranium tech with African tribal geometry',
+    className: 'theme-black-panther',
+    colors: {
+      primary: '#502379',
+      secondary: '#C0C0C0',
+      accent: '#D4AF37',
+      background: '#000000'
+    },
+    font: 'Ubuntu',
+    preview: '🐾 Wakanda Forever',
+    emojis: ['🐾', '⚡', '💎', '🛡️'],
+    category: 'Superhero',
+    tagline: 'Wakanda Forever, Cinema Forever',
+    modes: {
+      light: {
+        colors: ['#502379', '#C0C0C0', '#D4AF37', '#F0F0F0'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🐾', '⚡', '💎'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-2px)',
+          pageTransition: 'tribal-slide',
+          loader: 'vibranium-pulse'
+        }
+      },
+      dark: {
+        colors: ['#502379', '#C0C0C0', '#D4AF37', '#0A0A0A'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🐾', '⚡', '🛡️'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-2px)',
+          pageTransition: 'tribal-slide',
+          loader: 'vibranium-pulse'
+        }
+      },
+      highContrast: {
+        colors: ['#9370DB', '#FFFFFF', '#FFD700', '#000000'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🐾', '⚡'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Vibranium tech with African tribal geometry',
+    textColor: '#F0F0F0'
+  },
+  {
+    id: 'marvel',
+    name: 'Mighty MCU',
+    description: 'Comic clean UI with subtle sparkle and star patterns',
+    className: 'theme-marvel',
+    colors: {
+      primary: '#ED1D24',
+      secondary: '#152238',
+      accent: '#C0C0C0',
+      background: '#000000'
+    },
+    font: 'Roboto Condensed',
+    preview: '🦸 Hero Universe',
+    emojis: ['🦸', '⚡', '🌟', '💥'],
+    category: 'Superhero',
+    tagline: 'Assemble your ultimate watchlist',
+    modes: {
+      light: {
+        colors: ['#ED1D24', '#152238', '#C0C0C0', '#F5F5F5'],
+        font: {
+          name: 'Roboto Condensed',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦸', '⚡', '🌟'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(2deg)',
+          pageTransition: 'hero-burst',
+          loader: 'marvel-spin'
+        }
+      },
+      dark: {
+        colors: ['#ED1D24', '#152238', '#C0C0C0', '#0D0D0D'],
+        font: {
+          name: 'Roboto Condensed',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦸', '⚡', '💥'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(-2deg)',
+          pageTransition: 'hero-burst',
+          loader: 'marvel-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#C0C0C0', '#000080'],
+        font: {
+          name: 'Roboto Condensed',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🦸', '⚡'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Comic clean UI, subtle sparkle/gloss, star patterns',
+    textColor: '#F5F5F5'
+  },
+  {
+    id: 'loki',
+    name: 'Luscious Loki',
+    description: 'Norse runes with time-loop circle patterns and art-deco influences',
+    className: 'theme-loki',
+    colors: {
+      primary: '#D4AF37',
+      secondary: '#2C5234',
+      accent: '#CD7F32',
+      background: '#000000'
+    },
+    font: 'Playfair Display',
+    preview: '🐍 God of Mischief',
+    emojis: ['🐍', '⏰', '👑', '🌀'],
+    category: 'Superhero',
+    tagline: 'Glorious purpose meets glorious cinema',
+    modes: {
+      light: {
+        colors: ['#D4AF37', '#2C5234', '#CD7F32', '#F8F5E4'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🐍', '⏰', '👑'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(3deg)',
+          pageTransition: 'time-loop',
+          loader: 'loki-spiral'
+        }
+      },
+      dark: {
+        colors: ['#D4AF37', '#2C5234', '#CD7F32', '#0A0A0A'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🐍', '⏰', '🌀'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(-3deg)',
+          pageTransition: 'time-loop',
+          loader: 'loki-spiral'
+        }
+      },
+      highContrast: {
+        colors: ['#FFD700', '#FFFFFF', '#CD853F', '#000000'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '30px' }
+        },
+        emojis: ['🐍', '👑'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Norse runes, time-loop circle patterns, art-deco influences',
+    textColor: '#F8F5E4'
+  },
+  {
+    id: 'peaky-blinders',
+    name: 'Pensive Peaky',
+    description: 'Gritty vintage with smoky textures and sepia overlays',
+    className: 'theme-peaky-blinders',
+    colors: {
+      primary: '#ECE7DC',
+      secondary: '#7E675E',
+      accent: '#708090',
+      background: '#000000'
+    },
+    font: 'Crimson Text',
+    preview: '🎩 By Order Of',
+    emojis: ['🎩', '🚬', '⚔️', '🥃'],
+    category: 'Crime',
+    tagline: 'By order of the Peaky Blinders watchlist',
+    modes: {
+      light: {
+        colors: ['#ECE7DC', '#7E675E', '#708090', '#F5F0E8'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['🎩', '🚬', '⚔️'],
+        animations: {
+          buttonHover: 'scale(1.03) translateY(-1px)',
+          pageTransition: 'smoke-fade',
+          loader: 'vintage-spin'
+        }
+      },
+      dark: {
+        colors: ['#ECE7DC', '#7E675E', '#708090', '#1A1A1A'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['🎩', '🚬', '🥃'],
+        animations: {
+          buttonHover: 'scale(1.03) translateY(-1px)',
+          pageTransition: 'smoke-fade',
+          loader: 'vintage-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#FFFFFF', '#000000', '#808080', '#2F2F2F'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '26px' }
+        },
+        emojis: ['🎩', '⚔️'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Gritty vintage, smoky textures, sepia overlays',
+    textColor: '#ECE7DC'
   }
 ];

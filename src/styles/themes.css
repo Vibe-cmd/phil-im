@@ -152,6 +152,197 @@
     inset 0 1px 0 rgba(245, 197, 24, 0.1);
 }
 
+/* Harry Potter Theme */
+.theme-harry-potter {
+  --theme-primary: #D3A625;
+  --theme-secondary: #740001;
+  --theme-accent: #1A472A;
+  --theme-background: #0E1A40;
+  --theme-primary-rgb: 211, 166, 37;
+  --theme-secondary-rgb: 116, 0, 1;
+  --theme-accent-rgb: 26, 71, 42;
+  --theme-background-rgb: 14, 26, 64;
+  --font-family: 'Cinzel', serif;
+  
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(211, 166, 37, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(116, 0, 1, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0E1A40 0%, #1a2866 100%);
+  
+  /* Parchment texture effect */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(211, 166, 37, 0.03) 1px,
+      rgba(211, 166, 37, 0.03) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(116, 0, 1, 0.02) 1px,
+      rgba(116, 0, 1, 0.02) 2px
+    );
+}
+
+.theme-harry-potter .glass-strong {
+  background: rgba(211, 166, 37, 0.1) !important;
+  border: 1px solid rgba(211, 166, 37, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(14, 26, 64, 0.5),
+    inset 0 1px 0 rgba(211, 166, 37, 0.2);
+}
+
+/* Black Panther Theme */
+.theme-black-panther {
+  --theme-primary: #502379;
+  --theme-secondary: #C0C0C0;
+  --theme-accent: #D4AF37;
+  --theme-background: #000000;
+  --theme-primary-rgb: 80, 35, 121;
+  --theme-secondary-rgb: 192, 192, 192;
+  --theme-accent-rgb: 212, 175, 55;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Ubuntu', sans-serif;
+  
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(80, 35, 121, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a0f1d 100%);
+  
+  /* Tribal geometric patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(80, 35, 121, 0.05) 60deg,
+      transparent 120deg
+    );
+  background-size: 40px 40px;
+}
+
+.theme-black-panther .glass-strong {
+  background: rgba(80, 35, 121, 0.15) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(212, 175, 55, 0.2);
+}
+
+/* Marvel Theme */
+.theme-marvel {
+  --theme-primary: #ED1D24;
+  --theme-secondary: #152238;
+  --theme-accent: #C0C0C0;
+  --theme-background: #000000;
+  --theme-primary-rgb: 237, 29, 36;
+  --theme-secondary-rgb: 21, 34, 56;
+  --theme-accent-rgb: 192, 192, 192;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Roboto Condensed', sans-serif;
+  
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(237, 29, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(21, 34, 56, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #0f1419 100%);
+  
+  /* Star pattern effect */
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(192, 192, 192, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(237, 29, 36, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(192, 192, 192, 0.2), transparent);
+  background-size: 80px 60px, 100px 80px, 60px 40px;
+}
+
+.theme-marvel .glass-strong {
+  background: rgba(237, 29, 36, 0.1) !important;
+  border: 1px solid rgba(237, 29, 36, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(192, 192, 192, 0.1);
+}
+
+/* Loki Theme */
+.theme-loki {
+  --theme-primary: #D4AF37;
+  --theme-secondary: #2C5234;
+  --theme-accent: #CD7F32;
+  --theme-background: #000000;
+  --theme-primary-rgb: 212, 175, 55;
+  --theme-secondary-rgb: 44, 82, 52;
+  --theme-accent-rgb: 205, 127, 50;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Playfair Display', serif;
+  
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(44, 82, 52, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a1a0f 100%);
+  
+  /* Art deco circles and time loop patterns */
+  background-image: 
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      transparent 0px,
+      rgba(212, 175, 55, 0.02) 10px,
+      transparent 20px,
+      rgba(205, 127, 50, 0.02) 30px,
+      transparent 40px
+    );
+}
+
+.theme-loki .glass-strong {
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(205, 127, 50, 0.2);
+}
+
+/* Peaky Blinders Theme */
+.theme-peaky-blinders {
+  --theme-primary: #ECE7DC;
+  --theme-secondary: #7E675E;
+  --theme-accent: #708090;
+  --theme-background: #000000;
+  --theme-primary-rgb: 236, 231, 220;
+  --theme-secondary-rgb: 126, 103, 94;
+  --theme-accent-rgb: 112, 128, 144;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Crimson Text', serif;
+  
+  background: 
+    radial-gradient(ellipse at 30% 80%, rgba(126, 103, 94, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #000000 0%, #1a1715 100%);
+  
+  /* Smoky, gritty texture */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      rgba(236, 231, 220, 0.02) 3px,
+      rgba(236, 231, 220, 0.02) 6px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      rgba(112, 128, 144, 0.03) 2px,
+      rgba(112, 128, 144, 0.03) 4px
+    );
+}
+
+.theme-peaky-blinders .glass-strong {
+  background: rgba(126, 103, 94, 0.15) !important;
+  border: 1px solid rgba(236, 231, 220, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(236, 231, 220, 0.1);
+}
+
 /* Custom animations for themes */
 @keyframes glitch-hover {
   0%, 100% { transform: scale(1) translateX(0); }
@@ -170,6 +361,32 @@
   }
 }
 
+@keyframes magical-shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes tribal-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes hero-burst {
+  0% { transform: scale(0.8) rotate(-10deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes time-loop {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes smoke-fade {
+  0% { opacity: 0; filter: blur(5px); }
+  100% { opacity: 1; filter: blur(0px); }
+}
+
 /* Theme-specific button styles */
 .theme-spiderverse button:hover {
   animation: glitch-hover 0.3s ease;
@@ -184,12 +401,38 @@
   text-shadow: 0 0 10px var(--theme-primary);
 }
 
+.theme-harry-potter button:hover {
+  animation: magical-shimmer 0.5s ease;
+  text-shadow: 0 0 8px var(--theme-primary);
+}
+
+.theme-black-panther button:hover {
+  animation: tribal-slide 0.3s ease;
+}
+
+.theme-marvel button:hover {
+  animation: hero-burst 0.4s ease;
+}
+
+.theme-loki button:hover {
+  animation: time-loop 0.6s ease;
+}
+
+.theme-peaky-blinders button:hover {
+  animation: smoke-fade 0.4s ease;
+}
+
 /* Enhanced readability for all themes */
 .theme-spiderverse,
 .theme-dune,
 .theme-interstellar,
 .theme-matrix,
-.theme-batman {
+.theme-batman,
+.theme-harry-potter,
+.theme-black-panther,
+.theme-marvel,
+.theme-loki,
+.theme-peaky-blinders {
   color: #ffffff !important;
 }
 
@@ -197,7 +440,12 @@
 .theme-dune h1, .theme-dune h2, .theme-dune h3,
 .theme-interstellar h1, .theme-interstellar h2, .theme-interstellar h3,
 .theme-matrix h1, .theme-matrix h2, .theme-matrix h3,
-.theme-batman h1, .theme-batman h2, .theme-batman h3 {
+.theme-batman h1, .theme-batman h2, .theme-batman h3,
+.theme-harry-potter h1, .theme-harry-potter h2, .theme-harry-potter h3,
+.theme-black-panther h1, .theme-black-panther h2, .theme-black-panther h3,
+.theme-marvel h1, .theme-marvel h2, .theme-marvel h3,
+.theme-loki h1, .theme-loki h2, .theme-loki h3,
+.theme-peaky-blinders h1, .theme-peaky-blinders h2, .theme-peaky-blinders h3 {
   color: var(--theme-primary) !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
