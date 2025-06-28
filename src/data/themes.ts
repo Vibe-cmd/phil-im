@@ -630,5 +630,320 @@ export const themes: Theme[] = [
     },
     designStyle: 'Gritty vintage, smoky textures, sepia overlays',
     textColor: '#ECE7DC'
+  },
+  {
+    id: 'squid-game',
+    name: 'Squid Game',
+    description: 'Minimal UI with game shapes and flat shadows',
+    className: 'theme-squid-game',
+    colors: {
+      primary: '#FF007F',
+      secondary: '#1E7A57',
+      accent: '#FFFFFF',
+      background: '#000000'
+    },
+    font: 'Noto Sans KR',
+    preview: '🦑 Childhood Games',
+    emojis: ['🦑', '🎮', '🔴', '🔺', '🟪'],
+    category: 'Thriller',
+    tagline: 'Welcome to the games',
+    modes: {
+      light: {
+        colors: ['#FF007F', '#1E7A57', '#FFFFFF', '#F5F5F5'],
+        font: {
+          name: 'Noto Sans KR',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦑', '🎮', '🔴'],
+        animations: {
+          buttonHover: 'scale(1.05)',
+          pageTransition: 'game-transition',
+          loader: 'shape-spin'
+        }
+      },
+      dark: {
+        colors: ['#FF007F', '#1E7A57', '#FFFFFF', '#0A0A0A'],
+        font: {
+          name: 'Noto Sans KR',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦑', '🔺', '🟪'],
+        animations: {
+          buttonHover: 'scale(1.05)',
+          pageTransition: 'game-transition',
+          loader: 'shape-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#FF0080', '#FFFFFF', '#000000', '#00FF00'],
+        font: {
+          name: 'Noto Sans KR',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🦑', '🎮'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Minimal UI with game shapes (◯△▢), flat shadows',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'game-of-thrones',
+    name: 'Game of Thrones',
+    description: 'Medieval textures with house sigils and weathered UI',
+    className: 'theme-game-of-thrones',
+    colors: {
+      primary: '#A3BFD9',
+      secondary: '#8B0000',
+      accent: '#708090',
+      background: '#2F4F4F'
+    },
+    font: 'Cinzel',
+    preview: '🐉 Winter is Coming',
+    emojis: ['🐉', '⚔️', '👑', '🏰', '🔥'],
+    category: 'Fantasy',
+    tagline: 'Winter is coming',
+    modes: {
+      light: {
+        colors: ['#A3BFD9', '#8B0000', '#708090', '#F5F5F5'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🐉', '⚔️', '👑'],
+        animations: {
+          buttonHover: 'scale(1.03) rotate(1deg)',
+          pageTransition: 'medieval-fade',
+          loader: 'dragon-spin'
+        }
+      },
+      dark: {
+        colors: ['#A3BFD9', '#8B0000', '#708090', '#1A1A1A'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🐉', '🏰', '🔥'],
+        animations: {
+          buttonHover: 'scale(1.03) rotate(-1deg)',
+          pageTransition: 'medieval-fade',
+          loader: 'dragon-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#87CEEB', '#FFFFFF', '#696969', '#000000'],
+        font: {
+          name: 'Cinzel',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '30px' }
+        },
+        emojis: ['🐉', '⚔️'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Medieval textures, house sigils, weathered UI',
+    textColor: '#F5F5F5'
+  },
+  {
+    id: 'avatar',
+    name: 'Avatar',
+    description: 'Lush glowing plants with floating particles and tribal curves',
+    className: 'theme-avatar',
+    colors: {
+      primary: '#1CA9C9',
+      secondary: '#228B22',
+      accent: '#8A2BE2',
+      background: '#000000'
+    },
+    font: 'Ubuntu',
+    preview: '🌿 Pandora Awaits',
+    emojis: ['🌿', '🌊', '💙', '🦋', '✨'],
+    category: 'Sci-Fi',
+    tagline: 'I see you',
+    modes: {
+      light: {
+        colors: ['#1CA9C9', '#228B22', '#8A2BE2', '#E0F6FF'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🌿', '🌊', '💙'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-2px)',
+          pageTransition: 'nature-flow',
+          loader: 'bio-pulse'
+        }
+      },
+      dark: {
+        colors: ['#1CA9C9', '#228B22', '#8A2BE2', '#0A0A0A'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🌿', '🦋', '✨'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-2px)',
+          pageTransition: 'nature-flow',
+          loader: 'bio-pulse'
+        }
+      },
+      highContrast: {
+        colors: ['#00BFFF', '#FFFFFF', '#9370DB', '#000000'],
+        font: {
+          name: 'Ubuntu',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🌿', '💙'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Lush glowing plants, floating particles, tribal curves',
+    textColor: '#E0F6FF'
+  },
+  {
+    id: 'money-heist',
+    name: 'Money Heist',
+    description: 'Mask motif with heist blueprints and bold typography',
+    className: 'theme-money-heist',
+    colors: {
+      primary: '#D91F26',
+      secondary: '#000000',
+      accent: '#FFFFFF',
+      background: '#808080'
+    },
+    font: 'Oswald',
+    preview: '🎭 La Casa de Papel',
+    emojis: ['🎭', '💰', '🔴', '⚡', '💥'],
+    category: 'Crime',
+    tagline: 'Resistance is not futile, it is fertile',
+    modes: {
+      light: {
+        colors: ['#D91F26', '#000000', '#FFFFFF', '#F5F5F5'],
+        font: {
+          name: 'Oswald',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🎭', '💰', '🔴'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(2deg)',
+          pageTransition: 'heist-slide',
+          loader: 'mask-spin'
+        }
+      },
+      dark: {
+        colors: ['#D91F26', '#000000', '#FFFFFF', '#1A1A1A'],
+        font: {
+          name: 'Oswald',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🎭', '⚡', '💥'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(-2deg)',
+          pageTransition: 'heist-slide',
+          loader: 'mask-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#000000', '#C0C0C0'],
+        font: {
+          name: 'Oswald',
+          weight: ['600'],
+          size: { small: '16px', medium: '20px', large: '32px' }
+        },
+        emojis: ['🎭', '💰'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Mask motif, heist blueprints, bold typography',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'witcher',
+    name: 'The Witcher',
+    description: 'Sword and magic runes with fog textures and claw mark icons',
+    className: 'theme-witcher',
+    colors: {
+      primary: '#A9A9A9',
+      secondary: '#2E8B57',
+      accent: '#F5F5F5',
+      background: '#1C1C1C'
+    },
+    font: 'Cinzel',
+    preview: '🗡️ Toss a Coin',
+    emojis: ['🗡️', '🐺', '🔮', '⚡', '🌙'],
+    category: 'Fantasy',
+    tagline: 'Toss a coin to your witcher',
+    modes: {
+      light: {
+        colors: ['#A9A9A9', '#2E8B57', '#F5F5F5', '#F8F8F8'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🗡️', '🐺', '🔮'],
+        animations: {
+          buttonHover: 'scale(1.03) rotate(1deg)',
+          pageTransition: 'mist-fade',
+          loader: 'rune-spin'
+        }
+      },
+      dark: {
+        colors: ['#A9A9A9', '#2E8B57', '#F5F5F5', '#0D0D0D'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🗡️', '⚡', '🌙'],
+        animations: {
+          buttonHover: 'scale(1.03) rotate(-1deg)',
+          pageTransition: 'mist-fade',
+          loader: 'rune-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#DCDCDC', '#FFFFFF', '#228B22', '#000000'],
+        font: {
+          name: 'Cinzel',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🗡️', '🐺'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Sword and magic runes, fog textures, claw mark icons',
+    textColor: '#F5F5F5'
   }
 ];
