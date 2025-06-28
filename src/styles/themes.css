@@ -527,41 +527,247 @@
     inset 0 1px 0 rgba(245, 245, 245, 0.1);
 }
 
-/* Theme-specific button styles */
-.theme-spiderverse button:hover {
-  animation: glitch-hover 0.3s ease;
+/* NEW THEMES */
+
+/* Deadpool Theme */
+.theme-deadpool {
+  --theme-primary: #B80000;
+  --theme-secondary: #808080;
+  --theme-accent: #FFFFFF;
+  --theme-background: #000000;
+  --theme-primary-rgb: 184, 0, 0;
+  --theme-secondary-rgb: 128, 128, 128;
+  --theme-accent-rgb: 255, 255, 255;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Bangers', cursive;
+  
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(184, 0, 0, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a0000 100%);
+  
+  /* Graffiti texture with cracks */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(184, 0, 0, 0.05) 5px,
+      rgba(184, 0, 0, 0.05) 7px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(128, 128, 128, 0.03) 3px,
+      rgba(128, 128, 128, 0.03) 5px
+    );
 }
 
-.theme-batman button:hover {
-  animation: shadow-expand 0.3s ease;
+.theme-deadpool .glass-strong {
+  background: rgba(184, 0, 0, 0.15) !important;
+  border: 1px solid rgba(184, 0, 0, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.theme-matrix button:hover {
-  animation: glitch-hover 0.3s ease;
-  text-shadow: 0 0 10px var(--theme-primary);
+/* Studio Ghibli Theme */
+.theme-ghibli {
+  --theme-primary: #A8D5BA;
+  --theme-secondary: #DEB887;
+  --theme-accent: #A9D3F5;
+  --theme-background: #FFFDD0;
+  --theme-primary-rgb: 168, 213, 186;
+  --theme-secondary-rgb: 222, 184, 135;
+  --theme-accent-rgb: 169, 211, 245;
+  --theme-background-rgb: 255, 253, 208;
+  --font-family: 'Noto Sans', sans-serif;
+  
+  background: 
+    radial-gradient(ellipse at 60% 20%, rgba(169, 211, 245, 0.3) 0%, transparent 60%),
+    linear-gradient(135deg, #FFFDD0 0%, #f5f3c0 100%);
+  
+  /* Watercolor cloud effect */
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(168, 213, 186, 0.2) 30%, transparent 70%),
+    radial-gradient(ellipse at 80% 70%, rgba(222, 184, 135, 0.15) 25%, transparent 65%);
 }
 
-.theme-harry-potter button:hover {
-  animation: magical-shimmer 0.5s ease;
-  text-shadow: 0 0 8px var(--theme-primary);
+.theme-ghibli .glass-strong {
+  background: rgba(168, 213, 186, 0.2) !important;
+  border: 1px solid rgba(168, 213, 186, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.theme-black-panther button:hover {
-  animation: tribal-slide 0.3s ease;
+/* Jumanji Theme */
+.theme-jumanji {
+  --theme-primary: #228B22;
+  --theme-secondary: #8B4513;
+  --theme-accent: #FFD700;
+  --theme-background: #D2B48C;
+  --theme-primary-rgb: 34, 139, 34;
+  --theme-secondary-rgb: 139, 69, 19;
+  --theme-accent-rgb: 255, 215, 0;
+  --theme-background-rgb: 210, 180, 140;
+  --font-family: 'Cinzel', serif;
+  
+  background: 
+    radial-gradient(ellipse at 40% 80%, rgba(34, 139, 34, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #D2B48C 0%, #c4a876 100%);
+  
+  /* Jungle leaf patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 30deg at 25% 25%,
+      transparent 0deg,
+      rgba(34, 139, 34, 0.08) 60deg,
+      transparent 120deg
+    ),
+    repeating-linear-gradient(
+      60deg,
+      transparent,
+      transparent 8px,
+      rgba(139, 69, 19, 0.05) 8px,
+      rgba(139, 69, 19, 0.05) 12px
+    );
+  background-size: 60px 60px, 40px 40px;
 }
 
-.theme-marvel button:hover {
-  animation: hero-burst 0.4s ease;
+.theme-jumanji .glass-strong {
+  background: rgba(34, 139, 34, 0.15) !important;
+  border: 1px solid rgba(34, 139, 34, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 215, 0, 0.2);
 }
 
-.theme-loki button:hover {
-  animation: time-loop 0.6s ease;
+/* Titanic Theme */
+.theme-titanic {
+  --theme-primary: #1B263B;
+  --theme-secondary: #FFC0CB;
+  --theme-accent: #F8F4E3;
+  --theme-background: #0B1E35;
+  --theme-primary-rgb: 27, 38, 59;
+  --theme-secondary-rgb: 255, 192, 203;
+  --theme-accent-rgb: 248, 244, 227;
+  --theme-background-rgb: 11, 30, 53;
+  --font-family: 'Playfair Display', serif;
+  
+  background: 
+    radial-gradient(ellipse at 50% 80%, rgba(255, 192, 203, 0.1) 0%, transparent 70%),
+    linear-gradient(135deg, #0B1E35 0%, #1a3555 100%);
+  
+  /* Art Nouveau ornamental patterns */
+  background-image: 
+    repeating-radial-gradient(
+      circle at 40% 40%,
+      transparent 0px,
+      rgba(248, 244, 227, 0.03) 15px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      30deg,
+      transparent,
+      transparent 4px,
+      rgba(27, 38, 59, 0.05) 4px,
+      rgba(27, 38, 59, 0.05) 8px
+    );
 }
 
-.theme-peaky-blinders button:hover {
-  animation: smoke-fade 0.4s ease;
+.theme-titanic .glass-strong {
+  background: rgba(27, 38, 59, 0.2) !important;
+  border: 1px solid rgba(248, 244, 227, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(11, 30, 53, 0.6),
+    inset 0 1px 0 rgba(248, 244, 227, 0.2);
 }
 
+/* Creed Theme */
+.theme-creed {
+  --theme-primary: #D62828;
+  --theme-secondary: #4682B4;
+  --theme-accent: #708090;
+  --theme-background: #000000;
+  --theme-primary-rgb: 214, 40, 40;
+  --theme-secondary-rgb: 70, 130, 180;
+  --theme-accent-rgb: 112, 128, 144;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Oswald', sans-serif;
+  
+  background: 
+    radial-gradient(ellipse at 50% 20%, rgba(214, 40, 40, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  
+  /* Spotlight and athletic stripes */
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 15px,
+      rgba(70, 130, 180, 0.05) 15px,
+      rgba(70, 130, 180, 0.05) 17px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 25px,
+      rgba(112, 128, 144, 0.03) 25px,
+      rgba(112, 128, 144, 0.03) 27px
+    );
+}
+
+.theme-creed .glass-strong {
+  background: rgba(214, 40, 40, 0.15) !important;
+  border: 1px solid rgba(214, 40, 40, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(112, 128, 144, 0.2);
+}
+
+/* Narcos Theme */
+.theme-narcos {
+  --theme-primary: #EDEDED;
+  --theme-secondary: #8B0000;
+  --theme-accent: #A0522D;
+  --theme-background: #556B2F;
+  --theme-primary-rgb: 237, 237, 237;
+  --theme-secondary-rgb: 139, 0, 0;
+  --theme-accent-rgb: 160, 82, 45;
+  --theme-background-rgb: 85, 107, 47;
+  --font-family: 'Crimson Text', serif;
+  
+  background: 
+    linear-gradient(135deg, #556B2F 0%, #4a5c29 100%);
+  
+  /* Newspaper texture with crime board elements */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(237, 237, 237, 0.05) 1px,
+      rgba(237, 237, 237, 0.05) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      rgba(139, 0, 0, 0.03) 20px,
+      rgba(139, 0, 0, 0.03) 22px
+    );
+}
+
+.theme-narcos .glass-strong {
+  background: rgba(237, 237, 237, 0.1) !important;
+  border: 1px solid rgba(237, 237, 237, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(85, 107, 47, 0.6),
+    inset 0 1px 0 rgba(160, 82, 45, 0.2);
+}
+
+/* Theme-specific button hover animations */
 .theme-squid-game button:hover {
   animation: scale-pulse 0.3s ease;
 }
@@ -586,129 +792,104 @@
   text-shadow: 0 0 6px var(--theme-accent);
 }
 
-/* Custom animations for themes */
-@keyframes glitch-hover {
-  0%, 100% { transform: scale(1) translateX(0); }
-  25% { transform: scale(1.02) translateX(-1px); }
-  75% { transform: scale(1.02) translateX(1px); }
+.theme-deadpool button:hover {
+  animation: chaotic-spin 0.4s ease;
+  text-shadow: 0 0 8px var(--theme-primary);
 }
 
-@keyframes shadow-expand {
-  0% { 
-    transform: scale(1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  100% { 
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
-  }
+.theme-ghibli button:hover {
+  animation: nature-bloom 0.5s ease;
+  box-shadow: 0 0 12px rgba(var(--theme-primary-rgb), 0.3);
 }
 
-@keyframes magical-shimmer {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+.theme-jumanji button:hover {
+  animation: jungle-pulse 0.4s ease;
+  text-shadow: 0 0 6px var(--theme-accent);
 }
 
-@keyframes tribal-slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
+.theme-titanic button:hover {
+  animation: romantic-glow 0.5s ease;
+  text-shadow: 0 0 8px var(--theme-accent);
 }
 
-@keyframes hero-burst {
-  0% { transform: scale(0.8) rotate(-10deg); opacity: 0; }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+.theme-creed button:hover {
+  animation: athletic-boost 0.3s ease;
+  transform: scale(1.05) translateY(-2px);
 }
 
-@keyframes time-loop {
+.theme-narcos button:hover {
+  animation: newspaper-flip 0.4s ease;
+  text-shadow: 0 0 6px var(--theme-primary);
+}
+
+/* Additional custom animations */
+@keyframes chaotic-spin {
   0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(360deg) scale(1); }
+  25% { transform: rotate(5deg) scale(1.02); }
+  75% { transform: rotate(-5deg) scale(1.02); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
-@keyframes smoke-fade {
-  0% { opacity: 0; filter: blur(5px); }
-  100% { opacity: 1; filter: blur(0px); }
+@keyframes nature-bloom {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.9; }
 }
 
-@keyframes scale-pulse {
+@keyframes jungle-pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.04); }
 }
 
-@keyframes medieval-glow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; filter: brightness(1.2); }
+@keyframes romantic-glow {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.9; filter: brightness(1.1); }
 }
 
-@keyframes bio-glow {
-  0%, 100% { 
-    transform: scale(1);
-    filter: brightness(1);
-  }
-  50% { 
-    transform: scale(1.02);
-    filter: brightness(1.1) hue-rotate(10deg);
-  }
+@keyframes athletic-boost {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-3px); }
+  100% { transform: scale(1.02) translateY(-1px); }
 }
 
-@keyframes heist-flash {
-  0%, 100% { transform: scale(1); }
-  25% { transform: scale(1.03) rotate(1deg); }
-  75% { transform: scale(1.03) rotate(-1deg); }
+@keyframes newspaper-flip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(5deg); }
+  100% { transform: rotateY(0deg); }
 }
 
-@keyframes mystical-shimmer {
-  0%, 100% { 
-    opacity: 1; 
-    filter: blur(0px);
-  }
-  50% { 
-    opacity: 0.9; 
-    filter: blur(0.5px) brightness(1.1);
-  }
-}
-
-/* Enhanced readability for all themes */
-.theme-spiderverse,
-.theme-dune,
-.theme-interstellar,
-.theme-matrix,
-.theme-batman,
-.theme-harry-potter,
-.theme-black-panther,
-.theme-marvel,
-.theme-loki,
-.theme-peaky-blinders {
-  color: #ffffff !important;
-}
-
-.theme-spiderverse h1, .theme-spiderverse h2, .theme-spiderverse h3,
-.theme-dune h1, .theme-dune h2, .theme-dune h3,
-.theme-interstellar h1, .theme-interstellar h2, .theme-interstellar h3,
-.theme-matrix h1, .theme-matrix h2, .theme-matrix h3,
-.theme-batman h1, .theme-batman h2, .theme-batman h3,
-.theme-harry-potter h1, .theme-harry-potter h2, .theme-harry-potter h3,
-.theme-black-panther h1, .theme-black-panther h2, .theme-black-panther h3,
-.theme-marvel h1, .theme-marvel h2, .theme-marvel h3,
-.theme-loki h1, .theme-loki h2, .theme-loki h3,
-.theme-peaky-blinders h1, .theme-peaky-blinders h2, .theme-peaky-blinders h3 {
-  color: var(--theme-primary) !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
+/* Enhanced readability for new themes */
 .theme-squid-game,
 .theme-game-of-thrones,
 .theme-avatar,
 .theme-money-heist,
-.theme-witcher {
+.theme-witcher,
+.theme-deadpool,
+.theme-creed,
+.theme-narcos {
   color: #ffffff !important;
+}
+
+.theme-ghibli,
+.theme-jumanji,
+.theme-titanic {
+  color: #2F2F2F !important;
 }
 
 .theme-squid-game h1, .theme-squid-game h2, .theme-squid-game h3,
 .theme-game-of-thrones h1, .theme-game-of-thrones h2, .theme-game-of-thrones h3,
 .theme-avatar h1, .theme-avatar h2, .theme-avatar h3,
 .theme-money-heist h1, .theme-money-heist h2, .theme-money-heist h3,
-.theme-witcher h1, .theme-witcher h2, .theme-witcher h3 {
+.theme-witcher h1, .theme-witcher h2, .theme-witcher h3,
+.theme-deadpool h1, .theme-deadpool h2, .theme-deadpool h3,
+.theme-creed h1, .theme-creed h2, .theme-creed h3,
+.theme-narcos h1, .theme-narcos h2, .theme-narcos h3 {
   color: var(--theme-primary) !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.theme-ghibli h1, .theme-ghibli h2, .theme-ghibli h3,
+.theme-jumanji h1, .theme-jumanji h2, .theme-jumanji h3,
+.theme-titanic h1, .theme-titanic h2, .theme-titanic h3 {
+  color: var(--theme-primary) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }

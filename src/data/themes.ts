@@ -945,5 +945,383 @@ export const themes: Theme[] = [
     },
     designStyle: 'Sword and magic runes, fog textures, claw mark icons',
     textColor: '#F5F5F5'
+  },
+  {
+    id: 'deadpool',
+    name: 'Deadpool',
+    description: 'Cracked graffiti with comic sarcasm and bold fonts',
+    className: 'theme-deadpool',
+    colors: {
+      primary: '#B80000',
+      secondary: '#808080',
+      accent: '#FFFFFF',
+      background: '#000000'
+    },
+    font: 'Bangers',
+    preview: '💀 Maximum Effort',
+    emojis: ['💀', '🔫', '💥', '🎭', '🩸'],
+    category: 'Superhero',
+    tagline: 'Maximum effort',
+    modes: {
+      light: {
+        colors: ['#B80000', '#808080', '#FFFFFF', '#F5F5F5'],
+        font: {
+          name: 'Bangers',
+          weight: ['400'],
+          size: { small: '14px', medium: '18px', large: '32px' }
+        },
+        emojis: ['💀', '🔫', '💥'],
+        animations: {
+          buttonHover: 'scale(1.1) rotate(5deg)',
+          pageTransition: 'comic-pop',
+          loader: 'chaotic-spin'
+        }
+      },
+      dark: {
+        colors: ['#B80000', '#808080', '#FFFFFF', '#0A0A0A'],
+        font: {
+          name: 'Bangers',
+          weight: ['400'],
+          size: { small: '14px', medium: '18px', large: '32px' }
+        },
+        emojis: ['💀', '🎭', '🩸'],
+        animations: {
+          buttonHover: 'scale(1.1) rotate(-5deg)',
+          pageTransition: 'comic-pop',
+          loader: 'chaotic-spin'
+        }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#000000', '#C0C0C0'],
+        font: {
+          name: 'Bangers',
+          weight: ['400'],
+          size: { small: '16px', medium: '20px', large: '36px' }
+        },
+        emojis: ['💀', '💥'],
+        animations: {
+          buttonHover: 'scale(1.15)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Cracked graffiti, comic sarcasm, bold fonts',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'ghibli',
+    name: 'Studio Ghibli',
+    description: 'Watercolor textures with clouds and hand-drawn edges',
+    className: 'theme-ghibli',
+    colors: {
+      primary: '#A8D5BA',
+      secondary: '#DEB887',
+      accent: '#A9D3F5',
+      background: '#FFFDD0'
+    },
+    font: 'Noto Sans',
+    preview: '🌸 Magical Worlds',
+    emojis: ['🌸', '🌿', '☁️', '🦋', '✨'],
+    category: 'Animation',
+    tagline: 'Always believe in yourself',
+    modes: {
+      light: {
+        colors: ['#A8D5BA', '#DEB887', '#A9D3F5', '#FFFEF7'],
+        font: {
+          name: 'Noto Sans',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['🌸', '🌿', '☁️'],
+        animations: {
+          buttonHover: 'scale(1.02) translateY(-1px)',
+          pageTransition: 'cloud-drift',
+          loader: 'nature-bloom'
+        }
+      },
+      dark: {
+        colors: ['#A8D5BA', '#DEB887', '#A9D3F5', '#2F3E1F'],
+        font: {
+          name: 'Noto Sans',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['🌸', '🦋', '✨'],
+        animations: {
+          buttonHover: 'scale(1.02) translateY(-1px)',
+          pageTransition: 'cloud-drift',
+          loader: 'nature-bloom'
+        }
+      },
+      highContrast: {
+        colors: ['#228B22', '#FFFFFF', '#4169E1', '#000000'],
+        font: {
+          name: 'Noto Sans',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '26px' }
+        },
+        emojis: ['🌸', '🌿'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Watercolor texture, clouds, hand-drawn edges',
+    textColor: '#2F3E1F'
+  },
+  {
+    id: 'jumanji',
+    name: 'Jumanji',
+    description: 'Nature leaves with wooden textures and safari borders',
+    className: 'theme-jumanji',
+    colors: {
+      primary: '#228B22',
+      secondary: '#8B4513',
+      accent: '#FFD700',
+      background: '#D2B48C'
+    },
+    font: 'Cinzel',
+    preview: '🦁 Welcome to the Jungle',
+    emojis: ['🦁', '🌿', '🥁', '🐒', '🌴'],
+    category: 'Adventure',
+    tagline: 'Welcome to the jungle',
+    modes: {
+      light: {
+        colors: ['#228B22', '#8B4513', '#FFD700', '#F5F5DC'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦁', '🌿', '🥁'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(1deg)',
+          pageTransition: 'jungle-swing',
+          loader: 'drum-beat'
+        }
+      },
+      dark: {
+        colors: ['#228B22', '#8B4513', '#FFD700', '#1F2F1F'],
+        font: {
+          name: 'Cinzel',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '24px' }
+        },
+        emojis: ['🦁', '🐒', '🌴'],
+        animations: {
+          buttonHover: 'scale(1.05) rotate(-1deg)',
+          pageTransition: 'jungle-swing',
+          loader: 'drum-beat'
+        }
+      },
+      highContrast: {
+        colors: ['#00FF00', '#FFFFFF', '#FFFF00', '#000000'],
+        font: {
+          name: 'Cinzel',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🦁', '🌿'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Nature leaves, wooden textures, safari borders',
+    textColor: '#1F2F1F'
+  },
+  {
+    id: 'titanic',
+    name: 'Titanic',
+    description: 'Art Nouveau frames with faded photos and romantic textures',
+    className: 'theme-titanic',
+    colors: {
+      primary: '#1B263B',
+      secondary: '#FFC0CB',
+      accent: '#F8F4E3',
+      background: '#0B1E35'
+    },
+    font: 'Playfair Display',
+    preview: '🚢 My Heart Will Go On',
+    emojis: ['🚢', '💙', '💎', '🌊', '⭐'],
+    category: 'Romance',
+    tagline: 'My heart will go on',
+    modes: {
+      light: {
+        colors: ['#1B263B', '#FFC0CB', '#F8F4E3', '#F8F8FF'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🚢', '💙', '💎'],
+        animations: {
+          buttonHover: 'scale(1.03) translateY(-2px)',
+          pageTransition: 'ocean-wave',
+          loader: 'romantic-fade'
+        }
+      },
+      dark: {
+        colors: ['#1B263B', '#FFC0CB', '#F8F4E3', '#0A0A1A'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['400', '700'],
+          size: { small: '14px', medium: '16px', large: '26px' }
+        },
+        emojis: ['🚢', '🌊', '⭐'],
+        animations: {
+          buttonHover: 'scale(1.03) translateY(-2px)',
+          pageTransition: 'ocean-wave',
+          loader: 'romantic-fade'
+        }
+      },
+      highContrast: {
+        colors: ['#000080', '#FFFFFF', '#FFD700', '#000000'],
+        font: {
+          name: 'Playfair Display',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '30px' }
+        },
+        emojis: ['🚢', '💙'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Art Nouveau frames, faded photos, romantic textures',
+    textColor: '#F8F4E3'
+  },
+  {
+    id: 'creed',
+    name: 'Creed',
+    description: 'Athletic minimalism with spotlight background and gloves icon',
+    className: 'theme-creed',
+    colors: {
+      primary: '#D62828',
+      secondary: '#4682B4',
+      accent: '#708090',
+      background: '#000000'
+    },
+    font: 'Oswald',
+    preview: '🥊 Go the Distance',
+    emojis: ['🥊', '🏃', '🏆', '💪', '⭐'],
+    category: 'Sports',
+    tagline: 'Go the distance',
+    modes: {
+      light: {
+        colors: ['#D62828', '#4682B4', '#708090', '#F5F5F5'],
+        font: {
+          name: 'Oswald',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🥊', '🏃', '🏆'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-3px)',
+          pageTransition: 'athletic-slide',
+          loader: 'training-pulse'
+        }
+      },
+      dark: {
+        colors: ['#D62828', '#4682B4', '#708090', '#0A0A0A'],
+        font: {
+          name: 'Oswald',
+          weight: ['300', '400', '600'],
+          size: { small: '14px', medium: '18px', large: '28px' }
+        },
+        emojis: ['🥊', '💪', '⭐'],
+        animations: {
+          buttonHover: 'scale(1.05) translateY(-3px)',
+          pageTransition: 'athletic-slide',
+          loader: 'training-pulse'
+        }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#0000FF', '#000000'],
+        font: {
+          name: 'Oswald',
+          weight: ['600'],
+          size: { small: '16px', medium: '20px', large: '32px' }
+        },
+        emojis: ['🥊', '🏆'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Athletic minimalism, spotlight background, gloves icon',
+    textColor: '#F5F5F5'
+  },
+  {
+    id: 'narcos',
+    name: 'Narcos',
+    description: 'Newspaper clippings with crime dossier look',
+    className: 'theme-narcos',
+    colors: {
+      primary: '#EDEDED',
+      secondary: '#8B0000',
+      accent: '#A0522D',
+      background: '#556B2F'
+    },
+    font: 'Crimson Text',
+    preview: '📰 Plata o Plomo',
+    emojis: ['📰', '🔫', '💰', '🚁', '⚖️'],
+    category: 'Crime',
+    tagline: 'Plata o plomo',
+    modes: {
+      light: {
+        colors: ['#EDEDED', '#8B0000', '#A0522D', '#F5F5F5'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['📰', '🔫', '💰'],
+        animations: {
+          buttonHover: 'scale(1.02) rotate(1deg)',
+          pageTransition: 'newspaper-flip',
+          loader: 'typewriter'
+        }
+      },
+      dark: {
+        colors: ['#EDEDED', '#8B0000', '#A0522D', '#2F2F1F'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['400', '600'],
+          size: { small: '14px', medium: '16px', large: '22px' }
+        },
+        emojis: ['📰', '🚁', '⚖️'],
+        animations: {
+          buttonHover: 'scale(1.02) rotate(-1deg)',
+          pageTransition: 'newspaper-flip',
+          loader: 'typewriter'
+        }
+      },
+      highContrast: {
+        colors: ['#FFFFFF', '#000000', '#8B4513', '#2F4F2F'],
+        font: {
+          name: 'Crimson Text',
+          weight: ['600'],
+          size: { small: '16px', medium: '18px', large: '26px' }
+        },
+        emojis: ['📰', '🔫'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
+      }
+    },
+    designStyle: 'Newspaper clippings, crime dossier look',
+    textColor: '#2F2F1F'
   }
 ];
