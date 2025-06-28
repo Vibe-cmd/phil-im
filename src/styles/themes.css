@@ -1,0 +1,203 @@
+
+/* Enhanced Theme Styles */
+
+/* Spider-Verse Theme */
+.theme-spiderverse {
+  --theme-primary: #FF3C3C;
+  --theme-secondary: #8F00FF;
+  --theme-accent: #00F0FF;
+  --theme-background: #000000;
+  --theme-primary-rgb: 255, 60, 60;
+  --theme-secondary-rgb: 143, 0, 255;
+  --theme-accent-rgb: 0, 240, 255;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Bangers', cursive;
+  
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 60, 60, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(143, 0, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a0505 100%);
+  
+  /* Comic halftone dots effect */
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 60, 60, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(0, 240, 255, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px, 15px 15px;
+}
+
+.theme-spiderverse .glass-strong {
+  background: rgba(255, 60, 60, 0.1) !important;
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 60, 60, 0.2);
+}
+
+/* Dune Theme */
+.theme-dune {
+  --theme-primary: #D7BFA5;
+  --theme-secondary: #C46A33;
+  --theme-accent: #6E8CA0;
+  --theme-background: #2B1810;
+  --theme-primary-rgb: 215, 191, 165;
+  --theme-secondary-rgb: 196, 106, 51;
+  --theme-accent-rgb: 110, 140, 160;
+  --theme-background-rgb: 43, 24, 16;
+  --font-family: 'Orbitron', monospace;
+  
+  background: 
+    linear-gradient(135deg, #2B1810 0%, #3d2318 50%, #2B1810 100%),
+    radial-gradient(ellipse at 50% 80%, rgba(215, 191, 165, 0.1) 0%, transparent 60%);
+  
+  /* Desert sand texture */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(215, 191, 165, 0.05) 2px,
+      rgba(215, 191, 165, 0.05) 4px
+    );
+}
+
+/* Interstellar Theme */
+.theme-interstellar {
+  --theme-primary: #9DA5A7;
+  --theme-secondary: #0A2342;
+  --theme-accent: #4A90E2;
+  --theme-background: #000000;
+  --theme-primary-rgb: 157, 165, 167;
+  --theme-secondary-rgb: 10, 35, 66;
+  --theme-accent-rgb: 74, 144, 226;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Space Mono', monospace;
+  
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse at 70% 80%, rgba(157, 165, 167, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #000000 0%, #0A0A0F 100%);
+  
+  /* Subtle star field */
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(157, 165, 167, 0.3), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(157, 165, 167, 0.2), transparent);
+  background-size: 100px 80px, 120px 100px, 80px 60px;
+}
+
+/* Matrix Theme */
+.theme-matrix {
+  --theme-primary: #00FF41;
+  --theme-secondary: #000000;
+  --theme-accent: #00CC33;
+  --theme-background: #0D0D0D;
+  --theme-primary-rgb: 0, 255, 65;
+  --theme-secondary-rgb: 0, 0, 0;
+  --theme-accent-rgb: 0, 204, 51;
+  --theme-background-rgb: 13, 13, 13;
+  --font-family: 'Courier New', monospace;
+  
+  background: 
+    linear-gradient(180deg, #0D0D0D 0%, #000000 100%);
+  
+  /* Matrix code rain effect */
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 25px,
+      rgba(0, 255, 65, 0.03) 25px,
+      rgba(0, 255, 65, 0.03) 27px
+    );
+}
+
+.theme-matrix .glass-strong {
+  background: rgba(0, 255, 65, 0.05) !important;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 65, 0.2),
+    inset 0 1px 0 rgba(0, 255, 65, 0.1);
+}
+
+/* Batman Theme */
+.theme-batman {
+  --theme-primary: #F5C518;
+  --theme-secondary: #0C1E33;
+  --theme-accent: #FFD700;
+  --theme-background: #000000;
+  --theme-primary-rgb: 245, 197, 24;
+  --theme-secondary-rgb: 12, 30, 51;
+  --theme-accent-rgb: 255, 215, 0;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Oswald', sans-serif;
+  
+  background: 
+    radial-gradient(ellipse at 50% 100%, rgba(12, 30, 51, 0.8) 0%, transparent 70%),
+    linear-gradient(135deg, #000000 0%, #0f0f0f 100%);
+  
+  /* Subtle city skyline silhouette */
+  background-image: 
+    linear-gradient(180deg, 
+      transparent 70%, 
+      rgba(12, 30, 51, 0.3) 85%, 
+      rgba(12, 30, 51, 0.6) 100%
+    );
+}
+
+.theme-batman .glass-strong {
+  background: rgba(245, 197, 24, 0.05) !important;
+  border: 1px solid rgba(245, 197, 24, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(245, 197, 24, 0.1);
+}
+
+/* Custom animations for themes */
+@keyframes glitch-hover {
+  0%, 100% { transform: scale(1) translateX(0); }
+  25% { transform: scale(1.02) translateX(-1px); }
+  75% { transform: scale(1.02) translateX(1px); }
+}
+
+@keyframes shadow-expand {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  100% { 
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Theme-specific button styles */
+.theme-spiderverse button:hover {
+  animation: glitch-hover 0.3s ease;
+}
+
+.theme-batman button:hover {
+  animation: shadow-expand 0.3s ease;
+}
+
+.theme-matrix button:hover {
+  animation: glitch-hover 0.3s ease;
+  text-shadow: 0 0 10px var(--theme-primary);
+}
+
+/* Enhanced readability for all themes */
+.theme-spiderverse,
+.theme-dune,
+.theme-interstellar,
+.theme-matrix,
+.theme-batman {
+  color: #ffffff !important;
+}
+
+.theme-spiderverse h1, .theme-spiderverse h2, .theme-spiderverse h3,
+.theme-dune h1, .theme-dune h2, .theme-dune h3,
+.theme-interstellar h1, .theme-interstellar h2, .theme-interstellar h3,
+.theme-matrix h1, .theme-matrix h2, .theme-matrix h3,
+.theme-batman h1, .theme-batman h2, .theme-batman h3 {
+  color: var(--theme-primary) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
