@@ -1,0 +1,198 @@
+Complete Guide to Adding New Themes
+1. Understanding the Theme Structure
+Your themes are defined in src/contexts/ThemeContext.tsx in the themes array. Each theme follows a specific structure with the following properties:
+
+
+interface Theme {
+  id: string;                    // Unique identifier
+  name: string;                  // Display name
+  description: string;           // Brief description
+  className: string;             // CSS class name
+  colors: {                      // Color palette
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+  };
+  font: string;                  // Font family
+  preview: string;               // Emoji preview
+  emojis: string[];             // Related emojis
+  category: string;             // Theme category
+  tagline: string;              // Theme tagline
+  modes: {                      // Different color modes
+    light: ThemeMode;
+    dark: ThemeMode;
+    highContrast: ThemeMode;
+  };
+}
+2. Step-by-Step Theme Creation Process
+Step 1: Choose Your Theme Concept
+Pick a movie, TV show, or franchise
+Define the visual identity (colors, fonts, mood)
+Gather inspiration from official artwork/posters
+Step 2: Create the Basic Theme Object
+Add your new theme to the themes array in src/contexts/ThemeContext.tsx:
+
+
+{
+  id: 'your-theme-id',                    // Use kebab-case
+  name: 'Your Theme Name',                // Human-readable name
+  description: 'Theme description',        // Brief description
+  className: 'theme-your-theme',          // CSS class prefix
+  colors: {
+    primary: '#HEX_COLOR',               // Main brand color
+    secondary: '#HEX_COLOR',             // Secondary color
+    accent: '#HEX_COLOR',                // Accent/highlight color
+    background: '#HEX_COLOR'             // Background color
+  },
+  font: 'Font Name, fallback',           // Font family
+  preview: '🎬',                         // Representative emoji
+  emojis: ['🎬', '🎭', '🎨', '⭐', '🌟'], // 5 related emojis
+  category: 'Category Name',             // e.g., 'Sci-Fi', 'Fantasy'
+  tagline: 'Memorable quote or tagline', // Famous quote from the source
+  modes: {
+    // Define light, dark, and highContrast modes
+  }
+}
+Step 3: Define Theme Modes
+Each theme needs three modes (light, dark, highContrast):
+
+
+modes: {
+  light: {
+    colors: ['#color1', '#color2', '#color3', '#color4', '#color5'],
+    font: { 
+      name: 'Font Name', 
+      weight: ['regular', 'bold'], 
+      size: { small: '14px', medium: '16px', large: '18px' } 
+    },
+    emojis: ['🎬', '🎭', '🎨', '⭐', '🌟'],
+    animations: { 
+      buttonHover: 'animationName', 
+      pageTransition: 'transitionName', 
+      loader: 'loaderName' 
+    }
+  },
+  dark: {
+    // Similar structure with darker colors
+  },
+  highContrast: {
+    // High contrast version for accessibility
+  }
+}
+Step 4: Add Theme Images (Optional)
+In src/components/EnhancedThemePreview.tsx, add your theme to the getThemeImages function:
+
+
+const imageMap: Record<string, string[]> = {
+  'Your Theme Name': [
+    'https://image.tmdb.org/t/p/w300/poster1.jpg',
+    'https://image.tmdb.org/t/p/w300/poster2.jpg',
+    'https://image.tmdb.org/t/p/w300/poster3.jpg'
+  ],
+  // ... other themes
+};
+3. Color Selection Guidelines
+Primary Color:
+Most prominent color from your source material
+Used for buttons, links, highlights
+Secondary Color:
+Complementary to primary
+Used for hover states, borders
+Accent Color:
+Distinctive color for special elements
+Should contrast well with primary/secondary
+Background Color:
+Dark color for the app background
+Should provide good contrast with text
+4. Font Selection
+Choose fonts that match your theme's personality:
+
+Google Fonts: Use format like 'Roboto, sans-serif'
+Web Safe Fonts: 'Arial, sans-serif', 'Georgia, serif'
+Theme-specific: 'Orbitron' for sci-fi, 'Cinzel' for fantasy
+5. Example: Creating a "Neon Cyberpunk" Theme
+
+{
+  id: 'neon-cyberpunk',
+  name: 'Neon Cyberpunk',
+  description: 'Welcome to the future.',
+  className: 'theme-cyberpunk',
+  colors: {
+    primary: '#FF00FF',      // Neon pink
+    secondary: '#00FFFF',    // Cyan
+    accent: '#FFFF00',       // Electric yellow
+    background: '#0A0A0A'    // Deep black
+  },
+  font: 'Orbitron, monospace',
+  preview: '🌃',
+  emojis: ['🌃', '🤖', '💻', '⚡', '🔮'],
+  category: 'Sci-Fi',
+  tagline: 'The future is now.',
+  modes: {
+    light: {
+      colors: ['#FF00FF', '#00FFFF', '#0A0A0A', '#FFFF00', '#FF1493'],
+      font: { 
+        name: 'Orbitron, monospace', 
+        weight: ['regular', 'bold'], 
+        size: { small: '14px', medium: '16px', large: '18px' } 
+      },
+      emojis: ['🌃', '🤖', '💻', '⚡', '🔮'],
+      animations: { 
+        buttonHover: 'neonGlow', 
+        pageTransition: 'digitalGlitch', 
+        loader: 'circuitPulse' 
+      }
+    },
+    dark: {
+      colors: ['#CC00CC', '#00CCCC', '#0A0A0A', '#CCCC00', '#CC1177'],
+      font: { 
+        name: 'Orbitron, monospace', 
+        weight: ['regular', 'bold'], 
+        size: { small: '14px', medium: '16px', large: '18px' } 
+      },
+      emojis: ['🌃', '🤖', '💻', '⚡', '🔮'],
+      animations: { 
+        buttonHover: 'neonGlow', 
+        pageTransition: 'digitalGlitch', 
+        loader: 'circuitPulse' 
+      }
+    },
+    highContrast: {
+      colors: ['#FF00FF', '#000000', '#FFFFFF', '#FFFF00', '#00FFFF'],
+      font: { 
+        name: 'Orbitron, monospace', 
+        weight: ['regular', 'bold'], 
+        size: { small: '14px', medium: '16px', large: '18px' } 
+      },
+      emojis: ['🌃', '🤖', '💻', '⚡', '🔮'],
+      animations: { 
+        buttonHover: 'neonGlow', 
+        pageTransition: 'digitalGlitch', 
+        loader: 'circuitPulse' 
+      }
+    }
+  }
+}
+6. Testing Your Theme
+Add the theme to the themes array
+Save the file - the app will automatically reload
+Open the theme selector (🎨 button in header)
+Select your new theme from the list
+Test all UI elements to ensure good contrast and readability
+Check responsiveness on different screen sizes
+7. Best Practices
+Contrast: Ensure text is readable on all backgrounds
+Consistency: Use colors consistently across the theme
+Accessibility: Include a high contrast mode
+Performance: Don't use too many custom fonts
+Branding: Stay true to the source material's visual identity
+8. Advanced Customization
+For more complex themes, you can:
+
+Add custom CSS animations
+Include gradient backgrounds
+Implement theme-specific icons
+Add seasonal variations
+Create interactive elements
+This system allows you to create rich, immersive themes that transform the entire application's look and feel while maintaining functionality and accessibility.

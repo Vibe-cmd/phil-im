@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
@@ -292,4 +291,10 @@
   box-shadow: 
     0 0 20px rgba(var(--theme-accent-rgb), 0.4),
     0 0 40px rgba(var(--theme-primary-rgb), 0.2);
+}
+
+/* Ensure high-contrast, always-readable text color for all main UI text */
+body, h1, h2, h3, h4, h5, h6, p, span, label, input, button, .text, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.18);
 }

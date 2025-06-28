@@ -1,4 +1,3 @@
-
 export interface Album {
   id: string;
   name: string;
@@ -61,6 +60,8 @@ export interface Theme {
     dark: ThemeMode;
     highContrast: ThemeMode;
   };
+  designStyle?: string;
+  textColor?: string;
 }
 
 export interface ThemeMode {
@@ -80,6 +81,8 @@ export interface ThemeMode {
     pageTransition: string;
     loader: string;
   };
+  designStyle?: string;
+  textColor?: string;
 }
 
 export type LayoutType = 'grid' | 'carousel' | 'polaroid' | 'staggered' | 'instagram';

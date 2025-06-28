@@ -1,0 +1,1907 @@
+{
+  "themes": [
+    {
+      "name": "Spectacular Spider-Verse",
+      "category": "Superhero",
+      "tagline": "With great power comes great responsibility.",
+      "modes": {
+        "light": {
+          "colors": ["#FF1E56", "#00B7EB", "#FFFFFF", "#F5E050", "#FF6F61"],
+          "font": {
+            "name": "Anime Ace",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕷️", "🕸️", "🎨", "🦸‍♂️", "🌆"],
+          "animations": {
+            "buttonHover": "webSwing",
+            "pageTransition": "comicPop",
+            "loader": "spiderSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#D81F26", "#0288D1", "#1C2526", "#E0C120", "#E64A45"],
+          "font": {
+            "name": "Anime Ace",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕷️", "🕸️", "🎨", "🦸‍♂️", "🌆"],
+          "animations": {
+            "buttonHover": "webSwing",
+            "pageTransition": "comicPop",
+            "loader": "spiderSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FF1E56", "#000000", "#FFFFFF", "#FFFF00", "#FF6F61"],
+          "font": {
+            "name": "Anime Ace",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕷️", "🕸️", "🎨", "🦸‍♂️", "🌆"],
+          "animations": {
+            "buttonHover": "webSwing",
+            "pageTransition": "comicPop",
+            "loader": "spiderSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Dazzling Dune",
+      "category": "Sci-Fi",
+      "tagline": "The spice must flow.",
+      "modes": {
+        "light": {
+          "colors": ["#D9A86C", "#8B5523", "#F4E4BC", "#FFFFFF", "#A67B5B"],
+          "font": {
+            "name": "Cinzel",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🏜️", "🪐", "🛸", "⚔️", "🌌"],
+          "animations": {
+            "buttonHover": "sandSwirl",
+            "pageTransition": "desertFade",
+            "loader": "spiceGlow"
+          }
+        },
+        "dark": {
+          "colors": ["#A67B5B", "#5A3A1A", "#3C2F2F", "#1C2526", "#8B5523"],
+          "font": {
+            "name": "Cinzel",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🏜️", "🪐", "🛸", "⚔️", "🌌"],
+          "animations": {
+            "buttonHover": "sandSwirl",
+            "pageTransition": "desertFade",
+            "loader": "spiceGlow"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D9A86C", "#000000", "#FFFFFF", "#8B5523", "#A67B5B"],
+          "font": {
+            "name": "Cinzel",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🏜️", "🪐", "🛸", "⚔️", "🌌"],
+          "animations": {
+            "buttonHover": "sandSwirl",
+            "pageTransition": "desertFade",
+            "loader": "spiceGlow"
+          }
+        }
+      }
+    },
+    {
+      "name": "Intriguing Interstellar",
+      "category": "Sci-Fi",
+      "tagline": "We must reach for the stars.",
+      "modes": {
+        "light": {
+          "colors": ["#A3BFFA", "#3A5F7D", "#F4A261", "#FFFFFF", "#D9D9D9"],
+          "font": {
+            "name": "Orbitron",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌌", "🕰️", "🚀", "🌍", "🌀"],
+          "animations": {
+            "buttonHover": "starPulse",
+            "pageTransition": "wormholeZoom",
+            "loader": "orbitSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#0B1C2E", "#2A4059", "#D98A40", "#1C2526", "#4A4A4A"],
+          "font": {
+            "name": "Orbitron",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌌", "🕰️", "🚀", "🌍", "🌀"],
+          "animations": {
+            "buttonHover": "starPulse",
+            "pageTransition": "wormholeZoom",
+            "loader": "orbitSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#A3BFFA", "#000000", "#FFFFFF", "#F4A261", "#D9D9D9"],
+          "font": {
+            "name": "Orbitron",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌌", "🕰️", "🚀", "🌍", "🌀"],
+          "animations": {
+            "buttonHover": "starPulse",
+            "pageTransition": "wormholeZoom",
+            "loader": "orbitSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Mystical Matrix",
+      "category": "Sci-Fi",
+      "tagline": "There is no spoon.",
+      "modes": {
+        "light": {
+          "colors": ["#4CAF50", "#00FF00", "#FFFFFF", "#2E7D32", "#D9D9D9"],
+          "font": {
+            "name": "VT323",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔢", "🌐"],
+          "animations": {
+            "buttonHover": "glitch",
+            "pageTransition": "digitalRain",
+            "loader": "codeScroll"
+          }
+        },
+        "dark": {
+          "colors": ["#0F3D3E", "#00CC00", "#1A1A1A", "#1B5E20", "#263238"],
+          "font": {
+            "name": "VT323",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔢", "🌐"],
+          "animations": {
+            "buttonHover": "glitch",
+            "pageTransition": "digitalRain",
+            "loader": "codeScroll"
+          }
+        },
+        "highContrast": {
+          "colors": ["#00FF00", "#000000", "#FFFFFF", "#4CAF50", "#2E7D32"],
+          "font": {
+            "name": "VT323",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔢", "🌐"],
+          "animations": {
+            "buttonHover": "glitch",
+            "pageTransition": "digitalRain",
+            "loader": "codeScroll"
+          }
+        }
+      }
+    },
+    {
+      "name": "Hogwarts Harmony",
+      "category": "Fantasy",
+      "tagline": "It does not do to dwell on dreams and forget to live.",
+      "modes": {
+        "light": {
+          "colors": ["#A68A64", "#FFD700", "#FFFFFF", "#2A623D", "#740001"],
+          "font": {
+            "name": "Luminary, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "⚡", "🦁", "🏰", "📖"],
+          "animations": {
+            "buttonHover": "sparkle",
+            "pageTransition": "wandWave",
+            "loader": "owlFlight"
+          }
+        },
+        "dark": {
+          "colors": ["#4A3728", "#D4A017", "#1A472A", "#1C2526", "#5C0000"],
+          "font": {
+            "name": "Luminary, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "⚡", "🦁", "🏰", "📖"],
+          "animations": {
+            "buttonHover": "sparkle",
+            "pageTransition": "wandWave",
+            "loader": "owlFlight"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#2A623D", "#740001"],
+          "font": {
+            "name": "Luminary, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "⚡", "🦁", "🏰", "📖"],
+          "animations": {
+            "buttonHover": "sparkle",
+            "pageTransition": "wandWave",
+            "loader": "owlFlight"
+          }
+        }
+      }
+    },
+    {
+      "name": "Brooding Batman",
+      "category": "Superhero",
+      "tagline": "I am vengeance, I am the night, I am Batman!",
+      "modes": {
+        "light": {
+          "colors": ["#B0BEC5", "#4A4A4A", "#FFFFFF", "#FFCA28", "#2F4F4F"],
+          "font": {
+            "name": "Gotham, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦇", "🌃", "🕵️‍♂️", "🃏", "🚓"],
+          "animations": {
+            "buttonHover": "shadowPulse",
+            "pageTransition": "nightFade",
+            "loader": "batSignal"
+          }
+        },
+        "dark": {
+          "colors": ["#1C2526", "#2F4F4F", "#263238", "#E0A800", "#4A4A4A"],
+          "font": {
+            "name": "Gotham, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦇", "🌃", "🕵️‍♂️", "🃏", "🚓"],
+          "animations": {
+            "buttonHover": "shadowPulse",
+            "pageTransition": "nightFade",
+            "loader": "batSignal"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFCA28", "#000000", "#FFFFFF", "#4A4A4A", "#2F4F4F"],
+          "font": {
+            "name": "Gotham, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦇", "🌃", "🕵️‍♂️", "🃏", "🚓"],
+          "animations": {
+            "buttonHover": "shadowPulse",
+            "pageTransition": "nightFade",
+            "loader": "batSignal"
+          }
+        }
+      }
+    },
+    {
+      "name": "Vibrant Vibranium",
+      "category": "Superhero",
+      "tagline": "Wakanda forever!",
+      "modes": {
+        "light": {
+          "colors": ["#D4A017", "#6B3FA0", "#FFFFFF", "#FFD700", "#2C1A3D"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🐆", "👑", "🌍", "🛡️", "⚔️"],
+          "animations": {
+            "buttonHover": "vibraniumGlow",
+            "pageTransition": "tribalFade",
+            "loader": "pantherProwl"
+          }
+        },
+        "dark": {
+          "colors": ["#2C1A3D", "#4B2A70", "#1C2526", "#D4A017", "#B38C00"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🐆", "👑", "🌍", "🛡️", "⚔️"],
+          "animations": {
+            "buttonHover": "vibraniumGlow",
+            "pageTransition": "tribalFade",
+            "loader": "pantherProwl"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#6B3FA0", "#2C1A3D"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🐆", "👑", "🌍", "🛡️", "⚔️"],
+          "animations": {
+            "buttonHover": "vibraniumGlow",
+            "pageTransition": "tribalFade",
+            "loader": "pantherProwl"
+          }
+        }
+      }
+    },
+    {
+      "name": "Luscious Loki",
+      "category": "Superhero",
+      "tagline": "I am burdened with glorious purpose.",
+      "modes": {
+        "light": {
+          "colors": ["#2A9D8F", "#E9C46A", "#FFFFFF", "#F4A261", "#264653"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡️", "🕰️", "👑", "🐍", "🪄"],
+          "animations": {
+            "buttonHover": "illusionFade",
+            "pageTransition": "timeShift",
+            "loader": "scepterGlow"
+          }
+        },
+        "dark": {
+          "colors": ["#1B263B", "#2A7D6F", "#1C2526", "#D98A40", "#264653"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡️", "🕰️", "👑", "🐍", "🪄"],
+          "animations": {
+            "buttonHover": "illusionFade",
+            "pageTransition": "timeShift",
+            "loader": "scepterGlow"
+          }
+        },
+        "highContrast": {
+          "colors": ["#2A9D8F", "#000000", "#FFFFFF", "#E9C46A", "#264653"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡️", "🕰️", "👑", "🐍", "🪄"],
+          "animations": {
+            "buttonHover": "illusionFade",
+            "pageTransition": "timeShift",
+            "loader": "scepterGlow"
+          }
+        }
+      }
+    },
+    {
+      "name": "Pensive Peaky",
+      "category": "Crime Drama",
+      "tagline": "By order of the Peaky Blinders.",
+      "modes": {
+        "light": {
+          "colors": ["#D9C2A6", "#8B6F47", "#FFFFFF", "#4A3728", "#3C2F2F"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🧢", "🚬", "🔫", "🥃", "🕴️"],
+          "animations": {
+            "buttonHover": "smokePuff",
+            "pageTransition": "grayscaleFade",
+            "loader": "razorSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#2A3728", "#5F4B2B", "#1A1A1A", "#3C2F2F", "#263238"],
+          "colors": ["#333333", "#5F4B2B", "#FFD700", "#3C2F2F", "#1A1A4A"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular", "size-bold"],
+            "fontSize": "large"
+            "emojis": ["🧢", "👖", "🔨"],
+            "animations": {
+              "buttonHover": "smokePuff",
+              "pageTransition": "grayscale",
+              "loader": "razorSpin"
+            }
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#8B6F47", "#3C2F2F"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🧢", "🚬", "🔫", "🥃", "🕴️"],
+          "animations": {
+            {
+              "buttonHover": "smokePuff",
+              "pageTransition": "grayscaleFade",
+              "loader": "razorSpin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mighty MCU",
+      "category": "Superhero",
+      "tagline": "Avengers, assemble!",
+      "modes": {
+        "light": {
+          "colors": ["#D81F26", "#FFD700", "#FFFFFF", "#00B7EB", "#4CAF50"],
+          "font": {
+            "name": "Avenir, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦸‍♂️", "🛡️", "⚡", "🔨", "🌌"],
+          "animations": {
+            "buttonHover": "heroPulse",
+            "pageTransition": "infinityWarp",
+            "loader": "arcReactor"
+          }
+        },
+        "dark": {
+          "colors": ["#A1041B", "#D4A017", "#1C2526", "#0288D1", "#2A5F31"],
+          "font": {
+            "name": "Avenir, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦸‍♂️", "🛡️", "⚡", "🔨", "🌌"],
+          "animations": {
+            "buttonHover": "heroPulse",
+            "pageTransition": "infinityWarp",
+            "loader": "arcReactor"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D81F26", "#000000", "#FFFFFF", "#FFD700", "#4CAF50"],
+          "font": {
+            "name": "Avenir, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🦸‍♂️", "🛡️", "⚡", "🔨", "🌌"],
+          "animations": {
+            "buttonHover": "heroPulse",
+            "pageTransition": "infinityWarp",
+            "loader": "arcReactor"
+          }
+        }
+      }
+    },
+    {
+      "name": "Sinister Squid",
+      "category": "Thriller",
+      "tagline": "Ready, set, play.",
+      "modes": {
+        "light": {
+          "colors": ["#E91E63", "#0288D1", "#FFFFFF", "#4CAF50", "#FFD700"],
+          "font": {
+            "name": "Roboto Condensed, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎮", "🟥", "🟢", "🔺", "⬛"],
+          "animations": {
+            "buttonHover": "gameBlink",
+            "pageTransition": "maskSlide",
+            "loader": "dollTurn"
+          }
+        },
+        "dark": {
+          "colors": ["#B01B4A", "#01579B", "#1C2526", "#2A5F31", "#D4A017"],
+          "font": {
+            "name": "Roboto Condensed, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎮", "🟥", "🟢", "🔺", "⬛"],
+          "animations": {
+            "buttonHover": "gameBlink",
+            "pageTransition": "maskSlide",
+            "loader": "dollTurn"
+          }
+        },
+        "highContrast": {
+          "colors": ["#E91E63", "#000000", "#FFFFFF", "#4CAF50", "#FFD700"],
+          "font": {
+            "name": "Roboto Condensed, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎮", "🟥", "🟢", "🔺", "⬛"],
+          "animations": {
+            "buttonHover": "gameBlink",
+            "pageTransition": "maskSlide",
+            "loader": "dollTurn"
+          }
+        }
+      }
+    },
+    {
+      "name": "Throne's Triumph",
+      "category": "Epic Fantasy",
+      "tagline": "Winter is coming.",
+      "modes": {
+        "light": {
+          "colors": ["#FFD700", "#8B6F47", "#FFFFFF", "#4A3728", "#3C2F2F"],
+          "font": {
+            "name": "Trajan Pro, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["👑", "🐉", "⚔️", "🛡️", "❄️"],
+          "animations": {
+            {
+              "buttonHover": "swordClash",
+              "pageTransition": "fireFade",
+              "loader": "dragonSoar"
+            }
+        },
+        "dark": {
+          "colors": ["#D4A017", "#5F4B2B", "#1A1A1A", "#2A1A1A1A", "#3C2F2F"],
+          "font": {
+            "name": "Trajan Pro, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["👑", "🐉", "⚔️", "🛡️", "❄️"],
+          "animations": {
+            {
+              "buttonHover": "swordClash",
+              "pageTransition": "fireFade",
+              "loader": "dragonSoar"
+            }
+          }
+        },
+        {
+"highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#8B6F47", "#3C2F2F"],
+          "font": {
+            "name": "Trajan Pro, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["👑", "🐉", "⚔️", "🛡️", "❄️"],
+          "animations": {
+            "buttonHover": "swordClash",
+            "pageTransition": "fireFade",
+            "loader": "dragonSoar"
+          }
+        }
+      }
+    },
+    {
+      "name": "Azure Avatar",
+      "category": "Fantasy",
+      "tagline": "We are one with the forest.",
+      "modes": {
+        "light": {
+          "colors": ["#00A3AD", "#A3D39C", "#FFFFFF", "#4CAF50", "#2A623D"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌍", "🐉", "🌿", "🪶", "🦋"],
+          "animations": {
+            "buttonHover": "glowPulse",
+            "pageTransition": "natureBloom",
+            "loader": "treeSway"
+          }
+        },
+        "dark": {
+          "colors": ["#1B263B", "#2A5F31", "#1C2526", "#2A9D8F", "A#015A5E"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌍", "🐘", "🌱", "🪶", "🦋"],
+          "animations": {
+            {
+              "buttonHover": "glowPulse",
+              "pageTransition": "natureBloom",
+              "loader": "treeSway"
+            }
+          }
+        },
+        "highContrast": {
+          "colors": ["#00A3AD", "#000000", "#FFFFFF", "#4CAF50", "#A3D39C"],
+          "font": {
+            "name": "Papyrus, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🌍", "🐉", "🌿", "🪶", "🦋"],
+          "animations": {
+            {
+              "buttonHover": "glowPulse",
+              "pageTransition": "natureBloom",
+              "loader": "treeSway"
+            }
+        }
+      }
+    ],
+    {
+      "name": "Heistful Hustle",
+      "category": "Crime Drama",
+      "tagline": "Bella Ciao!",
+      "modes": {
+        {
+          "light": {
+            "colors": ["#D81F26", "#FFD700", "FFD700", "#FFFFFF", "#B0BEC5", "#4A3728"],
+            "font": {
+              "name": "Eurostile",
+              sans-serif",
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🎭", "💰", "🔫", "🖴️", "📜"],
+            "animations": {
+              {
+                "buttonHover": "maskFlip",
+                "pageTransition": "vaultSlide",
+                "loader": "moneyFall"
+              }
+            }
+          },
+          {
+"dark": {
+            "colors": ["#A1041B", "#D4A4A017", "#1C2526", "#2A1A3728", "#263238"],
+            "font": {
+              "name": "Eurostile, sans-serif",
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🎭", "💰", "🔫", "🖴️", "📜"],
+            "animations": {
+              {
+                "buttonHover": "maskFlip",
+                "pageTransition": "vaultSlide",
+                "loader": "moneyFall"
+              }
+            }
+          },
+          {
+"highContrast": {
+            "colors": ["#D81F26", "#000000", "#FFFFFF", "#FFD700", "#4A372A3728"],
+            "font": {
+              "name": "Eurostile",
+              sans-serif,
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🎭", "💰", "🔫", "🖴️", "📜"],
+            "animations": {
+              {
+                "buttonHover": "maskFlip",
+                "pageTransition": "vaultSlide",
+                "loader": "moneyFall"
+              }
+            }
+          }
+        }
+      },
+    {
+      "name": "Witcher's Wrath",
+      "category": "Fantasy",
+      "tagline": "Destiny is a beast.",
+      "modes": {
+        "light": {
+          "colors": ["#A68A64", "#FFD700", "#FFFFFF", "#4A3728", "#2A623D"],
+          "font": {
+            "name": "Cinzel, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚔️", "🐺", "🪄", "👑", "🧙‍♂️"],
+          "animations": {
+            "buttonHover": "swordGlow",
+            "pageTransition": "mistFade",
+            "loader": "medallionSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#4A3728", "#D4A017", "#1C2526", "#2A5F26", "#3C2F2F"],
+          "font": {
+            "name": "Cinzel, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚔️", "🐺", "🪄", "👑", "🧙‍♂️"],
+          "animations": {
+            "buttonHover": "swordGlow",
+            "pageTransition": "mistFade",
+            "loader": "medallionSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#A68A64", "#2A623D"],
+          "font": {
+            "name": "Cinzel, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚔️", "🐺", "🪄", "👑", "🧙‍♂️"],
+          "animations": {
+            "buttonHover": "swordGlow",
+            "pageTransition": "mistFade",
+            "loader": "medallionSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Dashing Deadpool",
+      "category": "Action Comedy",
+      "tagline": "Maximum effort!",
+      "modes": {
+        "light": {
+          "colors": ["#D81F26", "#FFD700", "#FFFFFF", "#B0BEC5", "#4A4A4A"],
+          "font": {
+            "name": "Impact, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡️", "🔫", "😂", "💥", "🦁"],
+          "animations": {
+            "buttonHover": "chimichangaPop",
+            "pageTransition": "sliceCut",
+            "loader": "wadeSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#A1041B", "#D4A017", "#1C2526", "#263B5B", "#2F2F2F"],
+          "font": {
+            "name": "Impact, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡️", "🔢", "😂", "💥", "🦁"],
+          "animations": {
+            "buttonHover": "chimichagaPop",
+            "pageTransition": "sliceCut",
+            "loader": "wadeSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D81F26", "#000000", "#FFFFFF", "#FFD700", "#4A4A4A"],
+          "font": {
+            "name": "Impact, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🗡", "🔫", "😂", "💥", "🦁"],
+          "animations": {
+            {
+              "buttonHover": "chimichangaPop",
+              "pageTransition": "sliceCut",
+              "loader": "wadeSpin"
+            }
+          }
+        }
+      },
+      }
+    ],
+    {
+      "name": "Ghibli's Glow",
+      "category": "Animated Fantasy",
+      "tagline": "The wind rises, we must try to live.",
+      "modes": {
+        {
+          "light": {
+            "colors": ["#A3D39C", "#00A3AD", "#FFFFFF", "#FFD700", "#2A623D"],
+            "font": {
+              "name": "Anime Ace",
+              sans-serif",
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🌸", "🐾", "🌿", "🪄", "🍃"],
+            "animations": {
+              {
+                "buttonHover": "petalFloat",
+                "pageTransition": "windFade",
+                "loader": "totoroBounce"
+              }
+            }
+          },
+          {
+"dark": {
+            "colors": ["#2A9D8F", "#01579B", "1C2526", "#E9C46A", "A#1B263B"],
+            "font": {
+              "name": "Anime Ace",
+              sans-serif,
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🌸", "🐾", "🌿", "🪄", "🍃"],
+            "animations": {
+              {
+                "buttonHover": "petalFloat",
+                "pageTransition": "windFade",
+                "loader": "totoroBounce"
+              }
+            }
+          },
+          {
+"highContrast": {
+            "colors": ["#A3D39C", "#000000", "#FFFFFF", "#00A3AD", "#2A623D"],
+            "font": {
+              "name": "Anime Ace",
+              sans-serif,
+              "weight": ["regular", "bold"],
+              "size": {
+                "small": "14px",
+                "medium": "16px",
+                "large": "18px"
+              }
+            },
+            "emojis": ["🌸", "🐾", "🌿", "🪄", "🍃"],
+            "animations": {
+              {
+                "buttonHover": "petalFloat",
+                "pageTransition": "windFade",
+                "loader": "totoroBounce"
+              }
+            }
+          }
+        }
+      },
+    {
+      "name": "Jumanji's Jungle",
+      "category": "Adventure",
+      "tagline": "In the jungle, you must wait, until the dice read five or eight.",
+      "modes": {
+        "light": {
+          "colors": ["#2A623D", "#8B6F47", "#FFFFFF", "#D9A86C", "#FFD700"],
+          "font": {
+            "name": "Jungle Fever, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎲", "🦒", "🌴", "🪐", "🗺️"],
+          "animations": {
+            "buttonHover": "diceRoll",
+            "pageTransition": "jungleFade",
+            "loader": "drumBeat"
+          }
+        },
+        "dark": {
+          "colors": ["#1A472A", "#5F4B2B", "#1C2526", "#A67B5B", "#D4A017"],
+          "font": {
+            "name": "Jungle Fever, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎲", "🦒", "🌴", "🪐", "🗺️"],
+          "animations": {
+            "buttonHover": "diceRoll",
+            "pageTransition": "jungleFade",
+            "loader": "drumBeat"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#2A623D", "#8B6F47"],
+          "font": {
+            "name": "Jungle Fever, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🎲", "🦒", "🌴", "🪐", "🗺️"],
+          "animations": {
+            "buttonHover": "diceRoll",
+            "pageTransition": "jungleFade",
+            "loader": "drumBeat"
+          }
+        }
+      }
+    },
+    {
+      "name": "Tragic Titanic",
+      "category": "Romance Drama",
+      "tagline": "I'm the king of the world!",
+      "modes": {
+        "light": {
+          "colors": ["#A3BFFA", "#FFD700", "#FFFFFF", "#D9C2A6", "#4A3728"],
+          "font": {
+            "name": "Great Vibes, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚢", "💎", "🌊", "❤️", "🎻"],
+          "animations": {
+            "buttonHover": "waveRipple",
+            "pageTransition": "oceanFade",
+            "loader": "shipSail"
+          }
+        },
+        "dark": {
+          "colors": ["#1B263B", "#D4A017", "#1C2526", "#8A7A6A", "#2A3728"],
+          "font": {
+            "name": "Great Vibes, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚢", "💎", "🌊", "❤️", "🎻"],
+          "animations": {
+            "buttonHover": "waveRipple",
+            "pageTransition": "oceanFade",
+            "loader": "shipSail"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#A3BFFA", "#4A3728"],
+          "font": {
+            "name": "Great Vibes, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              sprawy "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚢", "💎", "🌊", "❤️", "🎻"],
+          "animations": {
+            "buttonHover": "waveRipple",
+            "pageTransition": "oceanFade",
+            "loader": "shipSail"
+          }
+        }
+      }
+    },
+    {
+      "name": "Creed's Conquest",
+      "category": "Sports Drama",
+      "tagline": "Your legacy is more than a name.",
+      "modes": {
+        "light": {
+          "colors": ["#D81F26", "#FFD700", "#FFFFFF", "#4A4A4A", "#B0BEC5"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🥊", "🏋️‍♂️", "🏟️", "💪", "🥇"],
+          "animations": {
+            "buttonHover": "punchImpact",
+            "pageTransition": "ringFade",
+            "loader": "speedBag"
+          }
+        },
+        "dark": {
+          "colors": ["#A1041B", "#D4A017", "#1C2526", "#2F2F2F", "#263B5B"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🥊", "🏋️‍♂️", "🏟️", "💪", "🥇"],
+          "animations": {
+            "buttonHover": "punchImpact",
+            "pageTransition": "ringFade",
+            "loader": "speedBag"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D81F26", "#FFD700", "#000000", "#FFFFFF", "#4A4A4A4A"],
+          "font": {
+            "name": "Bebas Neue, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🥊", "🏋️‍♂️", "🏟️", "💪", "🥇"],
+          "animations": {
+            "buttonHover": "punchImpact",
+            "pageTransition": "ringFade",
+            "loader": "speedBag"
+          }
+        }
+      }
+    },
+    {
+      "name": "Narcotic Narcos",
+      "category": "Crime Drama",
+      "tagline": "Plata o plomo.",
+      "modes": {
+        "light": {
+          "colors": ["#FFD700", "#8B6F47", "#FFFFFF", "#4A3728", "#3C2F2F"],
+          "font": {
+            "name": "Oswald, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🔫", "💸", "🚬", "🕴️", "🛩️"],
+          "animations": {
+            "buttonHover": "smokeSwirl",
+            "pageTransition": "cartelFade",
+            "loader": "planeFly"
+          }
+        },
+        "dark": {
+          "colors": ["#D4A017", "#5F4B2B", "#1A1A1A", "#2A3728", "#3C2F2F"],
+          "font": {
+            "name": "Oswald, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🔫", "💸", "🚬", "🕴️", "🛩️"],
+          "animations": {
+            "buttonHover": "smokeSwirl",
+            "pageTransition": "cartelFade",
+            "loader": "planeFly"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#000000", "#FFFFFF", "#8B6F47", "#3C2F2F"],
+          "font": {
+            "name": "Oswald, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🔫", "💸", "🚬", "🕴️", "🛩️"],
+          "animations": {
+            "buttonHover": "smokeSwirl",
+            "pageTransition": "cartelFade",
+            "loader": "planeFly"
+          }
+        }
+      }
+    },
+    {
+      "name": "Jester's Joker",
+      "category": "Crime Drama",
+      "tagline": "Why so serious?",
+      "modes": {
+        "light": {
+          "colors": ["#4CAF50", "#D81F26", "#FFFFFF", "#FFD700", "#4A4A4A"],
+          "font": {
+            "name": "Creepster, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🃏", "😂", "🎭", "🩸", "🌃"],
+          "animations": {
+            "buttonHover": "jokerLaugh",
+            "pageTransition": "chaosFade",
+            "loader": "cardFlip"
+          }
+        },
+        "dark": {
+          "colors": ["#2A5F31", "#A1041B", "#1C2526", "#D4A017", "#2F2F2F"],
+          "font": {
+            "name": "Creepster, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🃏", "😂", "🎭", "🩸", "🌃"],
+          "animations": {
+            "buttonHover": "jokerLaugh",
+            "pageTransition": "chaosFade",
+            "loader": "cardFlip"
+          }
+        },
+        "highContrast": {
+          "colors": ["#4CAF50", "#D81F26", "#000000", "#FFFFFF", "#FFD700"],
+          "font": {
+            "name": "Creepster, cursive",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🃏", "😂", "🎭", "🩸", "🌃"],
+          "animations": {
+            "buttonHover": "jokerLaugh",
+            "pageTransition": "chaosFade",
+            "loader": "cardFlip"
+          }
+        }
+      }
+    },
+    {
+      "name": "Twisted Tenet",
+      "category": "Sci-Fi",
+      "tagline": "Don't try to understand it, feel it.",
+      "modes": {
+        "light": {
+          "colors": ["#A3BFFA", "#D81F26", "#FFFFFF", "#4A4A4A", "#FFD700"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕰️", "🔄", "🛩️", "🕴️", "🌌"],
+          "animations": {
+            "buttonHover": "timeReverse",
+            "pageTransition": "inversionFade",
+            "loader": "clockSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#1B263B", "#A1041B", "#1C2526", "#2F2F2F", "#D4A017"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕰️", "🔄", "🛩️", "🕴️", "🌌"],
+          "animations": {
+            "buttonHover": "timeReverse",
+            "pageTransition": "inversionFade",
+            "loader": "clockSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#A3BFFA", "#D81F26", "#000000", "#FFFFFF", "#FFD700"],
+          "font": {
+            "name": "Futura, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕰️", "🔄", "🛩️", "🕴️", "🌌"],
+          "animations": {
+            "buttonHover": "timeReverse",
+            "pageTransition": "inversionFade",
+            "loader": "clockSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Wistful WandaVision",
+      "category": "Superhero",
+      "tagline": "What is grief, if not love persevering?",
+      "modes": {
+        "light": {
+          "colors": ["#D81F26", "#A3BFFA", "#FFFFFF", "#FFD700", "#4A3728"],
+          "font": {
+            "name": "American Typewriter, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "📺", "❤️", "🧙‍♀️", "🌌"],
+          "animations": {
+            "buttonHover": "hexGlow",
+            "pageTransition": "tvStatic",
+            "loader": "visionPhase"
+          }
+        },
+        "dark": {
+          "colors": ["#A1041B", "#1B263B", "#1C2526", "#D4A017", "#2A3728"],
+          "font": {
+            "name": "American Typewriter, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "📺", "❤️", "🧙‍♀️", "🌌"],
+          "animations": {
+            "buttonHover": "hexGlow",
+            "pageTransition": "tvStatic",
+            "loader": "visionPhase"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D81F26", "#A3BFFA", "#000000", "#FFFFFF", "#FFD700"],
+          "font": {
+            "name": "American Typewriter, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🪄", "📺", "❤️", "🧙‍♀️", "🌌"],
+          "animations": {
+            "buttonHover": "hexGlow",
+            "pageTransition": "tvStatic",
+            "loader": "visionPhase"
+          }
+        }
+      }
+    },
+    {
+      "name": "Rebel Robot",
+      "category": "Sci-Fi",
+      "tagline": "Hello, friend.",
+      "modes": {
+        "light": {
+          "colors": ["#00FF00", "#FF1E56", "#FFFFFF", "#4CAF50", "#0F3D3E"],
+          "font": {
+            "name": "VT323, monospace",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔒", "🌐"],
+          "animations": {
+            "buttonHover": "glitchHack",
+            "pageTransition": "codeFlicker",
+            "loader": "terminalBlink"
+          }
+        },
+        "dark": {
+          "colors": ["#00CC00", "#D81F26", "#1C2526", "#2A5F31", "#0B2A2A"],
+          "font": {
+            "name": "VT323, monospace",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔒", "🌐"],
+          "animations": {
+            "buttonHover": "glitchHack",
+            "pageTransition": "codeFlicker",
+            "loader": "terminalBlink"
+          }
+        },
+        "highContrast": {
+          "colors": ["#00FF00", "#FF1E56", "#000000", "#FFFFFF", "#4CAF50"],
+          "font": {
+            "name": "VT323, monospace",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💾", "🖥️", "🕶️", "🔒", "🌐"],
+          "animations": {
+            "buttonHover": "glitchHack",
+            "pageTransition": "codeFlicker",
+            "loader": "terminalBlink"
+          }
+        }
+      }
+    },
+    {
+      "name": "Mischievous Minions",
+      "category": "Animated Comedy",
+      "tagline": "Bananaaaa!",
+      "modes": {
+        "light": {
+          "colors": ["#F4A261", "#00B7EB", "#FFFFFF", "#FFD700", "#4A4A4A"],
+          "font": {
+            "name": "Comic Sans MS, cursive",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🍌", "😈", "👨‍🚀", "🦁", "🎉"],
+          "animations": {
+            "buttonHover": "bananaBounce",
+            "pageTransition": "minionRun",
+            "loader": "goggleSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#D98A40", "#0288D1", "#1C2526", "#D4A017", "#2F2F2F"],
+          "font": {
+            "name": "Comic Sans MS, cursive",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🍌", "😈", "👨‍🚀", "🦁", "🎉"],
+          "animations": {
+            "buttonHover": "bananaBounce",
+            "pageTransition": "minionRun",
+            "loader": "goggleSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#F4A261", "#00B7EB", "#000000", "#FFFFFF", "#FFD700"],
+          "font": {
+            "name": "Comic Sans MS, cursive",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🍌", "😈", "👨‍🚀", "🦁", "🎉"],
+          "animations": {
+            "buttonHover": "bananaBounce",
+            "pageTransition": "minionRun",
+            "loader": "goggleSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Arcane's Aura",
+      "category": "Animated Fantasy",
+      "tagline": "Every legend has a beginning.",
+      "modes": {
+        "light": {
+          "colors": ["#2A9D8F", "#E9C46A", "#FFFFFF", "#F4A261", "#264653"],
+          "font": {
+            "name": "Anime Ace, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚙️", "🪄", "💥", "🧙‍♀️", "🏙️"],
+          "animations": {
+            "buttonHover": "hexSpark",
+            "pageTransition": "magicBurst",
+            "loader": "gearSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#2A7D6F", "#D98A40", "#1C2526", "#264653", "#1B263B"],
+          "font": {
+            "name": "Anime Ace, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚙️", "🪄", "💥", "🧙‍♀️", "🏙️"],
+          "animations": {
+            "buttonHover": "hexSpark",
+            "pageTransition": "magicBurst",
+            "loader": "gearSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#2A9D8F", "#E9C46A", "#000000", "#FFFFFF", "#F4A261"],
+          "font": {
+            "name": "Anime Ace, sans-serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["⚙️", "🪄", "💥", "🧙‍♀️", "🏙️"],
+          "animations": {
+            "buttonHover": "hexSpark",
+            "pageTransition": "magicBurst",
+            "loader": "gearSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Rambunctious Rick",
+      "category": "Sci-Fi Comedy",
+      "tagline": "Wubba lubba dub dub!",
+      "modes": {
+        "light": {
+          "colors": ["#00B7EB", "#F4A261", "#FFFFFF", "#4CAF50", "#FFD700"],
+          "font": {
+            "name": "Get Schwifty, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚀", "🧪", "👽", "🌀", "🌌"],
+          "animations": {
+            "buttonHover": "portalPop",
+            "pageTransition": "dimensionShift",
+            "loader": "pickleSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#0288D1", "#D98A40", "#1C2526", "#2A5F31", "#D4A017"],
+          "font": {
+            "name": "Get Schwifty, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚀", "🧪", "👽", "🌀", "🌌"],
+          "animations": {
+            "buttonHover": "portalPop",
+            "pageTransition": "dimensionShift",
+            "loader": "pickleSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#00B7EB", "#F4A261", "#000000", "#FFFFFF", "#4CAF50"],
+          "font": {
+            "name": "Get Schwifty, sans-serif",
+            "weight": ["regular"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🚀", "🧪", "👽", "🌀", "🌌"],
+          "animations": {
+            "buttonHover": "portalPop",
+            "pageTransition": "dimensionShift",
+            "loader": "pickleSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Sacred Syndicate",
+      "category": "Crime Drama",
+      "tagline": "Jo bhi main bolta hoon, vahi sahi hai.",
+      "modes": {
+        "light": {
+          "colors": ["#D81F26", "#FFD700", "#FFFFFF", "#4A3728", "#8B6F47"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕴️", "🔫", "🛕", "🌃", "🩸"],
+          "animations": {
+            "buttonHover": "bloodDrip",
+            "pageTransition": "cityFade",
+            "loader": "gunSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#A1041B", "#D4A017", "#1C2526", "#2A3728", "#5F4B2B"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕴️", "🔫", "🛕", "🌃", "🩸"],
+          "animations": {
+            "buttonHover": "bloodDrip",
+            "pageTransition": "cityFade",
+            "loader": "gunSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#D81F26", "#FFD700", "#000000", "#FFFFFF", "#8B6F47"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["🕴️", "🔫", "🛕", "🌃", "🩸"],
+          "animations": {
+            "buttonHover": "bloodDrip",
+            "pageTransition": "cityFade",
+            "loader": "gunSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Bountiful Bollywood",
+      "category": "Romance Drama",
+      "tagline": "Pyaar dosti hai.",
+      "modes": {
+        "light": {
+          "colors": ["#FFD700", "#D81F26", "#FFFFFF", "#00B7EB", "#A68A64"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💃", "🕺", "🎬", "🎶", "🌹"],
+          "animations": {
+            "buttonHover": "danceTwirl",
+            "pageTransition": "songFade",
+            "loader": "reelSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#D4A017", "#A1041B", "#1C2526", "#0288D1", "#4A3728"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💃", "🕺", "🎬", "🎶", "🌹"],
+          "animations": {
+            "buttonHover": "danceTwirl",
+            "pageTransition": "songFade",
+            "loader": "reelSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#FFD700", "#D81F26", "#000000", "#FFFFFF", "#00B7EB"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💃", "🕺", "🎬", "🎶", "🌹"],
+          "animations": {
+            "buttonHover": "danceTwirl",
+            "pageTransition": "songFade",
+            "loader": "reelSpin"
+          }
+        }
+      }
+    },
+    {
+      "name": "Dharma's Delight",
+      "category": "Romance Drama",
+      "tagline": "Kuch kuch hota hai.",
+      "modes": {
+        "light": {
+          "colors": ["#E91E63", "#FFD700", "#FFFFFF", "#00B7EB", "#A3BFFA"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💕", "🎬", "💃", "🕺", "🌟"],
+          "animations": {
+            "buttonHover": "heartPulse",
+            "pageTransition": "loveFade",
+            "loader": "starSpin"
+          }
+        },
+        "dark": {
+          "colors": ["#B01B4A", "#D4A017", "#1C2526", "#0288D1", "#1B263B"],
+          "font": {
+            "name": "Noto Serif Devanagari, serif",
+            "weight": ["regular", "bold"],
+            "size": {
+              "small": "14px",
+              "medium": "16px",
+              "large": "18px"
+            }
+          },
+          "emojis": ["💕", "🎬", "💃", "🕺", "🌟"],
+          "animations": {
+            "buttonHover": "heartPulse",
+            "pageTransition": "loveFade",
+            "loader": "starSpin"
+          }
+        },
+        "highContrast": {
+          "colors": ["#E91E63", "#FFD700", "#000000", "#FFFFFF", "#00B
