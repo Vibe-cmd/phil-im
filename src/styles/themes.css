@@ -425,7 +425,7 @@
   --theme-secondary-rgb: 34, 139, 34;
   --theme-accent-rgb: 138, 43, 226;
   --theme-background-rgb: 0, 0, 0;
-  --font-family: 'Ubuntu', sans-serif;
+  --font-family: 'Papyrus', fantasy;
   
   background: 
     radial-gradient(ellipse at 20% 80%, rgba(28, 169, 201, 0.15) 0%, transparent 50%),
@@ -581,7 +581,7 @@
   --theme-secondary-rgb: 222, 184, 135;
   --theme-accent-rgb: 169, 211, 245;
   --theme-background-rgb: 255, 253, 208;
-  --font-family: 'Noto Sans', sans-serif;
+  --font-family: 'Kalam', cursive;
   
   background: 
     radial-gradient(ellipse at 60% 20%, rgba(169, 211, 245, 0.3) 0%, transparent 60%),
@@ -736,7 +736,7 @@
   --theme-secondary-rgb: 139, 0, 0;
   --theme-accent-rgb: 160, 82, 45;
   --theme-background-rgb: 85, 107, 47;
-  --font-family: 'Crimson Text', serif;
+  --font-family: 'Bebas Neue', cursive;
   
   background: 
     linear-gradient(135deg, #556B2F 0%, #4a5c29 100%);
@@ -892,4 +892,189 @@
 .theme-titanic h1, .theme-titanic h2, .theme-titanic h3 {
   color: var(--theme-primary) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* NEW MISSING THEMES */
+
+/* Joker Theme */
+.theme-joker {
+  --theme-primary: #32CD32;
+  --theme-secondary: #800080;
+  --theme-accent: #FF69B4;
+  --theme-background: #000000;
+  --theme-primary-rgb: 50, 205, 50;
+  --theme-secondary-rgb: 128, 0, 128;
+  --theme-accent-rgb: 255, 105, 180;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Creepster', cursive;
+  
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(50, 205, 50, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(128, 0, 128, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a0a1a 100%);
+  
+  /* Chaotic laugh patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 45deg at 25% 25%,
+      transparent 0deg,
+      rgba(50, 205, 50, 0.05) 30deg,
+      transparent 60deg,
+      rgba(255, 105, 180, 0.03) 90deg,
+      transparent 120deg
+    );
+  background-size: 60px 60px;
+}
+
+.theme-joker .glass-strong {
+  background: rgba(50, 205, 50, 0.15) !important;
+  border: 1px solid rgba(50, 205, 50, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    inset 0 1px 0 rgba(255, 105, 180, 0.2);
+}
+
+/* Tenet Theme */
+.theme-tenet {
+  --theme-primary: #C0C0C0;
+  --theme-secondary: #4169E1;
+  --theme-accent: #FF4500;
+  --theme-background: #000000;
+  --theme-primary-rgb: 192, 192, 192;
+  --theme-secondary-rgb: 65, 105, 225;
+  --theme-accent-rgb: 255, 69, 0;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Exo 2', sans-serif;
+  
+  background: 
+    linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+  
+  /* Time inversion palindrome patterns */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(192, 192, 192, 0.03) 10px,
+      rgba(192, 192, 192, 0.03) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 15px,
+      rgba(65, 105, 225, 0.02) 15px,
+      rgba(65, 105, 225, 0.02) 30px
+    );
+}
+
+.theme-tenet .glass-strong {
+  background: rgba(192, 192, 192, 0.1) !important;
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 69, 0, 0.2);
+}
+
+/* WandaVision Theme */
+.theme-wandavision {
+  --theme-primary: #DC143C;
+  --theme-secondary: #FFD700;
+  --theme-accent: #FF1493;
+  --theme-background: #000000;
+  --theme-primary-rgb: 220, 20, 60;
+  --theme-secondary-rgb: 255, 215, 0;
+  --theme-accent-rgb: 255, 20, 147;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Amatic SC', cursive;
+  
+  background: 
+    radial-gradient(ellipse at 40% 60%, rgba(220, 20, 60, 0.15) 0%, transparent 60%),
+    linear-gradient(135deg, #000000 0%, #2a0a0a 100%);
+  
+  /* Sitcom static and hex patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(255, 215, 0, 0.04) 60deg,
+      transparent 120deg,
+      rgba(255, 20, 147, 0.03) 180deg,
+      transparent 240deg
+    );
+  background-size: 80px 80px;
+}
+
+/* I-Robot Theme */
+.theme-robot {
+  --theme-primary: #00BFFF;
+  --theme-secondary: #C0C0C0;
+  --theme-accent: #FF4500;
+  --theme-background: #1C1C1C;
+  --theme-primary-rgb: 0, 191, 255;
+  --theme-secondary-rgb: 192, 192, 192;
+  --theme-accent-rgb: 255, 69, 0;
+  --theme-background-rgb: 28, 28, 28;
+  --font-family: 'Exo 2', sans-serif;
+  
+  background: 
+    radial-gradient(circle at 50% 20%, rgba(0, 191, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #1C1C1C 0%, #2a2a2a 100%);
+  
+  /* Circuit board patterns */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 191, 255, 0.05) 20px,
+      rgba(0, 191, 255, 0.05) 22px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      rgba(192, 192, 192, 0.03) 20px,
+      rgba(192, 192, 192, 0.03) 22px
+    );
+}
+
+/* Enhanced readability for new themes */
+.theme-joker,
+.theme-tenet,
+.theme-wandavision,
+.theme-robot {
+  color: #ffffff !important;
+}
+
+.theme-joker h1, .theme-joker h2, .theme-joker h3,
+.theme-tenet h1, .theme-tenet h2, .theme-tenet h3,
+.theme-wandavision h1, .theme-wandavision h2, .theme-wandavision h3,
+.theme-robot h1, .theme-robot h2, .theme-robot h3 {
+  color: var(--theme-primary) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Theme-specific animations */
+.theme-joker button:hover {
+  animation: chaotic-laugh 0.5s ease;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.theme-tenet button:hover {
+  animation: time-reverse 0.4s ease;
+  transform: rotateY(180deg) scale(1.05);
+}
+
+@keyframes chaotic-laugh {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(5deg) scale(1.05); }
+  50% { transform: rotate(-3deg) scale(1.1); }
+  75% { transform: rotate(8deg) scale(1.08); }
+}
+
+@keyframes time-reverse {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg) scale(1.1); }
+  100% { transform: rotateY(180deg); }
 }

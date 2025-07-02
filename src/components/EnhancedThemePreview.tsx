@@ -54,7 +54,6 @@ const getThemeImages = (themeName: string) => {
       '/theme/mcu2.jpeg',
       '/theme/mcu3.jpeg'
     ],
-    // New themes with local images
     'Luscious Loki': [
       '/theme/loki1.jpeg',
       '/theme/loki2.jpeg',
@@ -170,7 +169,6 @@ const getThemeImages = (themeName: string) => {
       '/theme/dharma2.jpeg',
       '/theme/dharma3.jpeg'
     ],
-    // Add new themes with .jpeg images
     'Blade Runner': [
       '/theme/bladerun1.jpeg',
       '/theme/bladerun2.jpeg',

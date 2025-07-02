@@ -633,7 +633,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'squid-game',
-    name: 'Squid Game',
+    name: 'Sinister Squid',
     description: 'Minimal UI with game shapes and flat shadows',
     className: 'theme-squid-game',
     colors: {
@@ -696,7 +696,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'game-of-thrones',
-    name: 'Game of Thrones',
+    name: "Throne's Triumph",
     description: 'Medieval textures with house sigils and weathered UI',
     className: 'theme-game-of-thrones',
     colors: {
@@ -759,7 +759,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'avatar',
-    name: 'Avatar',
+    name: 'Azure Avatar',
     description: 'Lush glowing plants with floating particles and tribal curves',
     className: 'theme-avatar',
     colors: {
@@ -768,7 +768,7 @@ export const themes: Theme[] = [
       accent: '#8A2BE2',
       background: '#000000'
     },
-    font: 'Ubuntu',
+    font: 'Papyrus',
     preview: '🌿 Pandora Awaits',
     emojis: ['🌿', '🌊', '💙', '🦋', '✨'],
     category: 'Sci-Fi',
@@ -777,7 +777,7 @@ export const themes: Theme[] = [
       light: {
         colors: ['#1CA9C9', '#228B22', '#8A2BE2', '#E0F6FF'],
         font: {
-          name: 'Ubuntu',
+          name: 'Papyrus',
           weight: ['400', '700'],
           size: { small: '14px', medium: '16px', large: '24px' }
         },
@@ -791,7 +791,7 @@ export const themes: Theme[] = [
       dark: {
         colors: ['#1CA9C9', '#228B22', '#8A2BE2', '#0A0A0A'],
         font: {
-          name: 'Ubuntu',
+          name: 'Papyrus',
           weight: ['400', '700'],
           size: { small: '14px', medium: '16px', large: '24px' }
         },
@@ -805,7 +805,7 @@ export const themes: Theme[] = [
       highContrast: {
         colors: ['#00BFFF', '#FFFFFF', '#9370DB', '#000000'],
         font: {
-          name: 'Ubuntu',
+          name: 'Papyrus',
           weight: ['700'],
           size: { small: '16px', medium: '18px', large: '28px' }
         },
@@ -822,7 +822,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'money-heist',
-    name: 'Money Heist',
+    name: 'Heistful Hustle',
     description: 'Mask motif with heist blueprints and bold typography',
     className: 'theme-money-heist',
     colors: {
@@ -885,7 +885,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'witcher',
-    name: 'The Witcher',
+    name: "Witcher's Wrath",
     description: 'Sword and magic runes with fog textures and claw mark icons',
     className: 'theme-witcher',
     colors: {
@@ -948,7 +948,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'deadpool',
-    name: 'Deadpool',
+    name: 'Dashing Deadpool',
     description: 'Cracked graffiti with comic sarcasm and bold fonts',
     className: 'theme-deadpool',
     colors: {
@@ -1011,7 +1011,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'ghibli',
-    name: 'Studio Ghibli',
+    name: "Ghibli's Glow",
     description: 'Watercolor textures with clouds and hand-drawn edges',
     className: 'theme-ghibli',
     colors: {
@@ -1020,7 +1020,7 @@ export const themes: Theme[] = [
       accent: '#A9D3F5',
       background: '#FFFDD0'
     },
-    font: 'Noto Sans',
+    font: 'Kalam',
     preview: '🌸 Magical Worlds',
     emojis: ['🌸', '🌿', '☁️', '🦋', '✨'],
     category: 'Animation',
@@ -1029,8 +1029,8 @@ export const themes: Theme[] = [
       light: {
         colors: ['#A8D5BA', '#DEB887', '#A9D3F5', '#FFFEF7'],
         font: {
-          name: 'Noto Sans',
-          weight: ['300', '400', '600'],
+          name: 'Kalam',
+          weight: ['300', '400', '700'],
           size: { small: '14px', medium: '16px', large: '22px' }
         },
         emojis: ['🌸', '🌿', '☁️'],
@@ -1043,8 +1043,8 @@ export const themes: Theme[] = [
       dark: {
         colors: ['#A8D5BA', '#DEB887', '#A9D3F5', '#2F3E1F'],
         font: {
-          name: 'Noto Sans',
-          weight: ['300', '400', '600'],
+          name: 'Kalam',
+          weight: ['300', '400', '700'],
           size: { small: '14px', medium: '16px', large: '22px' }
         },
         emojis: ['🌸', '🦋', '✨'],
@@ -1057,7 +1057,7 @@ export const themes: Theme[] = [
       highContrast: {
         colors: ['#228B22', '#FFFFFF', '#4169E1', '#000000'],
         font: {
-          name: 'Noto Sans',
+          name: 'Kalam',
           weight: ['600'],
           size: { small: '16px', medium: '18px', large: '26px' }
         },
@@ -1074,7 +1074,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'jumanji',
-    name: 'Jumanji',
+    name: "Jumanji's Jungle",
     description: 'Nature leaves with wooden textures and safari borders',
     className: 'theme-jumanji',
     colors: {
@@ -1137,7 +1137,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'titanic',
-    name: 'Titanic',
+    name: 'Tragic Titanic',
     description: 'Art Nouveau frames with faded photos and romantic textures',
     className: 'theme-titanic',
     colors: {
@@ -1200,7 +1200,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'creed',
-    name: 'Creed',
+    name: "Creed's Conquest",
     description: 'Athletic minimalism with spotlight background and gloves icon',
     className: 'theme-creed',
     colors: {
@@ -1263,7 +1263,7 @@ export const themes: Theme[] = [
   },
   {
     id: 'narcos',
-    name: 'Narcos',
+    name: 'Narcotic Narcos',
     description: 'Newspaper clippings with crime dossier look',
     className: 'theme-narcos',
     colors: {
@@ -1272,7 +1272,7 @@ export const themes: Theme[] = [
       accent: '#A0522D',
       background: '#556B2F'
     },
-    font: 'Crimson Text',
+    font: 'Bebas Neue',
     preview: '📰 Plata o Plomo',
     emojis: ['📰', '🔫', '💰', '🚁', '⚖️'],
     category: 'Crime',
@@ -1281,7 +1281,7 @@ export const themes: Theme[] = [
       light: {
         colors: ['#EDEDED', '#8B0000', '#A0522D', '#F5F5F5'],
         font: {
-          name: 'Crimson Text',
+          name: 'Bebas Neue',
           weight: ['400', '600'],
           size: { small: '14px', medium: '16px', large: '22px' }
         },
@@ -1295,7 +1295,7 @@ export const themes: Theme[] = [
       dark: {
         colors: ['#EDEDED', '#8B0000', '#A0522D', '#2F2F1F'],
         font: {
-          name: 'Crimson Text',
+          name: 'Bebas Neue',
           weight: ['400', '600'],
           size: { small: '14px', medium: '16px', large: '22px' }
         },
@@ -1309,7 +1309,7 @@ export const themes: Theme[] = [
       highContrast: {
         colors: ['#FFFFFF', '#000000', '#8B4513', '#2F4F2F'],
         font: {
-          name: 'Crimson Text',
+          name: 'Bebas Neue',
           weight: ['600'],
           size: { small: '16px', medium: '18px', large: '26px' }
         },
@@ -1323,5 +1323,83 @@ export const themes: Theme[] = [
     },
     designStyle: 'Newspaper clippings, crime dossier look',
     textColor: '#2F2F1F'
+  },
+  {
+    id: 'joker',
+    name: "Jester's Joker",
+    description: 'Chaotic graffiti with madness patterns and neon chaos',
+    className: 'theme-joker',
+    colors: {
+      primary: '#32CD32',
+      secondary: '#800080',
+      accent: '#FF69B4',
+      background: '#000000'
+    },
+    font: 'Creepster',
+    preview: '🃏 Why So Serious?',
+    emojis: ['🃏', '🎭', '💀', '🔥', '😈'],
+    category: 'Thriller',
+    tagline: 'Why so serious?',
+    modes: {
+      light: {
+        colors: ['#32CD32', '#800080', '#FF69B4', '#F5F5F5'],
+        font: { name: 'Creepster', weight: ['400'], size: { small: '14px', medium: '20px', large: '36px' } },
+        emojis: ['🃏', '🎭', '💀'],
+        animations: { buttonHover: 'scale(1.1) rotate(10deg)', pageTransition: 'chaos-spin', loader: 'maniacal-laugh' }
+      },
+      dark: {
+        colors: ['#32CD32', '#800080', '#FF69B4', '#0A0A0A'],
+        font: { name: 'Creepster', weight: ['400'], size: { small: '14px', medium: '20px', large: '36px' } },
+        emojis: ['🃏', '🔥', '😈'],
+        animations: { buttonHover: 'scale(1.1) rotate(-10deg)', pageTransition: 'chaos-spin', loader: 'maniacal-laugh' }
+      },
+      highContrast: {
+        colors: ['#00FF00', '#FFFFFF', '#FF1493', '#000000'],
+        font: { name: 'Creepster', weight: ['400'], size: { small: '16px', medium: '22px', large: '40px' } },
+        emojis: ['🃏', '🎭'],
+        animations: { buttonHover: 'scale(1.15)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Chaotic graffiti, madness patterns, neon chaos',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'tenet',
+    name: 'Twisted Tenet',
+    description: 'Time inversion effects with palindrome UI elements',
+    className: 'theme-tenet',
+    colors: {
+      primary: '#C0C0C0',
+      secondary: '#4169E1',
+      accent: '#FF4500',
+      background: '#000000'
+    },
+    font: 'Exo 2',
+    preview: '⏰ Don\'t Think, Feel',
+    emojis: ['⏰', '🔄', '🌀', '⚡', '🎯'],
+    category: 'Sci-Fi',
+    tagline: 'Don\'t try to understand it, feel it',
+    modes: {
+      light: {
+        colors: ['#C0C0C0', '#4169E1', '#FF4500', '#F5F5F5'],
+        font: { name: 'Exo 2', weight: ['300', '400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['⏰', '🔄', '🌀'],
+        animations: { buttonHover: 'scale(1.05) rotateY(180deg)', pageTransition: 'time-reverse', loader: 'temporal-loop' }
+      },
+      dark: {
+        colors: ['#C0C0C0', '#4169E1', '#FF4500', '#0A0A0A'],
+        font: { name: 'Exo 2', weight: ['300', '400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['⏰', '⚡', '🎯'],
+        animations: { buttonHover: 'scale(1.05) rotateY(-180deg)', pageTransition: 'time-reverse', loader: 'temporal-loop' }
+      },
+      highContrast: {
+        colors: ['#FFFFFF', '#0000FF', '#FF6600', '#000000'],
+        font: { name: 'Exo 2', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['⏰', '🔄'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Time inversion effects, palindrome UI elements',
+    textColor: '#F5F5F5'
   }
 ];
