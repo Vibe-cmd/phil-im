@@ -234,6 +234,20 @@ export const themes: Theme[] = [
           pageTransition: 'tv-static',
           loader: 'retro-scan'
         }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#00FFFF', '#000000'],
+        font: {
+          name: 'Dancing Script',
+          weight: ['700'],
+          size: { small: '16px', medium: '18px', large: '28px' }
+        },
+        emojis: ['📺', '✨'],
+        animations: {
+          buttonHover: 'scale(1.1)',
+          pageTransition: 'fade',
+          loader: 'pulse'
+        }
       }
     },
     designStyle: '50s retro + glitch effect, old TV borders',
