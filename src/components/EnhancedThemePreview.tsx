@@ -244,6 +244,11 @@ const getThemeImages = (themeName: string) => {
       '/theme/starwars2.jpeg',
       '/theme/starwars3.jpeg'
     ],
+    'Game of Thrones': [
+      '/theme/thrones1.jpeg',
+      '/theme/thrones2.jpeg',
+      '/theme/thrones3.jpeg'
+    ]
   };
   
   return imageMap[themeName] || [

@@ -1078,3 +1078,352 @@
   50% { transform: rotateY(90deg) scale(1.1); }
   100% { transform: rotateY(180deg); }
 }
+
+/* REMAINING THEMES */
+
+/* Minions Theme */
+.theme-minions {
+  --theme-primary: #FFD700;
+  --theme-secondary: #4169E1;
+  --theme-accent: #FF6347;
+  --theme-background: #87CEEB;
+  --theme-primary-rgb: 255, 215, 0;
+  --theme-secondary-rgb: 65, 105, 225;
+  --theme-accent-rgb: 255, 99, 71;
+  --theme-background-rgb: 135, 206, 235;
+  --font-family: 'Comic Sans MS', cursive;
+  
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #87CEEB 0%, #4169E1 100%);
+  
+  /* Playful bubble patterns */
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.2) 10px, transparent 10px),
+    radial-gradient(circle at 75% 75%, rgba(255, 99, 71, 0.15) 8px, transparent 8px);
+  background-size: 60px 60px, 40px 40px;
+}
+
+.theme-minions .glass-strong {
+  background: rgba(255, 215, 0, 0.2) !important;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Arcane Theme */
+.theme-arcane {
+  --theme-primary: #9A76C7;
+  --theme-secondary: #F4C2C2;
+  --theme-accent: #DAA520;
+  --theme-background: #1C1C3A;
+  --theme-primary-rgb: 154, 118, 199;
+  --theme-secondary-rgb: 244, 194, 194;
+  --theme-accent-rgb: 218, 165, 32;
+  --theme-background-rgb: 28, 28, 58;
+  --font-family: 'Orbitron', monospace;
+  
+  background: 
+    radial-gradient(ellipse at 40% 20%, rgba(154, 118, 199, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #1C1C3A 0%, #2A2A5A 100%);
+  
+  /* Hextech crystal patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 30deg at 50% 50%,
+      transparent 0deg,
+      rgba(154, 118, 199, 0.1) 60deg,
+      transparent 120deg
+    );
+  background-size: 100px 100px;
+}
+
+/* Rick and Morty Theme */
+.theme-rick {
+  --theme-primary: #00B4D8;
+  --theme-secondary: #90E0EF;
+  --theme-accent: #0077B6;
+  --theme-background: #023047;
+  --theme-primary-rgb: 0, 180, 216;
+  --theme-secondary-rgb: 144, 224, 239;
+  --theme-accent-rgb: 0, 119, 182;
+  --theme-background-rgb: 2, 48, 71;
+  --font-family: 'Space Mono', monospace;
+  
+  background: 
+    radial-gradient(circle at 60% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #023047 0%, #126782 100%);
+  
+  /* Portal spiral patterns */
+  background-image: 
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      transparent 0px,
+      rgba(0, 180, 216, 0.05) 20px,
+      transparent 40px
+    );
+}
+
+/* Sacred Syndicate Theme */
+.theme-syndicate {
+  --theme-primary: #8B4513;
+  --theme-secondary: #DAA520;
+  --theme-accent: #B8860B;
+  --theme-background: #2F1B14;
+  --theme-primary-rgb: 139, 69, 19;
+  --theme-secondary-rgb: 218, 165, 32;
+  --theme-accent-rgb: 184, 134, 11;
+  --theme-background-rgb: 47, 27, 20;
+  --font-family: 'Playfair Display', serif;
+  
+  background: 
+    linear-gradient(135deg, #2F1B14 0%, #4A2818 100%);
+  
+  /* Old money texture */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(218, 165, 32, 0.03) 10px,
+      rgba(218, 165, 32, 0.03) 20px
+    );
+}
+
+/* Bollywood Theme */
+.theme-bollywood {
+  --theme-primary: #FF6B35;
+  --theme-secondary: #F7931E;
+  --theme-accent: #FFD23F;
+  --theme-background: #8B2635;
+  --theme-primary-rgb: 255, 107, 53;
+  --theme-secondary-rgb: 247, 147, 30;
+  --theme-accent-rgb: 255, 210, 63;
+  --theme-background-rgb: 139, 38, 53;
+  --font-family: 'Noto Sans', sans-serif;
+  
+  background: 
+    radial-gradient(ellipse at 30% 70%, rgba(255, 107, 53, 0.2) 0%, transparent 60%),
+    linear-gradient(135deg, #8B2635 0%, #B8334A 100%);
+  
+  /* Paisley patterns */
+  background-image: 
+    repeating-conic-gradient(
+      from 45deg at 25% 25%,
+      transparent 0deg,
+      rgba(255, 210, 63, 0.1) 90deg,
+      transparent 180deg
+    );
+  background-size: 80px 80px;
+}
+
+/* Dharma Productions Theme */
+.theme-dharma {
+  --theme-primary: #C41E3A;
+  --theme-secondary: #FFD700;
+  --theme-accent: #FF69B4;
+  --theme-background: #8B1538;
+  --theme-primary-rgb: 196, 30, 58;
+  --theme-secondary-rgb: 255, 215, 0;
+  --theme-accent-rgb: 255, 105, 180;
+  --theme-background-rgb: 139, 21, 56;
+  --font-family: 'Noto Sans', sans-serif;
+  
+  background: 
+    radial-gradient(ellipse at 50% 30%, rgba(196, 30, 58, 0.3) 0%, transparent 70%),
+    linear-gradient(135deg, #8B1538 0%, #B8204D 100%);
+}
+
+/* Blade Runner Theme */
+.theme-bladerunner {
+  --theme-primary: #00FFFF;
+  --theme-secondary: #FF1493;
+  --theme-accent: #FFA500;
+  --theme-background: #000000;
+  --theme-primary-rgb: 0, 255, 255;
+  --theme-secondary-rgb: 255, 20, 147;
+  --theme-accent-rgb: 255, 165, 0;
+  --theme-background-rgb: 0, 0, 0;
+  --font-family: 'Courier New', monospace;
+  
+  background: 
+    linear-gradient(135deg, #000000 0%, #0D1421 100%);
+  
+  /* Neon city grid */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 30px,
+      rgba(0, 255, 255, 0.1) 30px,
+      rgba(0, 255, 255, 0.1) 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 30px,
+      rgba(255, 20, 147, 0.08) 30px,
+      rgba(255, 20, 147, 0.08) 32px
+    );
+}
+
+/* Enhanced theme-specific button effects */
+.theme-spiderverse button:hover {
+  animation: glitch-jump 0.3s ease;
+  text-shadow: 0 0 8px var(--theme-accent);
+  box-shadow: 0 0 20px rgba(var(--theme-primary-rgb), 0.5);
+}
+
+.theme-matrix button:hover {
+  animation: matrix-glitch 0.4s ease;
+  box-shadow: 0 0 15px rgba(var(--theme-primary-rgb), 0.6);
+  text-shadow: 0 0 6px var(--theme-primary);
+}
+
+.theme-batman button:hover {
+  animation: shadow-expand 0.3s ease;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(var(--theme-primary-rgb), 0.4);
+}
+
+.theme-dune button:hover {
+  animation: sand-shimmer 0.5s ease;
+  background: linear-gradient(45deg, var(--theme-primary), var(--theme-accent));
+}
+
+.theme-interstellar button:hover {
+  animation: cosmic-drift 0.6s ease;
+  box-shadow: 0 0 25px rgba(var(--theme-accent-rgb), 0.4);
+}
+
+/* Special background overlays for themes */
+.theme-spiderverse::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(var(--theme-primary-rgb), 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(var(--theme-accent-rgb), 0.02) 1px, transparent 1px);
+  background-size: 25px 25px, 35px 35px;
+  pointer-events: none;
+  z-index: 1;
+  animation: comic-drift 10s linear infinite;
+}
+
+.theme-matrix::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(var(--theme-primary-rgb), 0.03) 2px,
+      rgba(var(--theme-primary-rgb), 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+  animation: matrix-scroll 8s linear infinite;
+}
+
+/* Enhanced animations */
+@keyframes glitch-jump {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(1deg) skew(1deg); }
+  50% { transform: scale(1.02) rotate(-1deg) skew(-1deg); }
+  75% { transform: scale(1.07) rotate(0.5deg); }
+}
+
+@keyframes matrix-glitch {
+  0%, 100% { 
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  33% { 
+    transform: scale(1.02) translateX(2px);
+    filter: hue-rotate(90deg);
+  }
+  66% { 
+    transform: scale(1.02) translateX(-2px);
+    filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes shadow-expand {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  }
+  100% { 
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  }
+}
+
+@keyframes sand-shimmer {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes cosmic-drift {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+  25% { 
+    transform: scale(1.03) rotate(1deg);
+    filter: blur(0.5px);
+  }
+  75% { 
+    transform: scale(1.03) rotate(-1deg);
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes comic-drift {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(2px) translateY(-1px); }
+  50% { transform: translateX(0) translateY(-2px); }
+  75% { transform: translateX(-2px) translateY(-1px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes matrix-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+/* Theme-specific card hover effects */
+.theme-spiderverse .hover-lift:hover {
+  transform: translateY(-8px) scale(1.02) rotate(1deg);
+  filter: drop-shadow(0 0 10px rgba(var(--theme-accent-rgb), 0.5));
+}
+
+.theme-matrix .hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  filter: drop-shadow(0 0 10px rgba(var(--theme-primary-rgb), 0.6));
+}
+
+.theme-batman .hover-lift:hover {
+  transform: translateY(-12px) scale(1.02);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.8));
+}
