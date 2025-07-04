@@ -1032,5 +1032,668 @@ export const themes: Theme[] = [
     },
     designStyle: 'Glowy bokeh lights, ornate borders, love-drenched curves',
     textColor: '#8B4513'
+  },
+  {
+    id: 'simpsons',
+    name: 'The Simpsons',
+    description: 'Yellow family vibes with cartoon simplicity',
+    className: 'theme-simpsons',
+    colors: {
+      primary: '#FFD90F',
+      secondary: '#FF6A00',
+      accent: '#009639',
+      background: '#87CEEB'
+    },
+    font: 'Fredoka One',
+    preview: '🍩 Springfield Life',
+    emojis: ['🍩', '🏠', '📺', '🍺'],
+    category: 'Animation',
+    tagline: "D'oh! More great shows to watch",
+    modes: {
+      light: {
+        colors: ['#FFD90F', '#FF6A00', '#009639', '#87CEEB'],
+        font: { name: 'Fredoka One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🍩', '🏠', '📺'],
+        animations: { buttonHover: 'cartoon-bounce', pageTransition: 'couch-gag', loader: 'donut-roll' }
+      },
+      dark: {
+        colors: ['#FFD90F', '#FF6A00', '#009639', '#4682B4'],
+        font: { name: 'Fredoka One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🍩', '🏠', '🍺'],
+        animations: { buttonHover: 'cartoon-bounce', pageTransition: 'couch-gag', loader: 'donut-roll' }
+      },
+      highContrast: {
+        colors: ['#FFFF00', '#FF4500', '#00FF00', '#000000'],
+        font: { name: 'Fredoka One', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🍩', '🏠'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Yellow family vibes with cartoon simplicity',
+    textColor: '#000000'
+  },
+  {
+    id: 'blade-runner',
+    name: 'Blade Runner',
+    description: 'Neo-noir cyberpunk with rain and neon reflections',
+    className: 'theme-blade-runner',
+    colors: {
+      primary: '#FF6B35',
+      secondary: '#00CED1',
+      accent: '#FFD700',
+      background: '#2C2C2C'
+    },
+    font: 'Orbitron',
+    preview: '🌧️ Cyberpunk Noir',
+    emojis: ['🌧️', '🌃', '🤖', '💡'],
+    category: 'Sci-Fi',
+    tagline: 'More human than human entertainment',
+    modes: {
+      light: {
+        colors: ['#FF6B35', '#00CED1', '#FFD700', '#F0F8FF'],
+        font: { name: 'Orbitron', weight: ['300', '400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🌧️', '🌃', '🤖'],
+        animations: { buttonHover: 'neon-flicker', pageTransition: 'rain-drop', loader: 'spinner-blade' }
+      },
+      dark: {
+        colors: ['#FF6B35', '#00CED1', '#FFD700', '#1A1A1A'],
+        font: { name: 'Orbitron', weight: ['300', '400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🌧️', '🌃', '💡'],
+        animations: { buttonHover: 'neon-flicker', pageTransition: 'rain-drop', loader: 'spinner-blade' }
+      },
+      highContrast: {
+        colors: ['#FF4500', '#00FFFF', '#FFFF00', '#000000'],
+        font: { name: 'Orbitron', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🌧️', '🤖'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Neo-noir cyberpunk with rain and neon reflections',
+    textColor: '#00CED1'
+  },
+  {
+    id: 'la-la-land',
+    name: 'La La Land',
+    description: 'Pastel dreamy colors with spotlight effects',
+    className: 'theme-la-la-land',
+    colors: {
+      primary: '#FF69B4',
+      secondary: '#87CEEB',
+      accent: '#FFD700',
+      background: '#FFF8DC'
+    },
+    font: 'Dancing Script',
+    preview: '🎵 Musical Dreams',
+    emojis: ['🎵', '🌟', '💃', '🎭'],
+    category: 'Musical',
+    tagline: "Here's to the ones who dream",
+    modes: {
+      light: {
+        colors: ['#FF69B4', '#87CEEB', '#FFD700', '#FFF8DC'],
+        font: { name: 'Dancing Script', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎵', '🌟', '💃'],
+        animations: { buttonHover: 'spotlight-dance', pageTransition: 'musical-swirl', loader: 'jazz-hands' }
+      },
+      dark: {
+        colors: ['#FF69B4', '#87CEEB', '#FFD700', '#2F2F4F'],
+        font: { name: 'Dancing Script', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎵', '🌟', '🎭'],
+        animations: { buttonHover: 'spotlight-dance', pageTransition: 'musical-swirl', loader: 'jazz-hands' }
+      },
+      highContrast: {
+        colors: ['#FF1493', '#0000FF', '#FFFF00', '#000000'],
+        font: { name: 'Dancing Script', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🎵', '🌟'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Pastel dreamy colors with spotlight effects',
+    textColor: '#4B0082'
+  },
+  {
+    id: 'breaking-bad',
+    name: 'Breaking Bad',
+    description: 'Desert meth lab aesthetic with chemical green',
+    className: 'theme-breaking-bad',
+    colors: {
+      primary: '#32CD32',
+      secondary: '#FFD700',
+      accent: '#FF4500',
+      background: '#8B4513'
+    },
+    font: 'Bebas Neue',
+    preview: '🧪 Chemical Drama',
+    emojis: ['🧪', '💰', '🏜️', '⚗️'],
+    category: 'Crime',
+    tagline: 'I am the one who watches',
+    modes: {
+      light: {
+        colors: ['#32CD32', '#FFD700', '#FF4500', '#F5DEB3'],
+        font: { name: 'Bebas Neue', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🧪', '💰', '🏜️'],
+        animations: { buttonHover: 'chemical-bubble', pageTransition: 'desert-wind', loader: 'meth-cook' }
+      },
+      dark: {
+        colors: ['#32CD32', '#FFD700', '#FF4500', '#2F1B14'],
+        font: { name: 'Bebas Neue', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🧪', '💰', '⚗️'],
+        animations: { buttonHover: 'chemical-bubble', pageTransition: 'desert-wind', loader: 'meth-cook' }
+      },
+      highContrast: {
+        colors: ['#00FF00', '#FFFF00', '#FF0000', '#000000'],
+        font: { name: 'Bebas Neue', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🧪', '💰'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Desert meth lab aesthetic with chemical green',
+    textColor: '#F5DEB3'
+  },
+  {
+    id: 'barbie',
+    name: 'Barbie',
+    description: 'Pink paradise with glamorous sparkles',
+    className: 'theme-barbie',
+    colors: {
+      primary: '#FF69B4',
+      secondary: '#FFB6C1',
+      accent: '#FFFFFF',
+      background: '#FFC0CB'
+    },
+    font: 'Pacifico',
+    preview: '💖 Pink Paradise',
+    emojis: ['💖', '👑', '💄', '✨'],
+    category: 'Comedy',
+    tagline: "Life in plastic, it's fantastic!",
+    modes: {
+      light: {
+        colors: ['#FF69B4', '#FFB6C1', '#FFFFFF', '#FFC0CB'],
+        font: { name: 'Pacifico', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['💖', '👑', '💄'],
+        animations: { buttonHover: 'sparkle-glitter', pageTransition: 'pink-swirl', loader: 'doll-spin' }
+      },
+      dark: {
+        colors: ['#FF69B4', '#FFB6C1', '#FFFFFF', '#8B008B'],
+        font: { name: 'Pacifico', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['💖', '👑', '✨'],
+        animations: { buttonHover: 'sparkle-glitter', pageTransition: 'pink-swirl', loader: 'doll-spin' }
+      },
+      highContrast: {
+        colors: ['#FF1493', '#FFFFFF', '#000000', '#FF69B4'],
+        font: { name: 'Pacifico', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['💖', '👑'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Pink paradise with glamorous sparkles',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'wes-anderson',
+    name: 'Wes Anderson',
+    description: 'Symmetrical composition with pastel color palettes',
+    className: 'theme-wes-anderson',
+    colors: {
+      primary: '#F4A460',
+      secondary: '#98FB98',
+      accent: '#F0E68C',
+      background: '#FFF8DC'
+    },
+    font: 'Playfair Display',
+    preview: '🎨 Whimsical Symmetry',
+    emojis: ['🎨', '🏨', '📚', '🎭'],
+    category: 'Indie',
+    tagline: 'Perfectly framed, perfectly curated',
+    modes: {
+      light: {
+        colors: ['#F4A460', '#98FB98', '#F0E68C', '#FFF8DC'],
+        font: { name: 'Playfair Display', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎨', '🏨', '📚'],
+        animations: { buttonHover: 'symmetrical-flip', pageTransition: 'vintage-fade', loader: 'ornate-spin' }
+      },
+      dark: {
+        colors: ['#F4A460', '#98FB98', '#F0E68C', '#2F2F2F'],
+        font: { name: 'Playfair Display', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎨', '🏨', '🎭'],
+        animations: { buttonHover: 'symmetrical-flip', pageTransition: 'vintage-fade', loader: 'ornate-spin' }
+      },
+      highContrast: {
+        colors: ['#D2691E', '#00FF00', '#FFFF00', '#000000'],
+        font: { name: 'Playfair Display', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🎨', '🏨'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Symmetrical composition with pastel color palettes',
+    textColor: '#8B4513'
+  },
+  {
+    id: 'cars',
+    name: 'Cars (Pixar)',
+    description: 'Racing stripes and automotive chrome',
+    className: 'theme-cars',
+    colors: {
+      primary: '#FF0000',
+      secondary: '#FFD700',
+      accent: '#1E90FF',
+      background: '#2F4F4F'
+    },
+    font: 'Racing Sans One',
+    preview: '🏎️ Speed Racer',
+    emojis: ['🏎️', '🏁', '⚡', '🏆'],
+    category: 'Animation',
+    tagline: 'Ka-chiga! Speed and entertainment!',
+    modes: {
+      light: {
+        colors: ['#FF0000', '#FFD700', '#1E90FF', '#F0F8FF'],
+        font: { name: 'Racing Sans One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏎️', '🏁', '⚡'],
+        animations: { buttonHover: 'speed-boost', pageTransition: 'racing-stripes', loader: 'tire-spin' }
+      },
+      dark: {
+        colors: ['#FF0000', '#FFD700', '#1E90FF', '#1A1A1A'],
+        font: { name: 'Racing Sans One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏎️', '🏁', '🏆'],
+        animations: { buttonHover: 'speed-boost', pageTransition: 'racing-stripes', loader: 'tire-spin' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFF00', '#0000FF', '#000000'],
+        font: { name: 'Racing Sans One', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🏎️', '🏁'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Racing stripes and automotive chrome',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'jurassic-park',
+    name: 'Jurassic Park',
+    description: 'Prehistoric adventure with amber and fossil textures',
+    className: 'theme-jurassic-park',
+    colors: {
+      primary: '#FF8C00',
+      secondary: '#228B22',
+      accent: '#8B4513',
+      background: '#F5DEB3'
+    },
+    font: 'Cinzel',
+    preview: '🦕 Dino Adventure',
+    emojis: ['🦕', '🌿', '⚡', '🔬'],
+    category: 'Adventure',
+    tagline: 'Life finds a way... to entertain',
+    modes: {
+      light: {
+        colors: ['#FF8C00', '#228B22', '#8B4513', '#F5DEB3'],
+        font: { name: 'Cinzel', weight: ['400', '600'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🦕', '🌿', '⚡'],
+        animations: { buttonHover: 'dino-stomp', pageTransition: 'amber-glow', loader: 'fossil-dig' }
+      },
+      dark: {
+        colors: ['#FF8C00', '#228B22', '#8B4513', '#2F2F1A'],
+        font: { name: 'Cinzel', weight: ['400', '600'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🦕', '🌿', '🔬'],
+        animations: { buttonHover: 'dino-stomp', pageTransition: 'amber-glow', loader: 'fossil-dig' }
+      },
+      highContrast: {
+        colors: ['#FF4500', '#00FF00', '#A0522D', '#000000'],
+        font: { name: 'Cinzel', weight: ['600'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🦕', '🌿'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Prehistoric adventure with amber and fossil textures',
+    textColor: '#8B4513'
+  },
+  {
+    id: 'pirates',
+    name: 'Pirates of the Caribbean',
+    description: 'Nautical adventure with treasure map aesthetics',
+    className: 'theme-pirates',
+    colors: {
+      primary: '#8B4513',
+      secondary: '#FFD700',
+      accent: '#DC143C',
+      background: '#2F4F4F'
+    },
+    font: 'Pirata One',
+    preview: '🏴‍☠️ High Seas',
+    emojis: ['🏴‍☠️', '⚓', '💰', '🗡️'],
+    category: 'Adventure',
+    tagline: 'Yo ho ho and a bottle of entertainment',
+    modes: {
+      light: {
+        colors: ['#8B4513', '#FFD700', '#DC143C', '#F0F8FF'],
+        font: { name: 'Pirata One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏴‍☠️', '⚓', '💰'],
+        animations: { buttonHover: 'ship-rock', pageTransition: 'treasure-reveal', loader: 'compass-spin' }
+      },
+      dark: {
+        colors: ['#8B4513', '#FFD700', '#DC143C', '#1A1A2E'],
+        font: { name: 'Pirata One', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏴‍☠️', '⚓', '🗡️'],
+        animations: { buttonHover: 'ship-rock', pageTransition: 'treasure-reveal', loader: 'compass-spin' }
+      },
+      highContrast: {
+        colors: ['#A0522D', '#FFFF00', '#FF0000', '#000000'],
+        font: { name: 'Pirata One', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🏴‍☠️', '⚓'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Nautical adventure with treasure map aesthetics',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'superman',
+    name: 'Superman',
+    description: 'Heroic red and blue with cape-flowing dynamics',
+    className: 'theme-superman',
+    colors: {
+      primary: '#DC143C',
+      secondary: '#0000FF',
+      accent: '#FFD700',
+      background: '#87CEEB'
+    },
+    font: 'Oswald',
+    preview: '🦸‍♂️ Man of Steel',
+    emojis: ['🦸‍♂️', '⚡', '🌍', '💪'],
+    category: 'Superhero',
+    tagline: 'Truth, justice, and great entertainment',
+    modes: {
+      light: {
+        colors: ['#DC143C', '#0000FF', '#FFD700', '#87CEEB'],
+        font: { name: 'Oswald', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🦸‍♂️', '⚡', '🌍'],
+        animations: { buttonHover: 'super-flight', pageTransition: 'cape-swoosh', loader: 'earth-spin' }
+      },
+      dark: {
+        colors: ['#DC143C', '#0000FF', '#FFD700', '#191970'],
+        font: { name: 'Oswald', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🦸‍♂️', '⚡', '💪'],
+        animations: { buttonHover: 'super-flight', pageTransition: 'cape-swoosh', loader: 'earth-spin' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#0000FF', '#FFFF00', '#000000'],
+        font: { name: 'Oswald', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🦸‍♂️', '⚡'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Heroic red and blue with cape-flowing dynamics',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'slb',
+    name: 'Sanjay Leela Bhansali',
+    description: 'Grand palace aesthetics with mirror work and royal colors',
+    className: 'theme-slb',
+    colors: {
+      primary: '#8B0000',
+      secondary: '#FFD700',
+      accent: '#4B0082',
+      background: '#FFF8DC'
+    },
+    font: 'Cinzel Decorative',
+    preview: '👑 Royal Grandeur',
+    emojis: ['👑', '🏰', '💎', '🌹'],
+    category: 'Romance',
+    tagline: 'Magnificent tales of love and honor',
+    modes: {
+      light: {
+        colors: ['#8B0000', '#FFD700', '#4B0082', '#FFF8DC'],
+        font: { name: 'Cinzel Decorative', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['👑', '🏰', '💎'],
+        animations: { buttonHover: 'royal-shimmer', pageTransition: 'palace-doors', loader: 'jewel-sparkle' }
+      },
+      dark: {
+        colors: ['#8B0000', '#FFD700', '#4B0082', '#2F1B14'],
+        font: { name: 'Cinzel Decorative', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['👑', '🏰', '🌹'],
+        animations: { buttonHover: 'royal-shimmer', pageTransition: 'palace-doors', loader: 'jewel-sparkle' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFF00', '#9370DB', '#000000'],
+        font: { name: 'Cinzel Decorative', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['👑', '🏰'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Grand palace aesthetics with mirror work and royal colors',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'rockstar',
+    name: 'Rockstar',
+    description: 'Music industry vibes with concert stage lighting',
+    className: 'theme-rockstar',
+    colors: {
+      primary: '#8B0000',
+      secondary: '#FFD700',
+      accent: '#4169E1',
+      background: '#000000'
+    },
+    font: 'Rock Salt',
+    preview: '🎸 Music Magic',
+    emojis: ['🎸', '🎤', '🌟', '🎵'],
+    category: 'Musical',
+    tagline: 'Rock on with epic entertainment',
+    modes: {
+      light: {
+        colors: ['#8B0000', '#FFD700', '#4169E1', '#F5F5F5'],
+        font: { name: 'Rock Salt', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎸', '🎤', '🌟'],
+        animations: { buttonHover: 'stage-lights', pageTransition: 'concert-flash', loader: 'guitar-strum' }
+      },
+      dark: {
+        colors: ['#8B0000', '#FFD700', '#4169E1', '#0A0A0A'],
+        font: { name: 'Rock Salt', weight: ['400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🎸', '🎤', '🎵'],
+        animations: { buttonHover: 'stage-lights', pageTransition: 'concert-flash', loader: 'guitar-strum' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFF00', '#0000FF', '#000000'],
+        font: { name: 'Rock Salt', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🎸', '🎤'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Music industry vibes with concert stage lighting',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'godfather',
+    name: 'The Godfather',
+    description: 'Classic mafia aesthetics with sepia tones',
+    className: 'theme-godfather',
+    colors: {
+      primary: '#8B4513',
+      secondary: '#FFD700',
+      accent: '#2F4F4F',
+      background: '#F5DEB3'
+    },
+    font: 'Cinzel',
+    preview: '🤵 Family Honor',
+    emojis: ['🤵', '🌹', '🍷', '⚖️'],
+    category: 'Crime',
+    tagline: 'An offer you cannot refuse',
+    modes: {
+      light: {
+        colors: ['#8B4513', '#FFD700', '#2F4F4F', '#F5DEB3'],
+        font: { name: 'Cinzel', weight: ['400', '600'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🤵', '🌹', '🍷'],
+        animations: { buttonHover: 'respect-nod', pageTransition: 'family-fade', loader: 'ring-kiss' }
+      },
+      dark: {
+        colors: ['#8B4513', '#FFD700', '#2F4F4F', '#2F1B14'],
+        font: { name: 'Cinzel', weight: ['400', '600'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🤵', '🌹', '⚖️'],
+        animations: { buttonHover: 'respect-nod', pageTransition: 'family-fade', loader: 'ring-kiss' }
+      },
+      highContrast: {
+        colors: ['#A0522D', '#FFFF00', '#FFFFFF', '#000000'],
+        font: { name: 'Cinzel', weight: ['600'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🤵', '🌹'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Classic mafia aesthetics with sepia tones',
+    textColor: '#8B4513'
+  },
+  {
+    id: 'space-odyssey',
+    name: 'Space Odyssey',
+    description: 'Retro-futuristic space exploration with HAL aesthetics',
+    className: 'theme-space-odyssey',
+    colors: {
+      primary: '#FF0000',
+      secondary: '#FFFFFF',
+      accent: '#000000',
+      background: '#2F2F2F'
+    },
+    font: 'Orbitron',
+    preview: '🚀 2001 Vibes',
+    emojis: ['🚀', '🤖', '🌌', '🔴'],
+    category: 'Sci-Fi',
+    tagline: 'My mind is going... to great cinema',
+    modes: {
+      light: {
+        colors: ['#FF0000', '#FFFFFF', '#000000', '#F5F5F5'],
+        font: { name: 'Orbitron', weight: ['300', '400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🚀', '🤖', '🌌'],
+        animations: { buttonHover: 'hal-pulse', pageTransition: 'space-drift', loader: 'monolith-appear' }
+      },
+      dark: {
+        colors: ['#FF0000', '#FFFFFF', '#000000', '#0A0A0A'],
+        font: { name: 'Orbitron', weight: ['300', '400'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🚀', '🤖', '🔴'],
+        animations: { buttonHover: 'hal-pulse', pageTransition: 'space-drift', loader: 'monolith-appear' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFFFF', '#000000', '#FFFFFF'],
+        font: { name: 'Orbitron', weight: ['400'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🚀', '🤖'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Retro-futuristic space exploration with HAL aesthetics',
+    textColor: '#FFFFFF'
+  },
+  {
+    id: 'scarface',
+    name: 'Scarface',
+    description: 'Miami vice aesthetic with neon and gold',
+    className: 'theme-scarface',
+    colors: {
+      primary: '#FFD700',
+      secondary: '#FF1493',
+      accent: '#00FFFF',
+      background: '#000000'
+    },
+    font: 'Oswald',
+    preview: '🏖️ Miami Vice',
+    emojis: ['🏖️', '💰', '🌴', '🕶️'],
+    category: 'Crime',
+    tagline: 'Say hello to great entertainment',
+    modes: {
+      light: {
+        colors: ['#FFD700', '#FF1493', '#00FFFF', '#FFF8DC'],
+        font: { name: 'Oswald', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏖️', '💰', '🌴'],
+        animations: { buttonHover: 'miami-flash', pageTransition: 'neon-fade', loader: 'palm-sway' }
+      },
+      dark: {
+        colors: ['#FFD700', '#FF1493', '#00FFFF', '#0A0A0A'],
+        font: { name: 'Oswald', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🏖️', '💰', '🕶️'],
+        animations: { buttonHover: 'miami-flash', pageTransition: 'neon-fade', loader: 'palm-sway' }
+      },
+      highContrast: {
+        colors: ['#FFFF00', '#FF0000', '#00FFFF', '#000000'],
+        font: { name: 'Oswald', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🏖️', '💰'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Miami vice aesthetic with neon and gold',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'star-wars',
+    name: 'Star Wars',
+    description: 'Galactic empire aesthetic with lightsaber glows',
+    className: 'theme-star-wars',
+    colors: {
+      primary: '#FFD700',
+      secondary: '#00FF00',
+      accent: '#FF0000',
+      background: '#000000'
+    },
+    font: 'Orbitron',
+    preview: '⭐ Galaxy Far Away',
+    emojis: ['⭐', '🚀', '⚔️', '🌌'],
+    category: 'Sci-Fi',
+    tagline: 'May the force be with your entertainment',
+    modes: {
+      light: {
+        colors: ['#FFD700', '#00FF00', '#FF0000', '#F0F8FF'],
+        font: { name: 'Orbitron', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['⭐', '🚀', '⚔️'],
+        animations: { buttonHover: 'lightsaber-hum', pageTransition: 'hyperspace-jump', loader: 'force-spin' }
+      },
+      dark: {
+        colors: ['#FFD700', '#00FF00', '#FF0000', '#0A0A0A'],
+        font: { name: 'Orbitron', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['⭐', '🚀', '🌌'],
+        animations: { buttonHover: 'lightsaber-hum', pageTransition: 'hyperspace-jump', loader: 'force-spin' }
+      },
+      highContrast: {
+        colors: ['#FFFF00', '#00FF00', '#FF0000', '#000000'],
+        font: { name: 'Orbitron', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['⭐', '🚀'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Galactic empire aesthetic with lightsaber glows',
+    textColor: '#FFD700'
+  },
+  {
+    id: 'game-of-thrones',
+    name: 'Game of Thrones',
+    description: 'Medieval houses with dragon fire and iron throne',
+    className: 'theme-game-of-thrones',
+    colors: {
+      primary: '#8B0000',
+      secondary: '#FFD700',
+      accent: '#2F4F4F',
+      background: '#1C1C1C'
+    },
+    font: 'Cinzel Decorative',
+    preview: '🐉 Fire & Blood',
+    emojis: ['🐉', '⚔️', '👑', '🔥'],
+    category: 'Fantasy',
+    tagline: 'When you play the game of shows, you win or you die',
+    modes: {
+      light: {
+        colors: ['#8B0000', '#FFD700', '#2F4F4F', '#F5F5DC'],
+        font: { name: 'Cinzel Decorative', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🐉', '⚔️', '👑'],
+        animations: { buttonHover: 'dragon-breath', pageTransition: 'throne-rise', loader: 'crown-forge' }
+      },
+      dark: {
+        colors: ['#8B0000', '#FFD700', '#2F4F4F', '#0A0A0A'],
+        font: { name: 'Cinzel Decorative', weight: ['400', '700'], size: { small: '14px', medium: '16px', large: '24px' } },
+        emojis: ['🐉', '⚔️', '🔥'],
+        animations: { buttonHover: 'dragon-breath', pageTransition: 'throne-rise', loader: 'crown-forge' }
+      },
+      highContrast: {
+        colors: ['#FF0000', '#FFFF00', '#FFFFFF', '#000000'],
+        font: { name: 'Cinzel Decorative', weight: ['700'], size: { small: '16px', medium: '18px', large: '28px' } },
+        emojis: ['🐉', '⚔️'],
+        animations: { buttonHover: 'scale(1.1)', pageTransition: 'fade', loader: 'pulse' }
+      }
+    },
+    designStyle: 'Medieval houses with dragon fire and iron throne',
+    textColor: '#FFD700'
   }
 ];
